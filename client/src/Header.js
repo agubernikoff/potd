@@ -9,8 +9,9 @@ function Header({ user, logout }) {
     window
       .matchMedia("(max-width:860px)")
       .addEventListener("change", (e) => setMatches(e.matches));
-    if (window.matchMedia("(max-width:860px)")) setMatches(true);
+    if (window.matchMedia("(max-width:860px)").matches) setMatches(true);
   }, []);
+  console.log();
 
   const activeStyle = ({ isActive }) =>
     isActive
