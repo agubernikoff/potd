@@ -224,6 +224,7 @@ a:visited {
     background: white;
     border-top: 1px solid gray;
     padding: 0.5em;
+    z-index: 2;
   }
   .home-icon {
     width: 4.5em;
