@@ -246,6 +246,9 @@ a:visited {
   .newPostForm {
     width: 70%;
   }
+  .feed {
+    height: 88vh;
+  }
 }
 @media screen and (max-width: 500px) {
   :root {
