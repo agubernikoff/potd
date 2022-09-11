@@ -219,19 +219,29 @@ a:visited {
     bottom: 0;
     display: flex;
     width: 100vw;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background: white;
     border-top: 1px solid gray;
     padding: 0.5em;
     z-index: 2;
   }
+  .lock {
+    margin: auto;
+  }
+  .home-icon-A {
+    margin: auto;
+  }
   .home-icon {
     width: 4.5em;
+  }
+  .profilePicture {
+    margin: auto;
   }
   .makeapick {
     width: 3em;
     text-align: center;
+    margin: auto;
   }
   .post {
     width: 90%;

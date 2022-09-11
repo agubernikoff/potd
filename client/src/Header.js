@@ -39,7 +39,7 @@ function Header({ user, logout }) {
           <br />
         </>
       ) : null}
-      <NavLink to={"/"} style={activeStyle}>
+      <NavLink to={"/"} style={activeStyle} className="home-icon-A">
         {matches ? (
           <img alt="home-icon" src={home} className="home-icon" />
         ) : (
