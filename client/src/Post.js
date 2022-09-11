@@ -227,9 +227,9 @@ const Post = forwardRef(
               alt={`${post.user.username}`}
               className="profilePicture"
             />
-            <NavLink to={`/u/${post.user.id}`}>
-              <strong>{post.user.username}</strong>
-            </NavLink>
+            {/* <NavLink to={`/u/${post.user.id}`}> */}
+            <strong>{post.user.username}</strong>
+            {/* </NavLink> */}
           </div>
         </div>
         <h1>
