@@ -271,6 +271,9 @@ a:visited {
   .line-header {
     font-size: 1.5vw;
   }
+  .feed {
+    height: 78vh;
+  }
 }
 
 @-moz-keyframes rotateY {
