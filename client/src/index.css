@@ -267,6 +267,11 @@ a:visited {
     font-size: 0.9em;
   }
 }
+@media screen and (max-width: 400px) {
+  .line-header {
+    font-size: 1.5vw;
+  }
+}
 
 @-moz-keyframes rotateY {
   100% {
