@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/me", to: 'users#show_me'
   resources :users
   resources :posts
+  patch '/grade',to:'posts#grade'
   resources :tails, only:[:index, :create, :destroy]
   resources :fades, only:[:index, :create, :destroy]
   resources :comments, only: [:index, :create, :destroy]

@@ -83,10 +83,6 @@ a:visited {
   text-align: center;
   background: white;
 }
-.delete-btn {
-  color: white;
-  background: red;
-}
 .userInfoContainer {
   text-align: left;
   display: flex;
@@ -105,6 +101,7 @@ a:visited {
   box-shadow: 0 0 1px 3px;
 }
 .prevbtn {
+  float: left;
   background-color: transparent;
 }
 .nextbtn {
@@ -123,6 +120,17 @@ a:visited {
 }
 .reaction-icon {
   width: 1.5em;
+}
+.delete-btn {
+  color: white;
+  background: red;
+}
+.grade-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  margin: auto;
 }
 
 .game {

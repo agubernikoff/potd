@@ -57,6 +57,13 @@ function App() {
     setPosts([newPost, ...posts]);
   }
 
+  function updatePostsOnGrade(graded) {
+    const post = posts.find((p) => p.id === graded.id);
+    const filtered = posts.filter((p) => p.id !== graded.id);
+    const updated = { ...post, status: graded.status, result: graded.result };
+    setPosts([...filtered, updated]);
+  }
+
   function deletePosts(id) {
     const filtered = posts.filter((p) => p.id !== id);
     setPosts(filtered);
@@ -167,6 +174,7 @@ function App() {
                 updatePostCommentsOnComment={updatePostCommentsOnComment}
                 updatePostCommentsOnDelete={updatePostCommentsOnDelete}
                 deletePosts={deletePosts}
+                updatePostsOnGrade={updatePostsOnGrade}
               />
             }
           />

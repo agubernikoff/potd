@@ -20,6 +20,7 @@ const Post = forwardRef(
       updatePostCommentsOnComment,
       updatePostCommentsOnDelete,
       deletePosts,
+      updatePostsOnGrade,
     },
     ref
   ) => {
@@ -203,9 +204,28 @@ const Post = forwardRef(
       });
     }
 
+    function grade(innerText) {
+      const result = innerText.toLowerCase();
+
+      fetch("/grade", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: post.id, result: result }),
+      }).then((r) => {
+        if (r.ok) {
+          r.json().then((data) => {
+            console.log(data);
+            updatePostsOnGrade(data.post);
+          });
+        } else r.json().then((err) => console.log(err));
+      });
+    }
+
     const inputEl = useRef(null);
     const prev = "<";
     const next = ">";
+
+    console.log(post.status);
 
     return (
       <div id={`post${post.id}`} className="post" ref={ref}>
@@ -288,7 +308,6 @@ const Post = forwardRef(
               className="reaction-icon"
               onClick={handleFadeClick}
             />
-
             <span>{`${post.fades.length} FADES`}</span>
           </div>
         </div>
@@ -312,6 +331,24 @@ const Post = forwardRef(
           >
             DELETE
           </button>
+        ) : null}
+        {user.isAdmin &&
+        new Date(post.start) < new Date(Date.now()) &&
+        post.status === "pending" ? (
+          <div className="grade-container">
+            <button
+              onClick={(e) => grade(e.target.innerText)}
+              style={{ color: "white", background: "green" }}
+            >
+              W
+            </button>
+            <button
+              onClick={(e) => grade(e.target.innerText)}
+              style={{ color: "white", background: "red" }}
+            >
+              L
+            </button>
+          </div>
         ) : null}
       </div>
     );

@@ -28,16 +28,19 @@ class PostsController < ApplicationController
     end
 
     def update
-      post = Post.find(params[:post_id])
+      post = Post.find(params[:id])
       post.update!(post_params)
       render json: post, status: :updated
     end
 
     def grade
       current_user=User.find(session[:user_id])
-      post = Post.find(params[:post_id])
+      post = Post.find(params[:id])
+      user=post.user
       if current_user.isAdmin
         post.update(status:'graded',result:params[:result])
+        user.save
+        render json:{post:post,user:user}
       else render json:{error:"You don't have the facilities for that big man."}
       end
     end
@@ -51,7 +54,7 @@ class PostsController < ApplicationController
     private
     
     def post_params
-      params.permit(:pick,:odds,:status,:result,:start,:user_id,:caption,files:[])
+      params.permit(:id,:pick,:odds,:status,:result,:start,:user_id,:caption,files:[])
     end
     
     def render_unprocessable_entity invalid

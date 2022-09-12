@@ -17,6 +17,7 @@ function Feed({
   updatePostFade,
   updatePostFadesOnUnfade,
   deletePosts,
+  updatePostsOnGrade,
 }) {
   const [message, setMessage] = useState("");
 
@@ -38,6 +39,7 @@ function Feed({
       updatePostCommentsOnComment={updatePostCommentsOnComment}
       updatePostCommentsOnDelete={updatePostCommentsOnDelete}
       deletePosts={deletePosts}
+      updatePostsOnGrade={updatePostsOnGrade}
       ref={createRef()}
     />
   ));
