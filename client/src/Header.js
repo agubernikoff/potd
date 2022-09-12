@@ -19,16 +19,6 @@ function Header({ user, logout }) {
         }
       : null;
 
-  function makeAdmin() {
-    fetch(`/users/${user.id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ isAdmin: true }),
-    }).then((r) => {
-      if (r.ok) r.json().then((user) => console.log(user));
-    });
-  }
-
   return (
     <div className="header">
       <h1 className="lock">🔒</h1>
@@ -40,7 +30,6 @@ function Header({ user, logout }) {
             alt="propic"
             src={user.profile_picture}
             className="profilePicture"
-            onClick={makeAdmin}
           />
           {/* <h3 style={{ display: "inline-block" }}>
               {user.username.toUpperCase()}
