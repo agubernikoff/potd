@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid,with: :render_unprocessable_entity
     rescue_from ActiveRecord::RecordNotFound,with: :render_not_found
+    rescue_from ActiveRecord::RecordNotDestroyed,with: :not_destroyed
     skip_before_action :is_logged_in?, only: :index
     
     def index
@@ -47,8 +48,9 @@ class PostsController < ApplicationController
 
     def destroy
       post = Post.find(params[:id])
-      post.destroy
+      post.destroy!
       head :no_content
+      
     end
 
     private
@@ -64,4 +66,8 @@ class PostsController < ApplicationController
     def render_not_found
       render json: {error: "Post not found"}, status: 404
     end
+
+  def not_destroyed 
+    render json:{error: "You cannot delete a post whose game has already started"}, status: 403
+  end
 end

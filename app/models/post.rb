@@ -11,6 +11,8 @@ class Post < ApplicationRecord
 
   before_save :set_confidence
 
+  before_destroy :game_started
+
   validates :caption, presence: true
   validates :user_id, presence: true
   validates :pick, presence: true
@@ -57,6 +59,12 @@ class Post < ApplicationRecord
       self.write_attribute(:confidence,confidence)
 
     else self.write_attribute(:confidence,user_success)
+    end
+  end
+
+  def game_started
+    if self.start < DateTime.now
+      throw :abort
     end
   end
 

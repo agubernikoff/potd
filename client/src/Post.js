@@ -201,6 +201,10 @@ const Post = forwardRef(
         headers: { "Content-Type": "appliation/json" },
       }).then((r) => {
         if (r.ok) deletePosts(post.id);
+        else
+          r.json().then((data) => {
+            displayErrors(data.error);
+          });
       });
     }
 
@@ -217,7 +221,7 @@ const Post = forwardRef(
             console.log(data);
             updatePostsOnGrade(data.post);
           });
-        } else r.json().then((err) => console.log(err));
+        } else r.json().then((err) => displayErrors(err));
       });
     }
 
