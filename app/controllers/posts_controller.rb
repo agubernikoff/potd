@@ -37,11 +37,9 @@ class PostsController < ApplicationController
     def grade
       current_user=User.find(session[:user_id])
       post = Post.find(params[:id])
-      user=post.user
       if current_user.isAdmin
         post.update(status:'graded',result:params[:result])
-        user.save
-        render json:{post:post,user:user}
+        render json: post
       else render json:{error:"You don't have the facilities for that big man."}
       end
     end

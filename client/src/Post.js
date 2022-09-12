@@ -219,7 +219,7 @@ const Post = forwardRef(
         if (r.ok) {
           r.json().then((data) => {
             console.log(data);
-            updatePostsOnGrade(data.post);
+            updatePostsOnGrade(data);
           });
         } else r.json().then((err) => displayErrors(err));
       });

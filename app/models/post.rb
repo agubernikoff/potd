@@ -11,6 +11,8 @@ class Post < ApplicationRecord
 
   before_save :set_confidence
 
+  after_save :update_associated_users
+
   before_destroy :game_started
 
   validates :caption, presence: true
@@ -60,6 +62,12 @@ class Post < ApplicationRecord
 
     else self.write_attribute(:confidence,user_success)
     end
+  end
+
+  def update_associated_users
+    self.user.save
+    self.tails.each{|t| t.user.save}
+    self.fades.each{|t| t.user.save}
   end
 
   def game_started
