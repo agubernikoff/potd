@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     
     def index
       users = User.all
+      users.save_all
       render json: users
     end
     
