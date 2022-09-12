@@ -11,7 +11,6 @@ function Header({ user, logout }) {
       .addEventListener("change", (e) => setMatches(e.matches));
     if (window.matchMedia("(max-width:860px)").matches) setMatches(true);
   }, []);
-  console.log();
 
   const activeStyle = ({ isActive }) =>
     isActive
@@ -19,6 +18,16 @@ function Header({ user, logout }) {
           textDecoration: "underline",
         }
       : null;
+
+  function makeAdmin() {
+    fetch(`/users/${user.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ isAdmin: true }),
+    }).then((r) => {
+      if (r.ok) r.json().then((user) => console.log(user));
+    });
+  }
 
   return (
     <div className="header">
@@ -31,6 +40,7 @@ function Header({ user, logout }) {
             alt="propic"
             src={user.profile_picture}
             className="profilePicture"
+            onClick={makeAdmin}
           />
           {/* <h3 style={{ display: "inline-block" }}>
               {user.username.toUpperCase()}
