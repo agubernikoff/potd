@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import home from "./assets/home.png";
+import pick from "./assets/pick.png";
 
 function Header({ user, logout }) {
   const [matches, setMatches] = useState(false);
@@ -22,7 +23,7 @@ function Header({ user, logout }) {
   return (
     <div className="header">
       <h1 className="lock">🔒</h1>
-      <h3 className="title">PICK OF THE DAY</h3>
+      {/* <h3 className="title">PICK OF THE DAY</h3> */}
       {user ? (
         <>
           {/* <NavLink to={`/u/${user.id}`} style={activeStyle}> */}
@@ -43,13 +44,23 @@ function Header({ user, logout }) {
         {matches ? (
           <img alt="home-icon" src={home} className="home-icon" />
         ) : (
-          "HOME"
+          <div className="header_links">
+            <img alt="home-icon" src={home} className="nav_icon" />
+            HOME
+          </div>
         )}
       </NavLink>
       <br />
       <br />
       <NavLink to={"/games"} style={activeStyle} className="makeapick">
-        MAKE A PICK
+        {matches ? (
+          <img alt="home-icon" src={pick} className="home-icon" />
+        ) : (
+          <div className="header_links">
+            <img alt="home-icon" src={pick} className="nav_icon" />
+            MAKE A PICK
+          </div>
+        )}
       </NavLink>
     </div>
   );

@@ -46,7 +46,7 @@ function Feed({
 
   return (
     <div className="feed">
-      <h3 style={{ textAlign: "center" }}>FEED</h3>
+      {/* <h3 style={{ textAlign: "center" }}>FEED</h3> */}
       <AnimateBubbles>{postCards}</AnimateBubbles>
       {/* {message ? (
         <p>{message}</p>
