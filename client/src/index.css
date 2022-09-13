@@ -8,6 +8,10 @@ textarea {
   --h1font: 2em;
   --h3font: 1.2em;
   --font: 1em;
+  --acctProPic: 7em;
+  --acctUserFontSize: 2em;
+  --acctInputContainerAdjust: 0.43em;
+  --pAdjust: 3.15em;
 }
 .App {
   position: relative;
@@ -30,7 +34,8 @@ button {
   border-color: buttonborder;
 }
 p,
-span {
+span,
+label {
   font-size: var(--font);
 }
 h1 {
@@ -59,6 +64,9 @@ h3 {
   width: 3em;
   border-radius: 30px;
 }
+.round {
+  border-radius: 100px;
+}
 .lock {
   font-size: 4em;
   width: fit-content;
@@ -81,7 +89,7 @@ a:visited {
 }
 
 .feed {
-  width: 67%;
+  width: 66%;
   height: 100vh;
   overflow: auto;
   margin: auto;
@@ -93,7 +101,7 @@ a:visited {
   position: relative;
   display: block;
   margin: 1em auto;
-  width: 67%;
+  width: 66%;
   border: 1px solid black;
   padding: 0.5em;
   text-align: center;
@@ -201,7 +209,7 @@ a:visited {
   display: flex;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.9);
-  width: 100%;
+  width: 66%;
   height: 100vh;
 }
 .newPostForm {
@@ -215,6 +223,40 @@ a:visited {
   position: relative;
 }
 
+.edit-acct-btn {
+  margin: 1em 0.5em;
+  float: right;
+}
+.acct_profilePicture {
+  width: var(--acctProPic);
+  border-radius: 100px;
+  display: inline-block;
+}
+.acctUsername {
+  margin-left: 0.12em;
+  font-size: var(--acctUserFontSize);
+}
+.acctUsernameInput {
+  font-size: var(--acctUserFontSize);
+  font-weight: bold;
+  /* position: relative; */
+  bottom: 0.5em;
+  width: fit-content;
+}
+.acctInputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  position: relative;
+  bottom: var(--acctInputContainerAdjust);
+}
+.recordP {
+  margin-top: var(--pAdjust);
+}
+.backP {
+  margin-bottom: var(--pAdjust);
+}
+
 .footer {
   display: flex;
   flex-direction: row-reverse;
@@ -224,7 +266,18 @@ a:visited {
   right: 0;
   width: 16.5%;
 }
-
+@media screen and (max-width: 1050px) {
+  :root {
+    --acctUserFontSize: 1.6em;
+    --acctInputContainerAdjust: 1.1em;
+  }
+}
+@media screen and (max-width: 933px) {
+  :root {
+    --acctUserFontSize: 1.4em;
+    --acctInputContainerAdjust: 1.5em;
+  }
+}
 @media screen and (max-width: 860px) /* and (orientation: portrait) */ {
   .title {
     display: none;
@@ -233,6 +286,9 @@ a:visited {
     --font: 0.8em;
     --h3font: 1em;
     --h1font: 1.8em;
+    --acctProPic: 5em;
+    --acctInputContainerAdjust: 0.55em;
+    --pAdjust: 3.4em;
   }
   .lock {
     font-size: 3em;
@@ -260,9 +316,9 @@ a:visited {
   .home-icon {
     width: 4.5em;
   }
-  .header > .profilePicture {
+  /* .header > .profilePicture {
     margin: auto;
-  }
+  } */
   .makeapick {
     width: 3em;
     text-align: center;
@@ -283,8 +339,15 @@ a:visited {
   }
   .feed {
     height: 88vh;
+    width: 100%;
     border-left: none;
     border-right: none;
+  }
+}
+@media screen and (max-width: 590px) {
+  :root {
+    --acctUserFontSize: 1.2em;
+    --acctInputContainerAdjust: 0.88em;
   }
 }
 @media screen and (max-width: 500px) {
@@ -292,6 +355,10 @@ a:visited {
     --font: 0.6em;
     --h3font: 0.8em;
     --h1font: 1.6em;
+    --acctProPic: 4em;
+    --acctUserFontSize: 1em;
+    --acctInputContainerAdjust: 0.7em;
+    --pAdjust: 3.8em;
   }
 }
 @media screen and (max-width: 1090px) {
@@ -310,6 +377,19 @@ a:visited {
   }
   .feed {
     height: 78vh;
+  }
+  :root {
+    --acctUserFontSize: 0.8em;
+    --acctInputContainerAdjust: 1.07em;
+  }
+}
+@media screen and (max-width: 363px) {
+  :root {
+    --acctProPic: 3em;
+    --font: 0.5em;
+    --acctUserFontSize: 0.69em;
+    --acctInputContainerAdjust: 0.7em;
+    --pAdjust: 4.3em;
   }
 }
 

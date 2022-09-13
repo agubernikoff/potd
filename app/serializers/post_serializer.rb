@@ -1,10 +1,8 @@
 class PostSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
-  attributes :id,:pick,:odds,:caption,:status,:result,:start,:confidence,:created_at,:files,:comments
+  attributes :id,:pick,:odds,:caption,:status,:result,:start,:confidence,:created_at,:files,:comments,:tails,:fades
   belongs_to :user
-  has_many :tails
-  has_many :fades
 
   def files
     return unless object.files.attached?
@@ -21,5 +19,13 @@ class PostSerializer < ActiveModel::Serializer
 
   def comments
     ActiveModelSerializers::SerializableResource.new(object.comments,each_serializer: CommentSerializer)
+  end
+
+  def tails
+    ActiveModelSerializers::SerializableResource.new(object.tails,each_serializer: TailSerializer)
+  end
+
+  def fades
+    ActiveModelSerializers::SerializableResource.new(object.fades,each_serializer: FadeSerializer)
   end
 end

@@ -229,7 +229,7 @@ const Post = forwardRef(
     const prev = "<";
     const next = ">";
 
-    console.log(post.status);
+    console.log(post);
 
     return (
       <div id={`post${post.id}`} className="post" ref={ref}>
@@ -251,9 +251,9 @@ const Post = forwardRef(
               alt={`${post.user.username}`}
               className="profilePicture"
             />
-            {/* <NavLink to={`/u/${post.user.id}`}> */}
-            <strong>{post.user.username}</strong>
-            {/* </NavLink> */}
+            <NavLink to={`/u/${post.user.id}`}>
+              <strong>{post.user.username}</strong>
+            </NavLink>
           </div>
         </div>
         <h1>

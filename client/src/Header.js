@@ -26,16 +26,28 @@ function Header({ user, logout }) {
       {/* <h3 className="title">PICK OF THE DAY</h3> */}
       {user ? (
         <>
-          {/* <NavLink to={`/u/${user.id}`} style={activeStyle}> */}
-          <img
-            alt="propic"
-            src={user.profile_picture}
-            className="profilePicture"
-          />
-          {/* <h3 style={{ display: "inline-block" }}>
-              {user.username.toUpperCase()}
-            </h3> */}
-          {/* </NavLink> */}
+          <NavLink
+            to={`/u/${user.id}`}
+            style={activeStyle}
+            className="home-icon-A"
+          >
+            {matches ? (
+              <img
+                alt="propic"
+                src={user.profile_picture}
+                className="home-icon profilePicture"
+              />
+            ) : (
+              <div className="header_links">
+                <img
+                  alt="propic"
+                  src={user.profile_picture}
+                  className="nav_icon round"
+                />
+                {user.username.toUpperCase()}
+              </div>
+            )}
+          </NavLink>
           <br />
           <br />
         </>

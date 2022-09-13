@@ -1,147 +1,165 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, createRef } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
+import Post from "./Post";
 
 function Account({
   user,
   updateUserOnEdit,
-  updateUserLikesOnLike,
-  updateUserLikesOnUnlike,
-  updatePostLikesOnLike,
-  updatePostLikesOnUnlike,
+  updateUserTailsOnTail,
+  updateUserTailsOnUntail,
+  updatePostOnTail,
+  updatePostUntail,
   updatePostCommentsOnComment,
   updatePostCommentsOnDelete,
+  updateUserFadesOnFade,
+  updateUserFadesOnUnfade,
+  updatePostFade,
+  updatePostFadesOnUnfade,
+  deletePosts,
+  updatePostsOnGrade,
 }) {
   const [accountHolder, setAccountHolder] = useState("");
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState(null);
+  const [changePassword, setChangePassword] = useState(false);
   const [profile_picture, setProfilePicture] = useState(null);
   const [editFormPicture, setEditFormPicture] = useState("");
-  const [bio, setBio] = useState("");
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [isSeller, setIsSeller] = useState(false);
   const [displayOnly, setDisplayOnly] = useState(true);
-  const [likedProjects, setLikedProjects] = useState([]);
 
   let { id } = useParams();
   useEffect(() => {
     fetch(`/users/${id}`)
       .then((r) => r.json())
       .then((data) => {
+        console.log(data);
         setAccountHolder(data);
         setUsername(data.username);
-        setBio(data.bio);
-        setIsSeller(data.isSeller);
         setEditFormPicture(data.profile_picture);
         window.scrollTo(0, 0);
       });
-    fetch(`/liked_projects/${id}`)
-      .then((r) => r.json())
-      .then((data) => setLikedProjects(data));
   }, [id]);
 
-  function loopThroughAndFindPost(array, like) {
-    for (let i = 0; i < array.length; i++) {
-      console.log(array[i]);
-      if (array[i].find((p) => p.id === like.post_id))
-        return array[i].find((p) => p.id === like.post_id);
-    }
-  }
+  const successfulFades = accountHolder
+    ? accountHolder.fades.filter((f) => f.post_result === "l").length
+    : null;
 
-  function updateAccountHolderOnLike(newLike) {
-    const posts = accountHolder.projects.map((p) => p.posts);
-    console.log(posts);
-    const post = loopThroughAndFindPost(posts, newLike);
-    const updatedPost = { ...post, likes: [...post.likes, newLike] };
-    const project = accountHolder.projects.find(
-      (p) => p.id === updatedPost.project_id
-    );
-    const filteredPosts = project.posts.filter((p) => p.id !== updatedPost.id);
-    const updatedPosts = [...filteredPosts, updatedPost];
-    const sortedPosts = updatedPosts.sort((a, b) => a.id - b.id);
-    const updatedProject = { ...project, posts: sortedPosts };
-    const filteredProjects = accountHolder.projects.filter(
-      (p) => p.id !== updatedProject.id
-    );
-    const updatedProjects = [...filteredProjects, updatedProject];
-    const sortedProjects = updatedProjects.sort((a, b) => a.id - b.id);
-    setAccountHolder({ ...accountHolder, projects: sortedProjects });
-  }
+  const totalFades = accountHolder
+    ? accountHolder.fades.filter((f) => f.post_result).length
+    : null;
 
-  function updateAccountHolderOnUnLike(unLike) {
-    const posts = accountHolder.projects.map((p) => p.posts);
-    const post = loopThroughAndFindPost(posts, unLike);
+  const successfulTails = accountHolder
+    ? accountHolder.tails.filter((t) => t.post_result === "w").length
+    : null;
+
+  const totalTails = accountHolder
+    ? accountHolder.tails.filter((t) => t.post_result).length
+    : null;
+
+  function updateAccountHolderOnTail(data) {
+    const post = accountHolder.posts.find((p) => p.id === data.post.id);
     const updatedPost = {
       ...post,
-      likes: post.likes.filter((l) => l.id !== unLike.id),
+      confidence: data.post.confidence,
+      tails: [...post.tails, data.tail],
     };
-    const project = accountHolder.projects.find(
-      (p) => p.id === updatedPost.project_id
+    const filteredPosts = accountHolder.posts.filter(
+      (p) => p.id !== updatedPost.id
     );
-    const filteredPosts = project.posts.filter((p) => p.id !== updatedPost.id);
     const updatedPosts = [...filteredPosts, updatedPost];
     const sortedPosts = updatedPosts.sort((a, b) => a.id - b.id);
-    const updatedProject = { ...project, posts: sortedPosts };
-    const filteredProjects = accountHolder.projects.filter(
-      (p) => p.id !== updatedProject.id
+    setAccountHolder({ ...accountHolder, posts: sortedPosts });
+  }
+
+  function updateAccountHolderOnUnTail(untail, post) {
+    const untailPost = accountHolder.posts.find((p) => p.id === untail.post_id);
+    const filtered = untailPost.tails.filter((l) => l.id !== untail.id);
+    const updatedPost = {
+      ...untailPost,
+      confidence: post.confidence,
+      tails: filtered,
+    };
+    const filteredPosts = accountHolder.posts.filter(
+      (p) => p.id !== untailPost.id
     );
-    const updatedProjects = [...filteredProjects, updatedProject];
-    const sortedProjects = updatedProjects.sort((a, b) => a.id - b.id);
-    setAccountHolder({ ...accountHolder, projects: sortedProjects });
+    const updatedPosts = [...filteredPosts, updatedPost];
+    const sortedPosts = updatedPosts.sort((a, b) => b.id - a.id);
+    setAccountHolder({ ...accountHolder, posts: sortedPosts });
+  }
+
+  function updateAccountHolderOnFade(data) {
+    const post = accountHolder.posts.find((p) => p.id === data.post.id);
+    const updatedPost = {
+      ...post,
+      confidence: data.post.confidence,
+      fades: [...post.fades, data.fade],
+    };
+    const filteredPosts = accountHolder.posts.filter(
+      (p) => p.id !== updatedPost.id
+    );
+    const updatedPosts = [...filteredPosts, updatedPost];
+    const sortedPosts = updatedPosts.sort((a, b) => a.id - b.id);
+    setAccountHolder({ ...accountHolder, posts: sortedPosts });
+  }
+
+  function updateAccountHolderOnUnFade(unfade, post) {
+    const unfadePost = accountHolder.posts.find((p) => p.id === unfade.post_id);
+    const filtered = unfadePost.fades.filter((l) => l.id !== unfade.id);
+    const updatedPost = {
+      ...unfadePost,
+      confidence: post.confidence,
+      fades: filtered,
+    };
+    const filteredPosts = accountHolder.posts.filter(
+      (p) => p.id !== unfadePost.id
+    );
+    const updatedPosts = [...filteredPosts, updatedPost];
+    const sortedPosts = updatedPosts.sort((a, b) => b.id - a.id);
+    setAccountHolder({ ...accountHolder, posts: sortedPosts });
   }
 
   function updateAccountHolderOnComment(newComment) {
-    const posts = accountHolder.projects.map((p) => p.posts);
-    const post = loopThroughAndFindPost(posts, newComment);
-    const updatedPost = { ...post, comments: [...post.comments, newComment] };
-    const project = accountHolder.projects.find(
-      (p) => p.id === updatedPost.project_id
+    const likedPost = accountHolder.posts.find(
+      (p) => p.id === newComment.post_id
     );
-    const filteredPosts = project.posts.filter((p) => p.id !== updatedPost.id);
-    const updatedPosts = [...filteredPosts, updatedPost];
-    const sortedPosts = updatedPosts.sort((a, b) => a.id - b.id);
-    const updatedProject = { ...project, posts: sortedPosts };
-    const filteredProjects = accountHolder.projects.filter(
-      (p) => p.id !== updatedProject.id
-    );
-    const updatedProjects = [...filteredProjects, updatedProject];
-    const sortedProjects = updatedProjects.sort((a, b) => a.id - b.id);
-    setAccountHolder({ ...accountHolder, projects: sortedProjects });
+    if (likedPost) {
+      const updatedComments = [...likedPost.comments, newComment];
+      const updatedPost = { ...likedPost, comments: updatedComments };
+      const filteredPosts = accountHolder.posts.filter(
+        (p) => p.id !== newComment.post_id
+      );
+      const updatedPosts = [...filteredPosts, updatedPost];
+      const sorted = updatedPosts.sort((a, b) => b.id - a.id);
+      setAccountHolder({ ...accountHolder, posts: sorted });
+    }
   }
 
   function updateAccountHolderOnDeleteComment(deletedComment) {
-    const posts = accountHolder.projects.map((p) => p.posts);
-    const post = loopThroughAndFindPost(posts, deletedComment);
-    const updatedPost = {
-      ...post,
-      comments: post.comments.filter((l) => l.id !== deletedComment.id),
-    };
-    const project = accountHolder.projects.find(
-      (p) => p.id === updatedPost.project_id
+    const post = accountHolder.posts.find(
+      (p) => p.id === deletedComment.post_id
     );
-    const filteredPosts = project.posts.filter((p) => p.id !== updatedPost.id);
-    const updatedPosts = [...filteredPosts, updatedPost];
-    const sortedPosts = updatedPosts.sort((a, b) => a.id - b.id);
-    const updatedProject = { ...project, posts: sortedPosts };
-    const filteredProjects = accountHolder.projects.filter(
-      (p) => p.id !== updatedProject.id
-    );
-    const updatedProjects = [...filteredProjects, updatedProject];
-    const sortedProjects = updatedProjects.sort((a, b) => a.id - b.id);
-    setAccountHolder({ ...accountHolder, projects: sortedProjects });
+    if (post) {
+      const filtered = post.comments.filter((l) => l.id !== deletedComment.id);
+      const updatedPost = { ...post, comments: filtered };
+      const filteredPosts = accountHolder.posts.filter((p) => p.id !== post.id);
+      const updatedPosts = [...filteredPosts, updatedPost];
+      const sorted = updatedPosts.sort((a, b) => a.id - b.id);
+      setAccountHolder({ ...accountHolder, posts: sorted });
+    }
   }
 
   const formData = new FormData();
   formData.append("username", username);
-  formData.append("isSeller", isSeller);
+  if (password) formData.append("password", password);
   if (profile_picture) formData.append("profile_picture", profile_picture);
-  formData.append("bio", bio);
 
   function handleSubmit(e) {
     e.preventDefault();
     setErrors([]);
     setIsLoading(true);
-    fetch("/me", {
+    fetch(`/users/${user.id}`, {
       method: "PATCH",
       body: formData,
     }).then((r) => {
@@ -158,62 +176,87 @@ function Account({
     });
   }
 
+  const posts = accountHolder
+    ? accountHolder.posts
+        .sort((a, b) => b.id - a.id)
+        .map((post) => (
+          // console.log({ ...post, user: accountHolder })
+          <Post
+            key={post.id}
+            post={{ ...post, user: accountHolder }}
+            user={user}
+            updateUserTailsOnTail={updateUserTailsOnTail}
+            updateUserTailsOnUntail={updateUserTailsOnUntail}
+            updateUserFadesOnFade={updateUserFadesOnFade}
+            updateUserFadesOnUnfade={updateUserFadesOnUnfade}
+            updatePostUntail={updateAccountHolderOnUnTail}
+            updatePostOnTail={updateAccountHolderOnTail}
+            updatePostFade={updateAccountHolderOnFade}
+            updatePostFadesOnUnfade={updateAccountHolderOnUnFade}
+            updatePostCommentsOnComment={updateAccountHolderOnComment}
+            updatePostCommentsOnDelete={updateAccountHolderOnDeleteComment}
+            deletePosts={deletePosts}
+            updatePostsOnGrade={updatePostsOnGrade}
+            ref={createRef()}
+          />
+        ))
+    : null;
+
+  console.log(accountHolder);
+
   return (
-    <div>
-      {accountHolder ? null : <Loading />}
+    <div className="feed">
+      {accountHolder ? null : (
+        <div style={{ marginTop: "1em" }}>
+          <Loading />
+        </div>
+      )}
       {accountHolder.id === user.id ? (
         <button
           onClick={() => setDisplayOnly(!displayOnly)}
-          style={{ float: "right" }}
+          className="edit-acct-btn"
         >
           {displayOnly ? "EDIT PROFILE" : "CANCEL"}
         </button>
       ) : null}
       <br />
       {displayOnly ? (
-        <>
+        <div className="userInfoContainer">
           <img
             alt={accountHolder.username}
             src={accountHolder.profile_picture}
-            style={{ width: "10%", borderRadius: 50 }}
+            className="acct_profilePicture"
           />
-          <span style={{ fontSize: 108 }}>{accountHolder.username} </span>
-          {accountHolder.bio ? (
-            <p>
-              <strong>BIO: </strong>
-              {accountHolder.bio}
-            </p>
-          ) : null}
-        </>
+          <h1 className="acctUsername">{accountHolder.username}</h1>
+        </div>
       ) : (
         <form
           onSubmit={handleSubmit}
           style={{
             display: "flex",
-            flexDirection: "column",
-            width: "100%",
-            margin: "auto",
+            flexDirection: "row",
+            alignItems: "flex-end",
+            justifyContent: "space-between",
           }}
         >
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "flex-end",
+            }}
+          >
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
-                margin: "auto",
-                marginRight: 0,
                 marginBottom: 10,
-                width: "135px",
               }}
             >
               <img
                 alt={accountHolder.username}
                 src={editFormPicture}
-                style={{
-                  width: "95%",
-                  borderRadius: 60,
-                  display: "inline-block",
-                }}
+                className="acct_profilePicture"
               />
               <button
                 onClick={(e) => {
@@ -230,13 +273,7 @@ function Account({
                 Edit
               </button>
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                marginLeft: 0,
-              }}
-            >
+            <div className="acctInputContainer">
               <input
                 id="getFile"
                 type="file"
@@ -248,50 +285,39 @@ function Account({
                   setEditFormPicture(URL.createObjectURL(e.target.files[0]));
                 }}
               ></input>
+              <label>USERNAME</label>
               <input
                 type="text"
                 id="username"
                 autoComplete="off"
                 value={username}
                 placeholder={username}
-                style={{
-                  fontSize: 108,
-                  display: "inline-block",
-                  width: "99%",
-                }}
+                className="acctUsernameInput"
                 onChange={(e) => setUsername(e.target.value.toLowerCase())}
+              />
+              <label style={changePassword ? null : { visibility: "hidden" }}>
+                PASSWORD
+              </label>
+              <input
+                type="text"
+                id="username"
+                autoComplete="off"
+                value={password}
+                className="acctUsernameInput"
+                style={changePassword ? null : { visibility: "hidden" }}
+                onChange={(e) => setPassword(e.target.value.toLowerCase())}
               />
             </div>
           </div>
-          <div style={{ position: "relative", marginTop: 10, display: "flex" }}>
-            <label htmlFor="caption">
-              <strong>BIO: </strong>
-            </label>
-            <textarea
-              type="text"
-              id="description"
-              autoComplete="off"
-              rows="10"
-              cols="105"
-              placeholder="Tell us about yourself"
-              value={bio}
-              onChange={(e) => setBio(e.target.value)}
-            />
-          </div>
-          {isSeller ? null : (
-            <button
-              onClick={() => setIsSeller(true)}
-              style={{ display: "block", width: "fit-content", margin: "auto" }}
-            >
-              BECOME A SELLER
-            </button>
-          )}
           <button
-            type="submit"
-            style={{ margin: "auto", marginTop: 10, width: "fit-content" }}
+            onClick={(e) => {
+              e.preventDefault();
+              setChangePassword(!changePassword);
+            }}
           >
-            {isLoading ? <Loading /> : "EDIT PROFILE"}
+            {changePassword ? "CANCEL CHANGE PASSWORD" : "CHANGE PASSWORD"}
           </button>
+          <button type="submit">{isLoading ? <Loading /> : "SUBMIT"}</button>
           {errors.map((err) => (
             <h3 key={err} className="errors">
               {err}
@@ -299,15 +325,22 @@ function Account({
           ))}
         </form>
       )}
-      {accountHolder.isSeller && accountHolder.projects[0] ? (
-        <div>
-          <strong>MY PROJECTS:</strong>
-        </div>
-      ) : null}
       {accountHolder ? (
-        <div>
-          <strong>PROJECTS I'M INTERESTED IN:</strong>
-        </div>
+        <>
+          <p className={displayOnly ? "recordP" : null}>
+            <strong>RECORD: </strong>
+            {`${accountHolder.w} - ${accountHolder.l}`} (
+            {Math.round((accountHolder.winP + Number.EPSILON) * 100)}%)
+          </p>
+          <p className={displayOnly ? "backP" : null}>
+            <strong>TAIL/FADE SUCCESS: </strong>
+            {`${successfulFades + successfulTails} - ${
+              totalTails + totalFades - (successfulFades + successfulTails)
+            }`}{" "}
+            ({Math.round((accountHolder.backP + Number.EPSILON) * 100)}%)
+          </p>
+          {posts}
+        </>
       ) : null}
     </div>
   );

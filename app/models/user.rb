@@ -44,11 +44,15 @@ class User < ApplicationRecord
   end
 
   def set_backP
-    total_tails= self.tails.length
+    total_tails= self.tails.filter{|t|t.post.status=='graded'}.length
     successful_tails=self.tails.joins(:post).where(:post=>{result:'w'}).length
-    total_fades= self.fades.length
+    total_fades= self.fades.filter{|t|t.post.status=='graded'}.length
     successful_fades=self.fades.joins(:post).where(:post=>{result:'l'}).length
     total=total_tails+total_fades
+    puts total_tails
+    puts successful_tails
+    puts total_fades
+    puts successful_fades
     total_success=successful_tails+successful_fades
     percentage=total_success.to_f/total.to_f
     if total_tails==0 && total_fades==0

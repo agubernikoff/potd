@@ -194,6 +194,14 @@ function App() {
                 updateUserTailsOnUntail={updateUserTailsOnUntail}
                 updateUserFadesOnFade={updateUserFadesOnFade}
                 updateUserFadesOnUnfade={updateUserFadesOnUnfade}
+                updatePostOnTail={updatePostOnTail}
+                updatePostUntail={updatePostUntail}
+                updatePostFade={updatePostFade}
+                updatePostFadesOnUnfade={updatePostFadesOnUnfade}
+                updatePostCommentsOnComment={updatePostCommentsOnComment}
+                updatePostCommentsOnDelete={updatePostCommentsOnDelete}
+                deletePosts={deletePosts}
+                updatePostsOnGrade={updatePostsOnGrade}
               />
             }
           />
