@@ -34,7 +34,6 @@ function Account({
     fetch(`/users/${id}`)
       .then((r) => r.json())
       .then((data) => {
-        console.log(data);
         setAccountHolder(data);
         setUsername(data.username);
         setEditFormPicture(data.profile_picture);
@@ -180,7 +179,6 @@ function Account({
     ? accountHolder.posts
         .sort((a, b) => b.id - a.id)
         .map((post) => (
-          // console.log({ ...post, user: accountHolder })
           <Post
             key={post.id}
             post={{ ...post, user: accountHolder }}
@@ -201,8 +199,6 @@ function Account({
           />
         ))
     : null;
-
-  console.log(accountHolder);
 
   return (
     <div className="feed">

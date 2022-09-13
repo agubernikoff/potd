@@ -16,7 +16,6 @@ const AnimateBubbles = ({ children }) => {
     const prevBoundingBox = calculateBoundingBoxes(prevChildren);
     setPrevBoundingBox(prevBoundingBox);
   }, [prevChildren]);
-  //   console.log(React.Parent);
   useEffect(() => {
     const hasPrevBoundingBox = Object.keys(prevBoundingBox).length;
 

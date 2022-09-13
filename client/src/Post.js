@@ -104,7 +104,6 @@ const Post = forwardRef(
           r.json().then((data) => {
             updateUserFadesOnFade(data.fade);
             updatePostFade(data);
-            console.log(data.post);
           });
         } else r.json().then((data) => displayErrors(data.errors));
       });
@@ -184,7 +183,6 @@ const Post = forwardRef(
     }
 
     function deleteComment(e) {
-      console.log(e.target.value);
       fetch(`/comments/${e.target.value}`, {
         method: "DELETE",
         headers: { "Content-Type": "appliation/json" },
@@ -218,7 +216,6 @@ const Post = forwardRef(
       }).then((r) => {
         if (r.ok) {
           r.json().then((data) => {
-            console.log(data);
             updatePostsOnGrade(data);
           });
         } else r.json().then((err) => displayErrors(err));
@@ -228,8 +225,6 @@ const Post = forwardRef(
     const inputEl = useRef(null);
     const prev = "<";
     const next = ">";
-
-    console.log(post);
 
     return (
       <div id={`post${post.id}`} className="post" ref={ref}>
