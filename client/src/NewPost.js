@@ -4,7 +4,6 @@ import Loading from "./Loading";
 
 function NewPost({ user, updatePosts, pick, odds, start, clearSelections }) {
   const [files, setFiles] = useState([]);
-  console.log(files);
   const [caption, setCaption] = useState([]);
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -41,7 +40,6 @@ function NewPost({ user, updatePosts, pick, odds, start, clearSelections }) {
         } else {
           r.json().then((data) => {
             setErrors(data.errors);
-            console.log(data);
             setIsLoading(false);
           });
         }
