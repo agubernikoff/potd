@@ -218,7 +218,8 @@ a:visited {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  margin: auto;
+  height: fit-content;
+  margin: 4.2em auto;
   background: rgb(43, 81, 131);
   border: 2px solid white;
   padding: 2em;
