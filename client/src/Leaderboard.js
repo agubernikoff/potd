@@ -27,7 +27,11 @@ function Leaderboard() {
       <div className="listItem">
         <NavLink to={`/u/${u.id}`}>
           <div className="userInfoContainer">
-            <img alt={u.username} src={u.profile_picture} />
+            <img
+              alt={u.username}
+              src={u.profile_picture}
+              className="profilePicture"
+            />
             <p>{u.username}</p>
           </div>
         </NavLink>
