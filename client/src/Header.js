@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import home from "./assets/home.png";
 import pick from "./assets/pick.png";
+import leaderboard from "./assets/leaderboard.png";
 
 function Header({ user, logout }) {
   const [matches, setMatches] = useState(false);
@@ -74,6 +75,18 @@ function Header({ user, logout }) {
           </div>
         )}
       </NavLink>
+      {/* <br />
+      <br />
+      <NavLink to={"/leaderboard"} style={activeStyle} className="makeapick">
+        {matches ? (
+          <img alt="home-icon" src={leaderboard} className="home-icon" />
+        ) : (
+          <div className="header_links">
+            <img alt="home-icon" src={leaderboard} className="nav_icon" />
+            LEADERBOARD
+          </div>
+        )}
+      </NavLink> */}
     </div>
   );
 }

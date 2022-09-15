@@ -79,7 +79,7 @@ const Post = forwardRef(
         if (r.ok) {
           updateUserTailsOnUntail(tail.id);
           r.json().then((post) => updatePostUntail(tail, post));
-        } else r.json().then((data) => console.log(data));
+        } else r.json().then((data) => displayErrors(data.error));
       });
     }
 
@@ -118,7 +118,7 @@ const Post = forwardRef(
         if (r.ok) {
           updateUserFadesOnUnfade(fade.id);
           r.json().then((post) => updatePostFadesOnUnfade(fade, post));
-        } else r.json().then((data) => console.log(data));
+        } else r.json().then((data) => displayErrors(data.error));
       });
     }
 
@@ -229,7 +229,13 @@ const Post = forwardRef(
     return (
       <div id={`post${post.id}`} className="post" ref={ref}>
         <div>
-          <span style={{ float: "right", color: "#807f7f", fontSize: "50%" }}>
+          <span
+            style={{
+              float: "right",
+              color: "rgb(140, 183, 240)",
+              fontSize: "50%",
+            }}
+          >
             {new Date(post.created_at)
               .toLocaleDateString(undefined, {
                 day: "numeric",

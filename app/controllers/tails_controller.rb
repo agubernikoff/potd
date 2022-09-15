@@ -1,6 +1,7 @@
 class TailsController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid,with: :render_unprocessable_entity
-    rescue_from ActiveRecord::RecordNotFound,with: :render_not_found
+  rescue_from ActiveRecord::RecordNotFound,with: :render_not_found
+  rescue_from ActiveRecord::RecordNotDestroyed,with: :not_destroyed
   before_action :set_tail, only: [:show, :update, :destroy]
   # GET /tails
   def index
@@ -29,7 +30,7 @@ class TailsController < ApplicationController
 
   # DELETE /tails/1
   def destroy
-    @tail.destroy
+    @tail.destroy!
     post=Post.find(@tail.post_id)
     post.save
     render json: post, status: 200
@@ -52,5 +53,9 @@ class TailsController < ApplicationController
     
     def render_not_found
       render json: {error: "tail not found"}, status: 404
+    end
+
+    def not_destroyed 
+      render json:{error: "You cannot remove a tail of a post whose game has already started"}, status: 403
     end
 end

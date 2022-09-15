@@ -1,13 +1,28 @@
 class UsersController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid,with: :render_unprocessable_entity
     rescue_from ActiveRecord::RecordNotFound,with: :render_not_found
-    skip_before_action :is_logged_in?,only: [:index,:create,:show]
+    skip_before_action :is_logged_in?,only: [:index,:create,:show,:leadersW,:leadersB,:leadersA]
     
     
     def index
       users = User.all
       # User.find_each(&:save)
       render json: users
+    end
+
+    def leadersW
+      users_by_winP = User.all.order(winP: :desc).first(10)
+      render json: users_by_winP
+    end
+
+    def leadersB
+      users_by_backP = User.all.order(backP: :desc).first(10)
+      render json: users_by_backP
+    end
+
+    def leadersA
+      users_by_aggS = User.all.order(agg_success: :desc).first(10)
+      render json: users_by_aggS
     end
     
     def create

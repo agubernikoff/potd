@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get "/me", to: 'users#show_me'
   resources :users
+  get '/leadersW',to:'users#leadersW'
+  get '/leadersB',to:'users#leadersB'
+  get '/leadersA',to:'users#leadersA'
   resources :posts
   patch '/grade',to:'posts#grade'
   resources :tails, only:[:index, :create, :destroy]

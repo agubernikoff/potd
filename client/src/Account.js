@@ -328,7 +328,7 @@ function Account({
             {`${accountHolder.w} - ${accountHolder.l}`} (
             {Math.round((accountHolder.winP + Number.EPSILON) * 100)}%)
           </p>
-          <p className={displayOnly ? "backP" : null}>
+          <p className="backP">
             <strong>TAIL/FADE SUCCESS: </strong>
             {`${successfulFades + successfulTails} - ${
               totalTails + totalFades - (successfulFades + successfulTails)

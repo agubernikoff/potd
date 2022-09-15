@@ -1,6 +1,7 @@
 class FadesController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid,with: :render_unprocessable_entity
   rescue_from ActiveRecord::RecordNotFound,with: :render_not_found
+  rescue_from ActiveRecord::RecordNotDestroyed,with: :not_destroyed
   before_action :set_fade, only: [:show, :update, :destroy]
   # GET /fades
   def index
@@ -29,7 +30,7 @@ class FadesController < ApplicationController
 
   # DELETE /fades/1
   def destroy
-    @fade.destroy
+    @fade.destroy!
     post=Post.find(@fade.post_id)
     post.save
     render json: post, status: 200
@@ -52,5 +53,9 @@ class FadesController < ApplicationController
     
     def render_not_found
       render json: {error: "fade not found"}, status: 404
+    end
+
+    def not_destroyed 
+      render json:{error: "You cannot remove a fade of a post whose game has already started"}, status: 403
     end
 end

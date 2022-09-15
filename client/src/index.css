@@ -2,7 +2,8 @@ body,
 textarea {
   font-family: "Arial", Helvetica, Arial;
   /* color: white; */
-  background-color: rgb(211, 211, 243);
+  background-color: rgb(13, 42, 80);
+  color: white;
 }
 :root {
   --h1font: 2em;
@@ -25,13 +26,13 @@ textarea {
 }
 
 button {
-  background-color: white;
-  color: black;
+  color: rgb(13, 42, 80);
+  background: white;
   cursor: pointer;
   font-size: var(--font);
   -webkit-appearance: none;
   border-style: outset;
-  border-color: buttonborder;
+  border-color: rgb(13, 42, 80);
 }
 p,
 span,
@@ -77,7 +78,7 @@ h3 {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: var(--font);
 }
 a:hover {
@@ -85,7 +86,7 @@ a:hover {
 }
 a:visited {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .feed {
@@ -102,10 +103,10 @@ a:visited {
   display: block;
   margin: 1em auto;
   width: 66%;
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 0.5em;
   text-align: center;
-  background: white;
+  background: rgb(43, 81, 131);
 }
 .userInfoContainer {
   text-align: left;
@@ -163,7 +164,8 @@ a:visited {
   display: flex;
   flex-direction: row;
   border-radius: 20px;
-  border: 1px solid black;
+  border: 1px solid white;
+  background: rgb(43, 81, 131);
   padding: 1em;
 }
 .teams {
@@ -208,7 +210,7 @@ a:visited {
   top: 0;
   display: flex;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(13, 42, 80, 0.9);
   width: 66%;
   height: 100vh;
 }
@@ -217,8 +219,8 @@ a:visited {
   flex-direction: column;
   width: fit-content;
   margin: auto;
-  background: white;
-  border: 2px solid black;
+  background: rgb(43, 81, 131);
+  border: 2px solid white;
   padding: 2em;
   position: relative;
 }
@@ -255,6 +257,24 @@ a:visited {
 }
 .backP {
   margin-bottom: var(--pAdjust);
+}
+
+.leaderboard {
+  width: 50%;
+  margin: auto;
+}
+.leaderboardSelect {
+  margin-left: 41.5%;
+  text-align: center;
+}
+.leadersHeaders {
+  width: 60%;
+  margin: auto;
+  margin-left: 24%;
+}
+.listItem {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer {

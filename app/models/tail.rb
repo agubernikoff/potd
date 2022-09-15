@@ -9,6 +9,8 @@ class Tail < ApplicationRecord
   validate :post_is_graded
   validate :game_started
 
+  before_destroy :game_started_destroy
+
   def already_faded
     if self.post.fades.find_by(user_id: self.user_id)
       errors.add(:base,"You cannot tail a post you have already faded.")
@@ -30,6 +32,12 @@ class Tail < ApplicationRecord
   def game_started
     if self.post.start < DateTime.now
       errors.add(:base,"You cannot tail or fade a post whose game has already started.")
+    end
+  end
+
+  def game_started_destroy
+    if post.start < DateTime.now
+      throw :abort
     end
   end
 end

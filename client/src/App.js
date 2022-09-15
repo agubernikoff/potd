@@ -6,6 +6,7 @@ import Feed from "./Feed";
 import Footer from "./Footer";
 import Account from "./Account";
 import MakeAPick from "./MakeAPick";
+import Leaderboard from "./Leaderboard";
 
 function App() {
   const [user, setUser] = useState("");
@@ -205,6 +206,7 @@ function App() {
               />
             }
           />
+          <Route exact path="/leaderboard" element={<Leaderboard />} />
         </Routes>
       </div>
       <Footer user={user} logout={logout} />
