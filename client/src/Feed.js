@@ -40,6 +40,7 @@ function Feed({
       updatePostCommentsOnDelete={updatePostCommentsOnDelete}
       deletePosts={deletePosts}
       updatePostsOnGrade={updatePostsOnGrade}
+      account={false}
       ref={createRef()}
     />
   ));

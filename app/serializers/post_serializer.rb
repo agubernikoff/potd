@@ -33,17 +33,16 @@ class PostSerializer < ActiveModel::Serializer
     index=object.user.posts.index(object)
     if index>0
       object.user.posts[index-1]
-    else {}
+    else nil
   end
   end
 
   def last_ten
+    o=object.user.posts.find{|p|p.id ==object.id}
     index=object.user.posts.index(object)
-    if index>0 && object.user.posts.length>10
-      object.user.posts.slice(index-11,index-1).map{|p| p.result}
-    elsif index>0 && object.user.posts.length<10
-      object.user.posts.slice(0,index-1).map{|p| p.result}
-    else {}
+    if index>0
+      object.user.posts[0..index-1].reverse.map{|p| p.result}
+    else []
   end
   end
 end

@@ -21,6 +21,7 @@ const Post = forwardRef(
       updatePostCommentsOnDelete,
       deletePosts,
       updatePostsOnGrade,
+      account,
     },
     ref
   ) => {
@@ -238,13 +239,9 @@ const Post = forwardRef(
         : { color: "red" }
       : {};
 
-    // console.log(post.user.posts[post.user.posts.length - 2]);
-    // console.log(post);
-    // const p = post.user.posts.find((p) => p.id === post.id);
-    // // console.log(p, post);
-    // const index = post.user.posts.indexOf(p);
-    // const lastPick = post.user.posts[index + 1];
-    const lastTen = post.last_ten.map((p) => (p.result === "w" ? "✅" : "❌"));
+    const lastTen = post.last_ten.map((result) =>
+      result === "w" ? "✅" : "❌"
+    );
 
     return (
       <div id={`post${post.id}`} className="post" ref={ref} style={borderColor}>
@@ -276,23 +273,27 @@ const Post = forwardRef(
               <strong>{post.user.username} </strong>
             </NavLink>
           </div>
-          <p style={{ textAlign: "left" }}>
-            <strong>Record: </strong>
-            {`${post.user.w} - ${post.user.l}`} (
-            {Math.round((post.user.winP + Number.EPSILON) * 100)}%)
-          </p>
-          <p style={{ textAlign: "left" }}>
-            <strong>Last Pick: </strong>
-            {post.last_pick
-              ? `${post.last_pick.pick} ${
-                  post.last_pick.odds
-                } (${post.last_pick.result.toUpperCase()})`
-              : "N/A"}
-          </p>
-          <p style={{ textAlign: "left" }}>
-            <strong>Last 10: </strong>
-            {post.last_pick ? lastTen : "N/A"}
-          </p>
+          {account ? null : (
+            <>
+              <p style={{ textAlign: "left" }}>
+                <strong>Record: </strong>
+                {`${post.user.w} - ${post.user.l}`} (
+                {Math.round((post.user.winP + Number.EPSILON) * 100)}%)
+              </p>
+              <p style={{ textAlign: "left" }}>
+                <strong>Last Pick: </strong>
+                {post.last_pick
+                  ? `${post.last_pick.pick} ${
+                      post.last_pick.odds
+                    } (${post.last_pick.result.toUpperCase()})`
+                  : "N/A"}
+              </p>
+              <p style={{ textAlign: "left" }}>
+                <strong>Last 10: </strong>
+                {post.last_pick ? lastTen : "N/A"}
+              </p>
+            </>
+          )}
         </div>
         <h1 style={color}>
           {post.pick} {post.odds}

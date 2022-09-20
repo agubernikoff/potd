@@ -195,6 +195,7 @@ function Account({
             updatePostCommentsOnDelete={updateAccountHolderOnDeleteComment}
             deletePosts={deletePosts}
             updatePostsOnGrade={updatePostsOnGrade}
+            account={true}
             ref={createRef()}
           />
         ))
