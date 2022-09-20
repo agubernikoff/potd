@@ -63,7 +63,7 @@ h3 {
 }
 .profilePicture {
   width: 3em;
-  border-radius: 30px;
+  clip-path: circle();
 }
 .round {
   border-radius: 100px;
@@ -234,7 +234,7 @@ a:visited {
 }
 .acct_profilePicture {
   width: var(--acctProPic);
-  border-radius: 100px;
+  clip-path: circle();
   display: inline-block;
 }
 .acctUsername {
