@@ -226,8 +226,30 @@ const Post = forwardRef(
     const prev = "<";
     const next = ">";
 
+    const borderColor = post.result
+      ? post.result === "w"
+        ? { borderColor: "green" }
+        : { borderColor: "red" }
+      : {};
+
+    const color = post.result
+      ? post.result === "w"
+        ? { color: "green" }
+        : { color: "red" }
+      : {};
+
+    // console.log(post.user.posts[post.user.posts.length - 2]);
+
+    const p = post.user.posts.find((p) => p.id === post.id);
+    console.log(p, post);
+    const index = post.user.posts.indexOf(p);
+    const lastPick = post.user.posts[index + 1];
+    const lastTen = [...post.user.posts.slice(index + 1, index + 11)].map((p) =>
+      p.result === "w" ? "✅" : "❌"
+    );
+
     return (
-      <div id={`post${post.id}`} className="post" ref={ref}>
+      <div id={`post${post.id}`} className="post" ref={ref} style={borderColor}>
         <div>
           <span
             style={{
@@ -253,11 +275,28 @@ const Post = forwardRef(
               className="profilePicture"
             />
             <NavLink to={`/u/${post.user.id}`}>
-              <strong>{post.user.username}</strong>
+              <strong>{post.user.username} </strong>
             </NavLink>
           </div>
+          <p style={{ textAlign: "left" }}>
+            <strong>Record: </strong>
+            {`${post.user.w} - ${post.user.l}`} (
+            {Math.round((post.user.winP + Number.EPSILON) * 100)}%)
+          </p>
+          <p style={{ textAlign: "left" }}>
+            <strong>Last Pick: </strong>
+            {lastPick
+              ? `${lastPick.pick} ${
+                  lastPick.odds
+                } (${lastPick.result.toUpperCase()})`
+              : "N/A"}
+          </p>
+          <p style={{ textAlign: "left" }}>
+            <strong>Last 10: </strong>
+            {lastPick ? lastTen : "N/A"}
+          </p>
         </div>
-        <h1>
+        <h1 style={color}>
           {post.pick} {post.odds}
         </h1>
         <p>
