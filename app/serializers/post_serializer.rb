@@ -1,7 +1,7 @@
 class PostSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
-  attributes :id,:pick,:odds,:caption,:status,:result,:start,:confidence,:created_at,:files,:comments,:tails,:fades
+  attributes :id,:pick,:odds,:caption,:status,:result,:start,:confidence,:created_at,:files,:comments,:tails,:fades,:last_pick,:last_ten
   belongs_to :user
 
   def files
@@ -27,5 +27,23 @@ class PostSerializer < ActiveModel::Serializer
 
   def fades
     ActiveModelSerializers::SerializableResource.new(object.fades,each_serializer: FadeSerializer)
+  end
+
+  def last_pick
+    index=object.user.posts.index(object)
+    if index>0
+      object.user.posts[index-1]
+    else {}
+  end
+  end
+
+  def last_ten
+    index=object.user.posts.index(object)
+    if index>0 && object.user.posts.length>10
+      object.user.posts.slice(index-11,index-1).map{|p| p.result}
+    elsif index>0 && object.user.posts.length<10
+      object.user.posts.slice(0,index-1).map{|p| p.result}
+    else {}
+  end
   end
 end

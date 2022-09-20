@@ -239,14 +239,12 @@ const Post = forwardRef(
       : {};
 
     // console.log(post.user.posts[post.user.posts.length - 2]);
-
-    const p = post.user.posts.find((p) => p.id === post.id);
-    console.log(p, post);
-    const index = post.user.posts.indexOf(p);
-    const lastPick = post.user.posts[index + 1];
-    const lastTen = [...post.user.posts.slice(index + 1, index + 11)].map((p) =>
-      p.result === "w" ? "✅" : "❌"
-    );
+    // console.log(post);
+    // const p = post.user.posts.find((p) => p.id === post.id);
+    // // console.log(p, post);
+    // const index = post.user.posts.indexOf(p);
+    // const lastPick = post.user.posts[index + 1];
+    const lastTen = post.last_ten.map((p) => (p.result === "w" ? "✅" : "❌"));
 
     return (
       <div id={`post${post.id}`} className="post" ref={ref} style={borderColor}>
@@ -285,15 +283,15 @@ const Post = forwardRef(
           </p>
           <p style={{ textAlign: "left" }}>
             <strong>Last Pick: </strong>
-            {lastPick
-              ? `${lastPick.pick} ${
-                  lastPick.odds
-                } (${lastPick.result.toUpperCase()})`
+            {post.last_pick
+              ? `${post.last_pick.pick} ${
+                  post.last_pick.odds
+                } (${post.last_pick.result.toUpperCase()})`
               : "N/A"}
           </p>
           <p style={{ textAlign: "left" }}>
             <strong>Last 10: </strong>
-            {lastPick ? lastTen : "N/A"}
+            {post.last_pick ? lastTen : "N/A"}
           </p>
         </div>
         <h1 style={color}>
