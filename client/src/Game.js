@@ -9,7 +9,16 @@ function Game({ game, setPickAndOddsAndStart }) {
         <p className="team">{game.teams.home.team}</p>
       </div>
       <div className="gameTime">
-        <p>{new Date(game.schedule.start).toLocaleString()}</p>
+        <p>
+          {new Date(game.schedule.start).toLocaleString("en-US", {
+            weekday: "long",
+            year: "2-digit",
+            month: "numeric",
+            day: "2-digit",
+            hour: "numeric",
+            minute: "2-digit",
+          })}
+        </p>
       </div>
       <div className="lines-container">
         <div className="lines">
