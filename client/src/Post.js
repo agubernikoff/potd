@@ -2,6 +2,11 @@ import React, { useState, useRef, forwardRef } from "react";
 import { NavLink } from "react-router-dom";
 import heartIcon from "./assets/heartIcon.png";
 import emptyHeartIcon from "./assets/emptyHeartIcon.png";
+import thumbsUp from "./assets/thumbsUp.png";
+import thumbsUpGrey from "./assets/thumbsUpGrey.png";
+import thumbsDown from "./assets/thumbsDown.png";
+import thumbsDownGrey from "./assets/thumbsDownGrey.png";
+
 import Carousel from "react-elastic-carousel";
 
 const Post = forwardRef(
@@ -85,7 +90,7 @@ const Post = forwardRef(
     }
 
     function handleTailClick(e) {
-      if (e.target.src.includes("empty")) {
+      if (e.target.src.includes("Grey")) {
         onTail();
       } else {
         onUntail();
@@ -124,7 +129,7 @@ const Post = forwardRef(
     }
 
     function handleFadeClick(e) {
-      if (e.target.src.includes("empty")) {
+      if (e.target.src.includes("Grey")) {
         onFade();
       } else {
         onUnfade();
@@ -337,7 +342,7 @@ const Post = forwardRef(
         <div className="reactions-container">
           <div className="reaction">
             <img
-              src={user && userTailsThisPost[0] ? heartIcon : emptyHeartIcon}
+              src={user && userTailsThisPost[0] ? thumbsUp : thumbsUpGrey}
               alt={"like button"}
               className="reaction-icon"
               onClick={handleTailClick}
@@ -346,7 +351,7 @@ const Post = forwardRef(
           </div>
           <div className="reaction">
             <img
-              src={user && userFadesThisPost[0] ? heartIcon : emptyHeartIcon}
+              src={user && userFadesThisPost[0] ? thumbsDown : thumbsDownGrey}
               alt={"like button"}
               className="reaction-icon"
               onClick={handleFadeClick}
