@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+// import Leaderboard from "./Leaderboard";
 
 function Footer({ user, logout }) {
   function handleLogout() {
@@ -31,6 +32,7 @@ function Footer({ user, logout }) {
           <h3>LOGIN</h3>
         </NavLink>
       )}
+      {/* <Leaderboard /> */}
     </div>
   );
 }

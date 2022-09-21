@@ -40,7 +40,7 @@ function Leaderboard() {
       <td>
         {u.w} - {u.l}
       </td>
-      <td>({Math.round((u.winP + Number.EPSILON) * 100)}%)</td>
+      <td>{Math.round((u.winP + Number.EPSILON) * 100)}%</td>
     </tr>
   ));
 
@@ -75,7 +75,7 @@ function Leaderboard() {
           {successfulFades + successfulTails} -{" "}
           {totalTails + totalFades - (successfulFades + successfulTails)}
         </td>
-        <td>({Math.round((u.backP + Number.EPSILON) * 100)}%)</td>
+        <td>{Math.round((u.backP + Number.EPSILON) * 100)}%</td>
       </tr>
     );
   });

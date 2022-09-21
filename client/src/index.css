@@ -266,6 +266,7 @@ table {
   width: 90%;
   margin: 1em auto;
   border-collapse: collapse;
+  border: 5px ridge goldenrod;
 
   /* border-spacing: 1em; */
   /* padding-bottom: 3em; */
@@ -285,11 +286,17 @@ table tr td:first-child::before {
 }
 tr {
   text-align: center;
-  background: black;
-  border-bottom: 10px solid rgb(13, 42, 80);
+  /* border-bottom: 10px solid rgb(13, 42, 80); */
+  /* border-right: 5px groove white;
+  border-left: 5px groove white; */
 }
-tr:last-child {
-  width: 30%;
+
+tr:nth-child(even) {
+  background: rgb(43, 81, 131);
+}
+thead tr {
+  background: rgb(43, 81, 131);
+  /* border-bottom: 5px groove white; */
 }
 .leaderboardSelect {
   margin-left: 41.5%;
