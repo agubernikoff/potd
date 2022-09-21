@@ -266,7 +266,7 @@ table {
   width: 90%;
   margin: 1em auto;
   border-collapse: collapse;
-  border: 5px ridge goldenrod;
+  border: 5px ridge white;
 
   /* border-spacing: 1em; */
   /* padding-bottom: 3em; */
@@ -298,9 +298,12 @@ thead tr {
   background: rgb(43, 81, 131);
   /* border-bottom: 5px groove white; */
 }
+/* tr:hover {
+  outline: 1px solid white;
+} */
 .leaderboardSelect {
-  margin-left: 41.5%;
-  text-align: center;
+  margin: auto;
+  width: fit-content;
 }
 
 .footer {

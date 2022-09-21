@@ -82,14 +82,13 @@ function Leaderboard() {
   return (
     <div className="feed">
       <h1 style={{ textAlign: "center" }}>LEADERBOARD</h1>
-      <select
-        className="leaderboardSelect"
-        onChange={(e) => setSortBy(e.target.value)}
-      >
-        <option>WIN PERCENTAGE</option>
-        <option>FADE/TAIL SUCCESS</option>
-        {/* <option>AGGREGATE SUCCESS</option> */}
-      </select>
+      <div className="leaderboardSelect">
+        <select onChange={(e) => setSortBy(e.target.value)}>
+          <option>WIN PERCENTAGE</option>
+          <option>FADE/TAIL SUCCESS</option>
+          {/* <option>AGGREGATE SUCCESS</option> */}
+        </select>
+      </div>
       <table>
         <thead>
           <tr>
