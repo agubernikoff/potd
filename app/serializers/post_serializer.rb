@@ -34,11 +34,6 @@ class PostSerializer < ActiveModel::Serializer
   end
 
   def last_ten
-    o=object.user.posts.find{|p|p.id ==object.id}
-    index=object.user.posts.index(object)
-    if index>0
-      object.user.posts[0..index-1].reverse.map{|p| p.result}
-    else []
-  end
+    object.user.posts.filter{|p|p.status =='graded'}.last(10).reverse
   end
 end

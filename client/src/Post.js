@@ -244,8 +244,8 @@ const Post = forwardRef(
         : { color: "red" }
       : {};
 
-    const lastTen = post.last_ten.map((result) =>
-      result === "w" ? "✅" : "❌"
+    const lastTen = post.last_ten.map((post) =>
+      post.result === "w" ? "✅" : "❌"
     );
     console.log(post.last_ten);
     return (
