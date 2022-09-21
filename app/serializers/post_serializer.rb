@@ -30,11 +30,7 @@ class PostSerializer < ActiveModel::Serializer
   end
 
   def last_pick
-    index=object.user.posts.index(object)
-    if index>0
-      object.user.posts[index-1]
-    else nil
-  end
+    object.user.posts.filter{|p|p.status =='graded'}.last
   end
 
   def last_ten
