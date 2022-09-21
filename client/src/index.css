@@ -274,7 +274,7 @@ th,
 td {
   padding: 0.5em 0.3em;
 }
-table tr:nth-child(2) {
+table tr:nth-child(1) {
   counter-reset: rowNumber;
 }
 table tr {
