@@ -247,7 +247,7 @@ const Post = forwardRef(
     const lastTen = post.last_ten.map((result) =>
       result === "w" ? "✅" : "❌"
     );
-
+    console.log(post.last_pick);
     return (
       <div id={`post${post.id}`} className="post" ref={ref} style={borderColor}>
         <div>
