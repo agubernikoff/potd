@@ -23,8 +23,9 @@ function Leaderboard() {
   console.log(usersByWinP, usersByBackP, usersByAggS);
 
   const mappedWinP = usersByWinP.map((u) => (
-    <li key={u.id}>
-      <div className="listItem">
+    <tr key={u.id}>
+      <td>.</td>
+      <td className="listItem">
         <NavLink to={`/u/${u.id}`}>
           <div className="userInfoContainer">
             <img
@@ -35,12 +36,12 @@ function Leaderboard() {
             <p>{u.username}</p>
           </div>
         </NavLink>
-        <p>
-          {u.w} - {u.l}
-        </p>
-        <p>({Math.round((u.winP + Number.EPSILON) * 100)}%)</p>
-      </div>
-    </li>
+      </td>
+      <td>
+        {u.w} - {u.l}
+      </td>
+      <td>({Math.round((u.winP + Number.EPSILON) * 100)}%)</td>
+    </tr>
   ));
 
   const mappedBackP = usersByBackP.map((u) => {
@@ -56,8 +57,9 @@ function Leaderboard() {
 
     const totalTails = u ? u.tails.filter((t) => t.post_result).length : null;
     return (
-      <li key={u.id}>
-        <div className="listItem">
+      <tr key={u.id}>
+        <td>.</td>
+        <td className="listItem">
           <NavLink to={`/u/${u.id}`}>
             <div className="userInfoContainer">
               <img
@@ -68,13 +70,13 @@ function Leaderboard() {
               <p>{u.username}</p>
             </div>
           </NavLink>
-          <p>
-            {successfulFades + successfulTails} -{" "}
-            {totalTails + totalFades - (successfulFades + successfulTails)}
-          </p>
-          <p>({Math.round((u.backP + Number.EPSILON) * 100)}%)</p>
-        </div>
-      </li>
+        </td>
+        <td>
+          {successfulFades + successfulTails} -{" "}
+          {totalTails + totalFades - (successfulFades + successfulTails)}
+        </td>
+        <td>({Math.round((u.backP + Number.EPSILON) * 100)}%)</td>
+      </tr>
     );
   });
   return (
@@ -86,23 +88,22 @@ function Leaderboard() {
       >
         <option>WIN PERCENTAGE</option>
         <option>FADE/TAIL SUCCESS</option>
-        <option>AGGREGATE SUCCESS</option>
+        {/* <option>AGGREGATE SUCCESS</option> */}
       </select>
-      <div className="leadersHeaders">
-        <div className="listItem">
-          <h3>USERS</h3>
-          <h3>RECORD</h3>
-          <h3>{sortBy}</h3>
-        </div>
-      </div>
-      {usersByWinP[0] ? (
-        <ol className="leaderboard">
+      <table>
+        <thead>
+          <tr>
+            <th style={{ width: "1%" }}></th>
+            <th>USERS</th>
+            <th>RECORD</th>
+            <th style={{ width: "30%" }}>{sortBy}</th>
+          </tr>
+        </thead>
+        <tbody>
           {sortBy === "WIN PERCENTAGE" ? mappedWinP : null}
           {sortBy === "FADE/TAIL SUCCESS" ? mappedBackP : null}
-        </ol>
-      ) : (
-        <Loading />
-      )}
+        </tbody>
+      </table>
     </div>
   );
 }
