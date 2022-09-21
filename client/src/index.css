@@ -350,7 +350,7 @@ thead tr {
     width: 100vw;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: rgb(13, 42, 80);
     border-top: 1px solid gray;
     padding: 0.5em;
     z-index: 3;
