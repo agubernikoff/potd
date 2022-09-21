@@ -75,7 +75,7 @@ function Header({ user, logout }) {
           </div>
         )}
       </NavLink>
-      {/* <br />
+      <br />
       <br />
       <NavLink to={"/leaderboard"} style={activeStyle} className="makeapick">
         {matches ? (
@@ -86,7 +86,7 @@ function Header({ user, logout }) {
             LEADERBOARD
           </div>
         )}
-      </NavLink> */}
+      </NavLink>
     </div>
   );
 }
