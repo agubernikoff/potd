@@ -43,8 +43,8 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+5.0",
-            home: "-5.0",
+            away: "+3.5",
+            home: "-3.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
@@ -52,7 +52,7 @@ function NFLGames() {
       },
       moneyline: { current: { awayOdds: "+180", homeOdds: "-220" } },
       total: {
-        current: { total: "38.0", overOdds: "-115", underOdds: "-105" },
+        current: { total: "37.5", overOdds: "-115", underOdds: "-105" },
       },
     },
     {
