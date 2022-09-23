@@ -15,7 +15,7 @@ import Carousel from "react-elastic-carousel";
 
 const Post = forwardRef(({ post, account }, ref) => {
   const user = useSelector((state) => state.user.user);
-  console.log(user);
+  console.log(user, post);
 
   const dispatch = useDispatch();
 
