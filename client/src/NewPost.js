@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { postsActions } from "./store/posts-slice";
 import Loading from "./Loading";
 
-function NewPost({ user, updatePosts, pick, odds, start, clearSelections }) {
+function NewPost({ pick, odds, start, clearSelections }) {
+  const user = useSelector((state) => state.user.user);
+
+  const dispatch = useDispatch();
+
   const [files, setFiles] = useState([]);
   const [caption, setCaption] = useState([]);
   const [errors, setErrors] = useState([]);
@@ -34,7 +40,7 @@ function NewPost({ user, updatePosts, pick, odds, start, clearSelections }) {
         if (r.ok) {
           r.json().then((data) => {
             setIsLoading(false);
-            updatePosts(data);
+            dispatch(postsActions.updatePosts(data));
             navigate("/");
           });
         } else {

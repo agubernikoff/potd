@@ -3,8 +3,10 @@ import { NavLink } from "react-router-dom";
 import home from "./assets/home.png";
 import pick from "./assets/pick.png";
 import leaderboard from "./assets/leaderboard.png";
+import { useSelector } from "react-redux";
 
-function Header({ user, logout }) {
+function Header() {
+  const user = useSelector((state) => state.user.user);
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {

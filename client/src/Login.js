@@ -3,7 +3,7 @@ import SignUpForm from "./SignupForm";
 import { useState } from "react";
 // import Loading from "./Loading";
 
-function Login({ onLogin }) {
+function Login() {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
@@ -18,7 +18,7 @@ function Login({ onLogin }) {
             Please log in!
           </h1>
           <br />
-          <LoginForm onLogin={onLogin} />
+          <LoginForm />
           <br />
           <div
             style={{ display: "block", margin: "auto", width: "fit-content" }}
@@ -41,7 +41,7 @@ function Login({ onLogin }) {
             Please sign up!
           </h1>
           <br />
-          <SignUpForm onLogin={onLogin} />
+          <SignUpForm />
           <br />
           <div
             style={{ display: "block", margin: "auto", width: "fit-content" }}

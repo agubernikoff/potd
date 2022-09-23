@@ -1,48 +1,17 @@
-import React, { useState, createRef } from "react";
+import React, { createRef } from "react";
+import { useSelector } from "react-redux";
 import Post from "./Post";
 import AnimateBubbles from "./AnimateBubbles";
 
-function Feed({
-  posts,
-  loadMorePosts,
-  user,
-  updateUserTailsOnTail,
-  updateUserTailsOnUntail,
-  updatePostOnTail,
-  updatePostUntail,
-  updatePostCommentsOnComment,
-  updatePostCommentsOnDelete,
-  updateUserFadesOnFade,
-  updateUserFadesOnUnfade,
-  updatePostFade,
-  updatePostFadesOnUnfade,
-  deletePosts,
-  updatePostsOnGrade,
-}) {
-  const [message, setMessage] = useState("");
+function Feed() {
+  const posts = useSelector((state) => state.posts.posts);
+
+  // const [message, setMessage] = useState("");
 
   const sortedPosts = posts.sort((a, b) => b.confidence - a.confidence);
 
   const postCards = sortedPosts.map((post) => (
-    <Post
-      post={post}
-      key={post.id}
-      user={user}
-      updateUserTailsOnTail={updateUserTailsOnTail}
-      updateUserTailsOnUntail={updateUserTailsOnUntail}
-      updateUserFadesOnFade={updateUserFadesOnFade}
-      updateUserFadesOnUnfade={updateUserFadesOnUnfade}
-      updatePostUntail={updatePostUntail}
-      updatePostOnTail={updatePostOnTail}
-      updatePostFade={updatePostFade}
-      updatePostFadesOnUnfade={updatePostFadesOnUnfade}
-      updatePostCommentsOnComment={updatePostCommentsOnComment}
-      updatePostCommentsOnDelete={updatePostCommentsOnDelete}
-      deletePosts={deletePosts}
-      updatePostsOnGrade={updatePostsOnGrade}
-      account={false}
-      ref={createRef()}
-    />
+    <Post post={post} key={post.id} account={false} ref={createRef()} />
   ));
 
   return (

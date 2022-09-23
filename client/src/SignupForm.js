@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { userActions } from "./store/user-slice";
 import profile from "./assets/profile.jpeg";
 import Loading from "./Loading";
 
-function SignUpForm({ onLogin }) {
+function SignUpForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [profile_picture, setProfilePicture] = useState(null);
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   async function fetchAsFile(path) {
     const response = await fetch(path);
@@ -37,7 +42,7 @@ function SignUpForm({ onLogin }) {
       setIsLoading(false);
       if (r.ok) {
         r.json().then((user) => {
-          onLogin(user);
+          dispatch(userActions.setUser(user));
           navigate("/");
         });
       } else {

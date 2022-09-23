@@ -3,7 +3,7 @@ import NFLGames from "./NFLGames";
 import Game from "./Game";
 import NewPost from "./NewPost";
 
-function MakeAPick({ user, updatePosts }) {
+function MakeAPick() {
   const [pick, setPick] = useState(null);
   const [odds, setOdds] = useState(null);
   const [start, setStart] = useState(null);
@@ -36,9 +36,7 @@ function MakeAPick({ user, updatePosts }) {
           pick={pick}
           odds={odds}
           start={start}
-          user={user}
           clearSelections={clearSelections}
-          updatePosts={updatePosts}
         />
       ) : null}
       {games}

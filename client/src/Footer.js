@@ -1,12 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { userActions } from "./store/user-slice";
 // import Leaderboard from "./Leaderboard";
 
-function Footer({ user, logout }) {
+function Footer() {
+  const user = useSelector((state) => state.user.user);
+
+  const dispatch = useDispatch();
+
   function handleLogout() {
     fetch("/logout", {
       method: "DELETE",
-    }).then(() => logout());
+    }).then(() => dispatch(userActions.logOut()));
   }
 
   const activeStyle = ({ isActive }) =>
