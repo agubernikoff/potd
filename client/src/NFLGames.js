@@ -245,6 +245,27 @@ function NFLGames() {
       },
     },
     {
+      schedule: { start: "2022-09-25T20:05:00.000Z" },
+      teams: {
+        away: teams.jaguars,
+        home: teams.chargers,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+7.0",
+            home: "-7.0",
+            awayOdds: "-115",
+            homeOdds: "-105",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+225", homeOdds: "-310" } },
+      total: {
+        current: { total: "47.0", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
       schedule: { start: "2022-09-25T20:25:00.000Z" },
       teams: {
         away: teams.falcons,
