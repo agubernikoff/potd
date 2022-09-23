@@ -5,6 +5,7 @@ import AnimateBubbles from "./AnimateBubbles";
 
 function Feed() {
   const posts = useSelector((state) => state.posts.posts);
+  console.log(posts);
 
   // const [message, setMessage] = useState("");
 
