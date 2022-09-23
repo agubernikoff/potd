@@ -9,7 +9,7 @@ function Feed() {
 
   // const [message, setMessage] = useState("");
 
-  const sortedPosts = posts.sort((a, b) => b.confidence - a.confidence);
+  const sortedPosts = [...posts].sort((a, b) => b.confidence - a.confidence);
 
   const postCards = sortedPosts.map((post) => (
     <Post post={post} key={post.id} account={false} ref={createRef()} />
