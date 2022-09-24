@@ -240,7 +240,6 @@ const Post = forwardRef(({ post, account }, ref) => {
     }).then((r) => {
       if (r.ok) {
         r.json().then((data) => {
-          console.log(data);
           account
             ? dispatch(ahActions.updatePostsOnGrade(data))
             : dispatch(postsActions.updatePostsOnGrade(data));
