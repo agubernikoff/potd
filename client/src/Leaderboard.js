@@ -20,8 +20,6 @@ function Leaderboard() {
       .then((data) => setUsersByAggS(data));
   }, []);
 
-  console.log(usersByWinP, usersByBackP, usersByAggS);
-
   const mappedWinP = usersByWinP.map((u) => (
     <tr key={u.id}>
       <td>.</td>
