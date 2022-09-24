@@ -15,6 +15,7 @@ function NewPost({ pick, odds, start, clearSelections }) {
   const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
+  console.log(user);
 
   const formData = new FormData();
   formData.append("pick", pick);
