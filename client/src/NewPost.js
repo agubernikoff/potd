@@ -16,13 +16,12 @@ function NewPost({ pick, odds, start, clearSelections }) {
   const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
-  console.log(user);
 
   const formData = new FormData();
   formData.append("pick", pick);
   formData.append("odds", odds);
   formData.append("caption", caption);
-  formData.append("user_id", user.id);
+  if (user) formData.append("user_id", user.id);
   formData.append("start", start);
   for (let i = 0; i < files.length; i++) {
     formData.append("files[]", files[i]);
