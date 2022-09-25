@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Loading from "./Loading";
 
-function Leaderboard() {
+function Leaderboard({ inFooter }) {
   const [usersByWinP, setUsersByWinP] = useState([]);
   const [usersByBackP, setUsersByBackP] = useState([]);
   const [usersByAggS, setUsersByAggS] = useState([]);
-  const [sortBy, setSortBy] = useState("WIN PERCENTAGE");
+  const [sortBy, setSortBy] = useState(inFooter ? "WIN %" : "WIN PERCENTAGE");
 
   useEffect(() => {
     fetch("/leadersW")
@@ -30,6 +30,7 @@ function Leaderboard() {
               alt={u.username}
               src={u.profile_picture}
               className="profilePicture"
+              style={inFooter ? { fontSize: "4em" } : null}
             />
             <p>{u.username}</p>
           </div>
@@ -54,6 +55,7 @@ function Leaderboard() {
       : null;
 
     const totalTails = u ? u.tails.filter((t) => t.post_result).length : null;
+
     return (
       <tr key={u.id}>
         <td>.</td>
@@ -77,30 +79,48 @@ function Leaderboard() {
       </tr>
     );
   });
+
   return (
-    <div className="feed">
-      <h1 style={{ textAlign: "center" }}>LEADERBOARD</h1>
-      <div className="leaderboardSelect">
-        <select onChange={(e) => setSortBy(e.target.value)}>
-          <option>WIN PERCENTAGE</option>
-          <option>FADE/TAIL SUCCESS</option>
-          {/* <option>AGGREGATE SUCCESS</option> */}
-        </select>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th style={{ width: "1%" }}></th>
-            <th>USERS</th>
-            <th>RECORD</th>
-            <th style={{ width: "30%" }}>{sortBy}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {sortBy === "WIN PERCENTAGE" ? mappedWinP : null}
-          {sortBy === "FADE/TAIL SUCCESS" ? mappedBackP : null}
-        </tbody>
-      </table>
+    <div
+      className={inFooter ? null : "feed"}
+      style={
+        inFooter ? { width: "100%", fontSize: ".1em", marginTop: "36%" } : null
+      }
+    >
+      {inFooter ? null : (
+        <>
+          <h1 style={{ textAlign: "center" }}>LEADERBOARD</h1>
+          <div className="leaderboardSelect">
+            <select onChange={(e) => setSortBy(e.target.value)}>
+              <option>WIN PERCENTAGE</option>
+              <option>FADE/TAIL SUCCESS</option>
+              {/* <option>AGGREGATE SUCCESS</option> */}
+            </select>
+          </div>
+        </>
+      )}
+      {usersByWinP[0] ? (
+        <table>
+          <thead>
+            <tr>
+              <th style={{ width: "1%" }}></th>
+              <th>USERS</th>
+              <th>RECORD</th>
+              <th style={{ width: "30%" }}>{sortBy}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortBy === "WIN PERCENTAGE" || "WIN %" ? mappedWinP : null}
+            {sortBy === "FADE/TAIL SUCCESS" ? mappedBackP : null}
+          </tbody>
+        </table>
+      ) : (
+        <>
+          <br />
+          <br />
+          <Loading />
+        </>
+      )}
     </div>
   );
 }

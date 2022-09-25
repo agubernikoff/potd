@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { userActions } from "./store/user-slice";
-// import Leaderboard from "./Leaderboard";
+import Leaderboard from "./Leaderboard";
 
 function Footer() {
   const user = useSelector((state) => state.user.user);
 
   const dispatch = useDispatch();
+
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    window
+      .matchMedia("(max-width:1200px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+    if (window.matchMedia("(max-width:1200px)").matches) setMatches(true);
+  }, []);
+  console.log(matches);
 
   function handleLogout() {
     fetch("/logout", {
@@ -30,15 +40,16 @@ function Footer() {
           onClick={() => {
             handleLogout();
           }}
+          className="log"
         >
-          LOGOUT
+          LOG OUT
         </NavLink>
       ) : (
-        <NavLink to={`/login`} style={activeStyle}>
-          <h3>LOGIN</h3>
+        <NavLink to={`/login`} style={activeStyle} className="log">
+          LOG IN
         </NavLink>
       )}
-      {/* <Leaderboard /> */}
+      {matches ? null : <Leaderboard inFooter={true} />}
     </div>
   );
 }

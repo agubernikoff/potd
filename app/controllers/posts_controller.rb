@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     def index
       # session.delete :number
       # session[:number] ||=25
-      posts=Post.all.filter{|p| p.start.localtime.tomorrow.midnight > DateTime.now}
+      posts=Post.all.filter{|p| p.start.in_time_zone('Pacific Time (US & Canada)').tomorrow.midnight > DateTime.now.in_time_zone('Pacific Time (US & Canada)')}
       render json: posts
       # render json: posts.first(session[:number])
       
