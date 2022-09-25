@@ -401,7 +401,7 @@ thead tr {
     width: 70%;
   }
   .feed {
-    height: 80vh;
+    height: 82vh;
     width: 100%;
     border-left: none;
     border-right: none;
@@ -445,7 +445,7 @@ thead tr {
     font-size: 1.5vw;
   }
   .feed {
-    height: 70vh;
+    height: 72vh;
   }
   :root {
     --acctUserFontSize: 0.8em;
