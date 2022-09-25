@@ -42,7 +42,7 @@ function Leaderboard({ inFooter }) {
       <td>{Math.round((u.winP + Number.EPSILON) * 100)}%</td>
     </tr>
   ));
-
+  console.log(sortBy === "WIN PERCENTAGE");
   const mappedBackP = usersByBackP.map((u) => {
     const successfulFades = u
       ? u.fades.filter((f) => f.post_result === "l").length
@@ -110,7 +110,8 @@ function Leaderboard({ inFooter }) {
             </tr>
           </thead>
           <tbody>
-            {sortBy === "WIN PERCENTAGE" || "WIN %" ? mappedWinP : null}
+            {inFooter && sortBy === "WIN %" ? mappedWinP : null}
+            {sortBy === "WIN PERCENTAGE" ? mappedWinP : null}
             {sortBy === "FADE/TAIL SUCCESS" ? mappedBackP : null}
           </tbody>
         </table>

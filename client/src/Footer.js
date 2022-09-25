@@ -17,7 +17,6 @@ function Footer() {
       .addEventListener("change", (e) => setMatches(e.matches));
     if (window.matchMedia("(max-width:1200px)").matches) setMatches(true);
   }, []);
-  console.log(matches);
 
   function handleLogout() {
     fetch("/logout", {

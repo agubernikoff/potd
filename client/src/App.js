@@ -29,6 +29,7 @@ function App() {
       .then((r) => r.json())
       .then((data) => dispatch(postsActions.setPosts(data)));
   }, [dispatch]);
+
   return (
     <div className="App">
       <Header />
@@ -38,7 +39,11 @@ function App() {
           <Route exact path="/" element={<Feed />} />
           <Route exact path="/games" element={<MakeAPick />} />
           <Route exact path="/u/:id" element={<Account />} />
-          <Route exact path="/leaderboard" element={<Leaderboard />} />
+          <Route
+            exact
+            path="/leaderboard"
+            element={<Leaderboard inFooter={false} />}
+          />
         </Routes>
       </div>
       <Footer />
