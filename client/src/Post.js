@@ -49,7 +49,10 @@ const Post = forwardRef(({ post, account }, ref) => {
     fetch("/tails", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ post_id: post.id, user_id: user.id }),
+      body: JSON.stringify({
+        post_id: post.id,
+        user_id: user ? user.id : null,
+      }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((data) => {
@@ -102,7 +105,10 @@ const Post = forwardRef(({ post, account }, ref) => {
     fetch("/fades", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ post_id: post.id, user_id: user.id }),
+      body: JSON.stringify({
+        post_id: post.id,
+        user_id: user ? user.id : null,
+      }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((data) => {

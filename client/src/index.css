@@ -145,6 +145,7 @@ a:visited {
   align-items: center;
 }
 .reaction-icon {
+  cursor: pointer;
   width: 1.5em;
 }
 .delete-btn {
