@@ -12,17 +12,17 @@ class UsersController < ApplicationController
 
     def leadersW
       users_by_winP = User.all.order(winP: :desc).first(10)
-      render json: users_by_winP
+      render json: users_by_winP, each_serializer: LeaderSerializer
     end
 
     def leadersB
       users_by_backP = User.all.order(backP: :desc).first(10)
-      render json: users_by_backP
+      render json: users_by_backP, each_serializer: LeaderSerializer
     end
 
     def leadersA
       users_by_aggS = User.all.order(agg_success: :desc).first(10)
-      render json: users_by_aggS
+      render json: users_by_aggS, each_serializer: LeaderSerializer
     end
     
     def create

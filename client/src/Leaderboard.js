@@ -42,7 +42,7 @@ function Leaderboard({ inFooter }) {
       <td>{Math.round((u.winP + Number.EPSILON) * 100)}%</td>
     </tr>
   ));
-  console.log(sortBy === "WIN PERCENTAGE");
+
   const mappedBackP = usersByBackP.map((u) => {
     const successfulFades = u
       ? u.fades.filter((f) => f.post_result === "l").length
