@@ -6,10 +6,10 @@ class Tail < ApplicationRecord
   validates :user_id, presence: true
   validate :already_faded
   validate :not_yourself
-  # validate :post_is_graded
-  # validate :game_started
+  validate :post_is_graded
+  validate :game_started
 
-  # before_destroy :game_started_destroy
+  before_destroy :game_started_destroy
 
   before_save :set_post_result
 
@@ -25,23 +25,23 @@ class Tail < ApplicationRecord
     end
   end
 
-  # def post_is_graded
-  #   if self.post.status == 'graded'
-  #     errors.add(:base,"You cannot tail or fade posts that have already been graded.")
-  #   end
-  # end
+  def post_is_graded
+    if self.post.status == 'graded'
+      errors.add(:base,"You cannot tail or fade posts that have already been graded.")
+    end
+  end
 
-  # def game_started
-  #   if self.post.start < DateTime.now
-  #     errors.add(:base,"You cannot tail or fade a post whose game has already started.")
-  #   end
-  # end
+  def game_started
+    if self.post.start < DateTime.now
+      errors.add(:base,"You cannot tail or fade a post whose game has already started.")
+    end
+  end
 
-  # def game_started_destroy
-  #   if post.start < DateTime.now
-  #     throw :abort
-  #   end
-  # end
+  def game_started_destroy
+    if post.start < DateTime.now
+      throw :abort
+    end
+  end
 
   def set_post_result
     result = self.post.result
