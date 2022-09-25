@@ -30,6 +30,15 @@ function App() {
       .then((data) => dispatch(postsActions.setPosts(data)));
   }, [dispatch]);
 
+  useEffect(() => {
+    fetch("/tails")
+      .then((r) => r.json())
+      .then((data) => console.log(data));
+    fetch("/fades")
+      .then((r) => r.json())
+      .then((data) => console.log(data));
+  }, []);
+
   return (
     <div className="App">
       <Header />
