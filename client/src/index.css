@@ -72,7 +72,7 @@ h3 {
 .lock {
   font-size: 4em;
   width: fit-content;
-  margin: 0;
+  margin: auto;
   margin-bottom: 8%;
   transform: rotateY(0deg);
   animation: rotateY 2s infinite;
@@ -318,6 +318,8 @@ thead tr {
 }
 .log {
   float: right;
+  width: 100%;
+  text-align: center;
 }
 @media screen and (max-width: 1050px) {
   :root {
@@ -345,6 +347,7 @@ thead tr {
   }
   .lock {
     font-size: 3em;
+    margin: auto;
   }
   .header {
     position: fixed;
@@ -362,10 +365,10 @@ thead tr {
   .footer {
     top: -1em;
   }
-
-  .lock {
-    margin: auto;
+  .log {
+    text-align: right;
   }
+
   .home-icon-A {
     margin: auto;
   }
