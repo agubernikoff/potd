@@ -45,7 +45,7 @@ function Footer() {
         </NavLink>
       ) : (
         <NavLink to={`/login`} style={activeStyle} className="log">
-          LOG IN
+          LOG IN/SIGN UP
         </NavLink>
       )}
       {matches ? null : <Leaderboard inFooter={true} />}
