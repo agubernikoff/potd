@@ -17,7 +17,7 @@ function NotSignedIn({ clearSelections }) {
         x
       </button>
       <h1 style={{ textAlign: "center" }}>
-        Please log in/sign up to make a post
+        Please log in or sign up to make a post
       </h1>
       <button onClick={() => nav("/login")}>Sign in</button>
     </div>
