@@ -365,6 +365,7 @@ thead tr {
   }
   .footer {
     top: -1em;
+    width: fit-content;
   }
   .log {
     text-align: right;
