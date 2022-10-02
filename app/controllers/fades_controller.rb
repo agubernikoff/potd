@@ -6,6 +6,7 @@ class FadesController < ApplicationController
   # GET /fades
   def index
     @fades = Fade.all
+    @fades.find_each(&:save)
     render json: @fades
   end
 
