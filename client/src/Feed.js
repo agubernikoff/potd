@@ -9,12 +9,16 @@ function Feed() {
   // const [message, setMessage] = useState("");
 
   const winners = posts.filter((p) => p.status === "w");
+  console.log(winners);
 
   const losers = posts.filter((p) => p.status === "l");
+  console.log(losers);
 
-  const sortedPosts = [...posts].sort((a, b) => b.confidence - a.confidence);
+  const sortedPosts = posts.sort((a, b) => b.confidence - a.confidence);
+  console.log(sortedPosts);
 
   const filteredAndSorted = [...sortedPosts, ...winners, ...losers];
+  console.log(filteredAndSorted);
 
   const postCards = filteredAndSorted.map((post) => (
     <Post post={post} key={post.id} account={false} ref={createRef()} />
