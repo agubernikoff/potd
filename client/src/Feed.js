@@ -7,17 +7,15 @@ function Feed() {
   const posts = useSelector((state) => state.posts.posts);
 
   // const [message, setMessage] = useState("");
+  const postsCopy = [...posts];
 
-  const winners = posts.filter((p) => p.result === "w");
+  const winners = postsCopy.filter((p) => p.result === "w");
   console.log(winners);
 
-  const losers = posts.filter((p) => p.result === "l");
+  const losers = postsCopy.filter((p) => p.result === "l");
   console.log(losers);
 
-  const sortedPosts =
-    posts.length > 1
-      ? posts.sort((a, b) => b.confidence - a.confidence)
-      : posts;
+  const sortedPosts = postsCopy.sort((a, b) => b.confidence - a.confidence);
   console.log(sortedPosts);
 
   const filteredAndSorted = [...sortedPosts, ...winners, ...losers];
