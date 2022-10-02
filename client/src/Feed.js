@@ -8,9 +8,15 @@ function Feed() {
 
   // const [message, setMessage] = useState("");
 
+  const winners = posts.filter((p) => p.status === "w");
+
+  const losers = posts.filter((p) => p.status === "l");
+
   const sortedPosts = [...posts].sort((a, b) => b.confidence - a.confidence);
 
-  const postCards = sortedPosts.map((post) => (
+  const filteredAndSorted = [...sortedPosts, ...winners, ...losers];
+
+  const postCards = filteredAndSorted.map((post) => (
     <Post post={post} key={post.id} account={false} ref={createRef()} />
   ));
 
