@@ -8,10 +8,10 @@ function Feed() {
 
   // const [message, setMessage] = useState("");
 
-  const winners = posts.filter((p) => p.status === "w");
+  const winners = posts.filter((p) => p.result === "w");
   console.log(winners);
 
-  const losers = posts.filter((p) => p.status === "l");
+  const losers = posts.filter((p) => p.result === "l");
   console.log(losers);
 
   const sortedPosts = posts.sort((a, b) => b.confidence - a.confidence);
