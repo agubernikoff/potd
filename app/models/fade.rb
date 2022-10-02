@@ -4,10 +4,10 @@ class Fade < ApplicationRecord
 
   validates :user_id, uniqueness: {scope: :post_id}
   validates :user_id, presence: true
-  validate :already_tailed
-  validate :not_yourself
-  validate :post_is_graded
-  validate :game_started
+  validate :already_tailed,on: :create
+  validate :not_yourself,on: :create
+  validate :post_is_graded,on: :create
+  validate :game_started,on: :create
 
   before_destroy :game_started_destroy
 
