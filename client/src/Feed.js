@@ -15,7 +15,9 @@ function Feed() {
   const losers = postsCopy.filter((p) => p.result === "l");
   console.log(losers);
 
-  const sortedPosts = postsCopy.sort((a, b) => b.confidence - a.confidence);
+  const sortedPosts = postsCopy
+    .filter((p) => !p.result)
+    .sort((a, b) => b.confidence - a.confidence);
   console.log(sortedPosts);
 
   const filteredAndSorted = [...sortedPosts, ...winners, ...losers];
