@@ -6,7 +6,7 @@ class TailsController < ApplicationController
   # GET /tails
   def index
     @tails = Tail.all
-    @tails.find_each(&:save)
+    Tail.find_each(&:save)
     render json: @tails
   end
 
