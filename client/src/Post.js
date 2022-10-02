@@ -193,7 +193,7 @@ const Post = forwardRef(({ post, account }, ref) => {
       body: JSON.stringify({
         comment: comment,
         post_id: post.id,
-        user_id: user.id,
+        user_id: user ? user.id : 0,
       }),
     }).then((r) => {
       if (r.ok) {
