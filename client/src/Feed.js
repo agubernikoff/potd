@@ -10,18 +10,14 @@ function Feed() {
   const postsCopy = [...posts];
 
   const winners = postsCopy.filter((p) => p.result === "w");
-  console.log(winners);
 
   const losers = postsCopy.filter((p) => p.result === "l");
-  console.log(losers);
 
   const sortedPosts = postsCopy
     .filter((p) => !p.result)
     .sort((a, b) => b.confidence - a.confidence);
-  console.log(sortedPosts);
 
   const filteredAndSorted = [...sortedPosts, ...winners, ...losers];
-  console.log(filteredAndSorted);
 
   const postCards = filteredAndSorted.map((post) => (
     <Post post={post} key={post.id} account={false} ref={createRef()} />
@@ -29,7 +25,14 @@ function Feed() {
 
   return (
     <div className="feed">
-      {/* <h3 style={{ textAlign: "center" }}>FEED</h3> */}
+      {posts[0] ? null : (
+        <>
+          <h3 style={{ textAlign: "center" }}>No picks yet.</h3>
+          <h3 style={{ textAlign: "center" }}>
+            Make a pick, and tell us why it's a lock!
+          </h3>
+        </>
+      )}
       <AnimateBubbles>{postCards}</AnimateBubbles>
       {/* {message ? (
         <p>{message}</p>
