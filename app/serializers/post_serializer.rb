@@ -30,10 +30,10 @@ class PostSerializer < ActiveModel::Serializer
   end
 
   def last_pick
-    object.user.posts.filter{|p|p.status =='graded'}.last
+    object.user.posts.filter{|p|p.status =='graded'}.sort_by{|p|p.created_at}.reverse!.last
   end
 
   def last_ten
-    object.user.posts.filter{|p|p.status =='graded'}.last(10).reverse
+    object.user.posts.filter{|p|p.status =='graded'}.sort_by{|p|p.created_at}.reverse!.last(10)
   end
 end
