@@ -77,9 +77,9 @@ class Post < ApplicationRecord
   end
 
   def self.find_longest_odds
-    plus=Post.where("odds LIKE ?", "%" + "+" + "%")
+    plus=Post.where(result: 'w').where("odds LIKE ?", "%" + "+" + "%")
     plus_sorted=plus.sort_by{|p|p.odds.split('+')[1].to_i}.reverse!.first(10)
-    minus=Post.where("odds LIKE ?","%" + "-" + "%")
+    minus=Post.where(result: 'w').where("odds LIKE ?","%" + "-" + "%")
     minus_sorted=minus.sort_by{|p|p.odds.split('-')[1].to_i}.first(10)
     if plus.length >9
       return plus_sorted
