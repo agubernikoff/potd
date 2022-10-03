@@ -5,17 +5,16 @@ class PostSerializer < ActiveModel::Serializer
   belongs_to :user
 
   def files
-    return unless object.files[0]
+    return unless object.files?
 
     def file_url(file)
-      rails_representation_url(file,only_path:true) 
+      rails_blob_path(file,only_path:true) 
     end
 
-    # object.get_variants.map do |file|
-    #   file.blob.attributes.slice(:filename,:byte_size,:id).merge(url: file_url(file))
-    #   # rails_representation_url(file, only_path: true)
-    # end
-    object.files.map{|f|f.variant(resize_to_limit: [500, 300])}.map{|v|rails_representation_url(v,only_path:true)}
+    object.get_variants.map do |file|
+      file.blob.attributes.slice(:filename,:byte_size,:id).merge(url: file_url(file))
+    end
+    # object.files.map{|f|f.variant(resize_to_limit: [500, 300])}.map{|v|rails_representation_url(v,only_path:true)}
     
   end
 
