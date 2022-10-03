@@ -26,21 +26,17 @@ const Post = forwardRef(({ post, account }, ref) => {
       setErrors([]);
     }, 2000);
   }
+  console.log(post.files);
 
   const content = post.files
     ? post.files.map((f) =>
-        f.url.toLowerCase().includes(".mov") ? (
+        f.toLowerCase().includes(".mov") ? (
           <video key={f.url} controls style={{ width: "100%", height: "100%" }}>
             <source src={f.url} type="video/mp4" />
             Your browser does not support this
           </video>
         ) : (
-          <img
-            src={f.url}
-            alt={"content"}
-            key={f.url}
-            style={{ width: "100%" }}
-          />
+          <img src={f} alt={"content"} key={f} />
         )
       )
     : null;
