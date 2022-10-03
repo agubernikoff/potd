@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/leadersB',to:'users#leadersB'
   get '/leadersA',to:'users#leadersA'
   resources :posts
+  get '/longest_odds',to:'posts#longest_odds'
   patch '/grade',to:'posts#grade'
   resources :tails, only:[:index, :create, :destroy]
   resources :fades, only:[:index, :create, :destroy]

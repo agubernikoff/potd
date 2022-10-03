@@ -18,6 +18,11 @@ class PostsController < ApplicationController
       # end
     end
 
+    def longest_odds
+      posts=Post.find_longest_odds
+      render json: posts
+    end
+
     def show
       post = Post.find(params[:id])
       render json: post
