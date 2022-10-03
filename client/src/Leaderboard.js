@@ -5,7 +5,7 @@ import Loading from "./Loading";
 function Leaderboard({ inFooter }) {
   const [usersByWinP, setUsersByWinP] = useState([]);
   const [usersByBackP, setUsersByBackP] = useState([]);
-  const [usersByAggS, setUsersByAggS] = useState([]);
+  const [longestOdds, setLongestOdds] = useState([]);
   const [sortBy, setSortBy] = useState(inFooter ? "WIN %" : "WIN PERCENTAGE");
 
   useEffect(() => {
@@ -15,9 +15,12 @@ function Leaderboard({ inFooter }) {
     fetch("/leadersB")
       .then((r) => r.json())
       .then((data) => setUsersByBackP(data));
-    fetch("/leadersA")
+    // fetch("/leadersA")
+    //   .then((r) => r.json())
+    //   .then((data) => setUsersByAggS(data));
+    fetch("/longest_odds")
       .then((r) => r.json())
-      .then((data) => setUsersByAggS(data));
+      .then((data) => setLongestOdds(data));
   }, []);
 
   const mappedWinP = usersByWinP.map((u) => (
@@ -80,6 +83,28 @@ function Leaderboard({ inFooter }) {
     );
   });
 
+  console.log(longestOdds);
+  const mappedOdds = longestOdds.map((p) => (
+    <tr key={p.id}>
+      <td>.</td>
+      <td>
+        <NavLink to={`/u/${p.user.id}`}>
+          <div className="userInfoContainer">
+            <img
+              alt={p.user.username}
+              src={p.user.profile_picture}
+              className="profilePicture"
+            />
+            <p>{p.user.username}</p>
+          </div>
+        </NavLink>
+      </td>
+      <td>{p.pick}</td>
+      <td>{new Date(p.start).toLocaleDateString()}</td>
+      <td>{p.odds}</td>
+    </tr>
+  ));
+
   return (
     <div
       className={inFooter ? null : "feed"}
@@ -94,6 +119,7 @@ function Leaderboard({ inFooter }) {
             <select onChange={(e) => setSortBy(e.target.value)}>
               <option>WIN PERCENTAGE</option>
               <option>FADE/TAIL SUCCESS</option>
+              <option>LONGEST ODDS</option>
               {/* <option>AGGREGATE SUCCESS</option> */}
             </select>
           </div>
@@ -105,7 +131,14 @@ function Leaderboard({ inFooter }) {
             <tr>
               <th style={{ width: "1%" }}></th>
               <th>USERS</th>
-              <th>RECORD</th>
+              {sortBy === "LONGEST ODDS" ? (
+                <>
+                  <th>PICK</th>
+                  <th>DATE</th>
+                </>
+              ) : (
+                <th>RECORD</th>
+              )}
               <th style={{ width: "30%" }}>{sortBy}</th>
             </tr>
           </thead>
@@ -113,6 +146,7 @@ function Leaderboard({ inFooter }) {
             {inFooter && sortBy === "WIN %" ? mappedWinP : null}
             {sortBy === "WIN PERCENTAGE" ? mappedWinP : null}
             {sortBy === "FADE/TAIL SUCCESS" ? mappedBackP : null}
+            {sortBy === "LONGEST ODDS" ? mappedOdds : null}
           </tbody>
         </table>
       ) : (
