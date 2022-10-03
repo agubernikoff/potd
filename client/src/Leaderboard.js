@@ -47,18 +47,14 @@ function Leaderboard({ inFooter }) {
     const successfulFades = u
       ? u.fades.filter((f) => f.post_result === "l").length
       : null;
-    console.log(successfulFades);
 
     const totalFades = u ? u.fades.filter((f) => f.post_result).length : null;
-    console.log(totalFades);
 
     const successfulTails = u
       ? u.tails.filter((t) => t.post_result === "w").length
       : null;
-    console.log(successfulTails);
 
     const totalTails = u ? u.tails.filter((t) => t.post_result).length : null;
-    console.log(totalTails);
 
     return (
       <tr key={u.id}>
