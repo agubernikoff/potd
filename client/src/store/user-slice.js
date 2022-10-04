@@ -2,10 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
   name: "user",
-  initialState: { user: null },
+  initialState: { user: null, users: [], searchResults: [] },
   reducers: {
     setUser(state, action) {
       state.user = action.payload;
+    },
+    setUsers(state, action) {
+      state.users = action.payload;
     },
     logOut(state, action) {
       state.user = null;
@@ -33,6 +36,14 @@ const userSlice = createSlice({
       const filtered = state.user.fades.filter((uL) => uL.id !== unfadeID);
       const updatedUser = { ...state.user, fades: filtered };
       state.user = updatedUser;
+    },
+    setSearchResults(state, action) {
+      const searchText = action.payload;
+      const filtered = state.users.filter((u) =>
+        u.username.toUpperCase().includes(searchText.toUpperCase())
+      );
+      if (!searchText) state.searchResults = [];
+      else state.searchResults = filtered;
     },
   },
 });

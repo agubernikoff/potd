@@ -14,13 +14,7 @@ const postsSlice = createSlice({
     },
 
     updatePostsOnGrade(state, action) {
-      const post = [...state.posts].find((p) => p.id === action.payload.id);
       const filtered = state.posts.filter((p) => p.id !== action.payload.id);
-      const updated = {
-        ...post,
-        status: action.payload.status,
-        result: action.payload.result,
-      };
       const updatedPosts = [...filtered, action.payload];
       state.posts = updatedPosts;
     },

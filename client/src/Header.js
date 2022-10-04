@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import home from "./assets/home.png";
 import pick from "./assets/pick.png";
 import leaderboard from "./assets/leaderboard.png";
+import search from "./assets/search.png";
 import { useSelector } from "react-redux";
 
 function Header() {
@@ -86,6 +87,18 @@ function Header() {
           <div className="header_links">
             <img alt="home-icon" src={leaderboard} className="nav_icon" />
             LEADERBOARD
+          </div>
+        )}
+      </NavLink>
+      <br />
+      <br />
+      <NavLink to={"/search"} style={activeStyle} className="home-icon-A">
+        {matches ? (
+          <img alt="home-icon" src={search} className="home-icon" />
+        ) : (
+          <div className="header_links">
+            <img alt="home-icon" src={search} className="nav_icon" />
+            SEARCH
           </div>
         )}
       </NavLink>

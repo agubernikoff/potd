@@ -4,8 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { userActions } from "./store/user-slice";
 import { ahActions } from "./store/ah-slice";
 import { postsActions } from "./store/posts-slice";
-import heartIcon from "./assets/heartIcon.png";
-import emptyHeartIcon from "./assets/emptyHeartIcon.png";
 import thumbsUp from "./assets/thumbsUp.png";
 import thumbsUpGrey from "./assets/thumbsUpGrey.png";
 import thumbsDown from "./assets/thumbsDown.png";
@@ -26,7 +24,6 @@ const Post = forwardRef(({ post, account }, ref) => {
       setErrors([]);
     }, 2000);
   }
-  console.log(post.files);
 
   const content = post.files
     ? post.files.map((f) =>

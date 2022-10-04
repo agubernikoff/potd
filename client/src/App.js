@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import Header from "./Header";
@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Account from "./Account";
 import MakeAPick from "./MakeAPick";
 import Leaderboard from "./Leaderboard";
+import Search from "./Search";
 import { useDispatch } from "react-redux";
 import { userActions } from "./store/user-slice";
 import { postsActions } from "./store/posts-slice";
@@ -28,6 +29,9 @@ function App() {
     fetch("/posts")
       .then((r) => r.json())
       .then((data) => dispatch(postsActions.setPosts(data)));
+    fetch("/users")
+      .then((r) => r.json())
+      .then((data) => dispatch(userActions.setUsers(data)));
   }, [dispatch]);
 
   return (
@@ -44,6 +48,7 @@ function App() {
             path="/leaderboard"
             element={<Leaderboard inFooter={false} />}
           />
+          <Route exact path="/search" element={<Search />} />
         </Routes>
       </div>
       <Footer />

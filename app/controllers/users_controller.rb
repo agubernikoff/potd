@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     def index
       users = User.all
       # User.find_each(&:save)
-      render json: users
+      render json: users,each_serializer: UserSearchSerializer
     end
 
     def leadersW

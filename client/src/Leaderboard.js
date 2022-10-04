@@ -83,7 +83,6 @@ function Leaderboard({ inFooter }) {
     );
   });
 
-  console.log(longestOdds);
   const mappedOdds = longestOdds.map((p) => (
     <tr key={p.id}>
       <td>.</td>
