@@ -88,11 +88,4 @@ class Post < ApplicationRecord
     end
   end
 
-  def get_variants
-    return unless self.files.attached?
-      variants=self.files.map{|f|f.variant(resize:'100x100')}
-      return variants
-    # end
-  end
-
 end
