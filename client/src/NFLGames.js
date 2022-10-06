@@ -151,7 +151,7 @@ function NFLGames() {
             away: "+7.0",
             home: "-7.0",
             awayOdds: "-105",
-            homeOdds: "+115",
+            homeOdds: "-115",
           },
         },
       },

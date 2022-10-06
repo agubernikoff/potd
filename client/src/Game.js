@@ -5,14 +5,24 @@ function Game({ game, setPickAndOddsAndStart }) {
     <div className="game">
       <div className="teams">
         <div className="team">
-          <p className="team-name">{game.teams.away.team}</p>
+          <p className="team-name">
+            {game.teams.away.ranking
+              ? "#" + game.teams.away.ranking + " "
+              : null}
+            {game.teams.away.team}
+          </p>
           {game.teams.away.starter ? (
             <span className="team-starter">{game.teams.away.starter}</span>
           ) : null}
         </div>
         <p>@</p>
         <div className="team">
-          <p className="team-name">{game.teams.home.team}</p>
+          <p className="team-name">
+            {game.teams.home.ranking
+              ? "#" + game.teams.home.ranking + " "
+              : null}
+            {game.teams.home.team}
+          </p>
           {game.teams.home.starter ? (
             <span className="team-starter">{game.teams.home.starter}</span>
           ) : null}
