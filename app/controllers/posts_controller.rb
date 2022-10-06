@@ -8,6 +8,7 @@ class PostsController < ApplicationController
       # session.delete :number
       # session[:number] ||=25
       posts=Post.all.filter{|p| p.start.in_time_zone('Pacific Time (US & Canada)').tomorrow.midnight > DateTime.now.in_time_zone('Pacific Time (US & Canada)')}
+      Post.all.find_each(&:save)
       render json: posts
       # render json: posts.first(session[:number])
       

@@ -11,8 +11,6 @@ class Fade < ApplicationRecord
 
   before_destroy :game_started_destroy
 
-  before_save :set_post_result
-
   def already_tailed
     if self.post.tails.find_by(user_id: self.user_id)
       errors.add(:base,"You cannot fade a post you have already tailed")
@@ -41,10 +39,5 @@ class Fade < ApplicationRecord
     if post.start < DateTime.now
       throw :abort
     end
-  end
-
-  def set_post_result
-    result = self.post.result
-    self.write_attribute(:post_result,result)
   end
 end
