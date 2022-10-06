@@ -4,9 +4,19 @@ function Game({ game, setPickAndOddsAndStart }) {
   return (
     <div className="game">
       <div className="teams">
-        <p className="team">{game.teams.away.team}</p>
+        <div className="team">
+          <p className="team-name">{game.teams.away.team}</p>
+          {game.teams.away.starter ? (
+            <span className="team-starter">{game.teams.away.starter}</span>
+          ) : null}
+        </div>
         <p>@</p>
-        <p className="team">{game.teams.home.team}</p>
+        <div className="team">
+          <p className="team-name">{game.teams.home.team}</p>
+          {game.teams.home.starter ? (
+            <span className="team-starter">{game.teams.home.starter}</span>
+          ) : null}
+        </div>
       </div>
       <div className="gameTime">
         <p>
