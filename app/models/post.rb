@@ -21,6 +21,8 @@ class Post < ApplicationRecord
   validates :odds, presence: true
   validates :start, presence: true
 
+  validate :longer_than_250
+
   # validate :acceptable_files
 
   def acceptable_files
@@ -85,6 +87,12 @@ class Post < ApplicationRecord
       return plus_sorted
     else 
       return [*plus_sorted,*minus_sorted].first(10)
+    end
+  end
+
+  def longer_than_250
+    if self.odds.split('-')[1].to_i>250
+      errors.add(:base,"Odds must be longer than -250.")
     end
   end
 
