@@ -55,9 +55,8 @@ const Post = forwardRef(({ post, account }, ref) => {
       if (r.ok) {
         r.json().then((data) => {
           dispatch(userActions.updateUserOnTail(data.tail));
-          account
-            ? dispatch(ahActions.updateAccountHolderOnTail(data))
-            : dispatch(postsActions.updatePostOnTail(data));
+          dispatch(ahActions.updateAccountHolderOnTail(data));
+          dispatch(postsActions.updatePostOnTail(data));
         });
       } else r.json().then((data) => displayErrors(data.errors));
     });
@@ -71,18 +70,15 @@ const Post = forwardRef(({ post, account }, ref) => {
     }).then((r) => {
       if (r.ok) {
         dispatch(userActions.updateUserOnUntail(tail.id));
-        r.json().then((post) =>
-          account
-            ? dispatch(
-                ahActions.updateAccountHolderOnUnTail({
-                  tail: tail,
-                  post: post,
-                })
-              )
-            : dispatch(
-                postsActions.updatePostUntail({ tail: tail, post: post })
-              )
-        );
+        r.json().then((post) => {
+          dispatch(
+            ahActions.updateAccountHolderOnUnTail({
+              tail: tail,
+              post: post,
+            })
+          );
+          dispatch(postsActions.updatePostUntail({ tail: tail, post: post }));
+        });
       } else r.json().then((data) => displayErrors(data.error));
     });
   }
@@ -111,9 +107,8 @@ const Post = forwardRef(({ post, account }, ref) => {
       if (r.ok) {
         r.json().then((data) => {
           dispatch(userActions.updateUserOnFade(data.fade));
-          account
-            ? dispatch(ahActions.updateAccountHolderOnFade(data))
-            : dispatch(postsActions.updatePostFade(data));
+          dispatch(ahActions.updateAccountHolderOnFade(data));
+          dispatch(postsActions.updatePostFade(data));
         });
       } else r.json().then((data) => displayErrors(data.errors));
     });
@@ -127,18 +122,17 @@ const Post = forwardRef(({ post, account }, ref) => {
     }).then((r) => {
       if (r.ok) {
         dispatch(userActions.updateUserOnUnfade(fade.id));
-        r.json().then((post) =>
-          account
-            ? dispatch(
-                ahActions.updateAccountHolderOnUnFade({
-                  fade: fade,
-                  post: post,
-                })
-              )
-            : dispatch(
-                postsActions.updatePostFadesOnUnfade({ fade: fade, post: post })
-              )
-        );
+        r.json().then((post) => {
+          dispatch(
+            ahActions.updateAccountHolderOnUnFade({
+              fade: fade,
+              post: post,
+            })
+          );
+          dispatch(
+            postsActions.updatePostFadesOnUnfade({ fade: fade, post: post })
+          );
+        });
       } else r.json().then((data) => displayErrors(data.error));
     });
   }
@@ -196,9 +190,8 @@ const Post = forwardRef(({ post, account }, ref) => {
     }).then((r) => {
       if (r.ok) {
         r.json().then((data) => {
-          account
-            ? dispatch(ahActions.updateAccountHolderOnComment(data))
-            : dispatch(postsActions.updatePostCommentsOnComment(data));
+          dispatch(ahActions.updateAccountHolderOnComment(data));
+          dispatch(postsActions.updatePostCommentsOnComment(data));
         });
       } else r.json().then((data) => displayErrors(data.errors));
     });
@@ -211,9 +204,8 @@ const Post = forwardRef(({ post, account }, ref) => {
       headers: { "Content-Type": "appliation/json" },
     }).then((r) =>
       r.json().then((data) => {
-        account
-          ? dispatch(ahActions.updateAccountHolderOnDeleteComment(data))
-          : dispatch(postsActions.updatePostCommentsOnDelete(data));
+        dispatch(ahActions.updateAccountHolderOnDeleteComment(data));
+        dispatch(postsActions.updatePostCommentsOnDelete(data));
       })
     );
   }
@@ -223,11 +215,10 @@ const Post = forwardRef(({ post, account }, ref) => {
       method: "DELETE",
       headers: { "Content-Type": "appliation/json" },
     }).then((r) => {
-      if (r.ok)
-        account
-          ? dispatch(ahActions.deletePosts(post.id))
-          : dispatch(postsActions.deletePosts(post.id));
-      else
+      if (r.ok) {
+        dispatch(ahActions.deletePosts(post.id));
+        dispatch(postsActions.deletePosts(post.id));
+      } else
         r.json().then((data) => {
           displayErrors(data.error);
         });
@@ -244,9 +235,8 @@ const Post = forwardRef(({ post, account }, ref) => {
     }).then((r) => {
       if (r.ok) {
         r.json().then((data) => {
-          account
-            ? dispatch(ahActions.updatePostsOnGrade(data))
-            : dispatch(postsActions.updatePostsOnGrade(data));
+          dispatch(ahActions.updatePostsOnGrade(data));
+          dispatch(postsActions.updatePostsOnGrade(data));
         });
       } else r.json().then((err) => displayErrors(err));
     });
