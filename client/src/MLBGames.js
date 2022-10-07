@@ -76,16 +76,16 @@ function MLBGames() {
       odds: {
         spread: {
           current: {
-            away: "n/a",
-            home: "n/a",
-            awayOdds: "n/a",
-            homeOdds: "n/a",
+            away: "-1.5",
+            home: "+1.5",
+            awayOdds: "+158",
+            homeOdds: "-190",
           },
         },
       },
       moneyline: { current: { awayOdds: "-110", homeOdds: "-110" } },
       total: {
-        current: { total: "n/a", overOdds: "n/a", underOdds: "n/a" },
+        current: { total: "6.5", overOdds: "-125", underOdds: "+100" },
       },
     },
     {
