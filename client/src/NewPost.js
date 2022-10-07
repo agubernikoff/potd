@@ -5,7 +5,7 @@ import { postsActions } from "./store/posts-slice";
 import Loading from "./Loading";
 import NotSignedIn from "./NotSignedIn";
 
-function NewPost({ pick, odds, start, clearSelections }) {
+function NewPost({ pick, odds, start, clearSelections, league }) {
   const user = useSelector((state) => state.user.user);
 
   const dispatch = useDispatch();
@@ -18,6 +18,7 @@ function NewPost({ pick, odds, start, clearSelections }) {
   const navigate = useNavigate();
 
   const formData = new FormData();
+  formData.append("league", league);
   formData.append("pick", pick);
   formData.append("odds", odds);
   formData.append("caption", caption);

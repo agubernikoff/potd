@@ -2,7 +2,7 @@ class PostsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid,with: :render_unprocessable_entity
     rescue_from ActiveRecord::RecordNotFound,with: :render_not_found
     rescue_from ActiveRecord::RecordNotDestroyed,with: :not_destroyed
-    skip_before_action :is_logged_in?, only: [:index,:longest_odds]
+    skip_before_action :is_logged_in?, only: [:index,:longest_odds,:update]
     
     def index
       # session.delete :number
@@ -59,7 +59,7 @@ class PostsController < ApplicationController
     private
     
     def post_params
-      params.permit(:id,:pick,:odds,:status,:result,:start,:user_id,:caption,files:[])
+      params.permit(:id,:pick,:odds,:status,:result,:start,:user_id,:caption,:league,files:[])
     end
     
     def render_unprocessable_entity invalid

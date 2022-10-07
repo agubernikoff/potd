@@ -317,6 +317,7 @@ const Post = forwardRef(({ post, account }, ref) => {
           </>
         )}
       </div>
+      <span>{post.league}</span>
       <h1 style={color}>
         {post.pick} {post.odds}
       </h1>

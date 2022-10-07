@@ -63,6 +63,7 @@ function MakeAPick() {
           odds={odds}
           start={start}
           clearSelections={clearSelections}
+          league={league}
         />
       ) : null}
       {league === "NFL" ? NFLgames : null}
