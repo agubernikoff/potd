@@ -3,51 +3,51 @@ function MLBGames() {
     cardinals: {
       team: "St. Louis Cardinals",
       abbreviation: "STL",
-      starter: "A. Wainwright (R)",
+      starter: "M. Mikolas",
     },
     braves: { team: "Atlanta Braves", abbreviation: "ATL", starter: "" },
     mets: {
       team: "New York Mets",
       abbreviation: "NYM",
-      starter: "M. Scherzer (R)",
+      starter: "J. Degrom",
     },
     padres: {
       team: "San Diego Padres",
       abbreviation: "SD",
-      starter: "Y. Darvish (R)",
+      starter: "B. Snell",
     },
     phillies: {
       team: "Philladelphia Phillies",
       abbreviation: "PHI",
-      starter: "Z. Wheeler (R)",
+      starter: "A. Nola",
     },
     dodgers: { team: "Los Angeles Dodgers", abbreviation: "LAD", starter: "" },
     rays: {
       team: "Tampa Bay Rays",
       abbreviation: "TB",
-      starter: "S. McClanahan (L)",
+      starter: "T. Glasnow",
     },
     guardians: {
       team: "Cleveland Guardians",
       abbreviation: "CLE",
-      starter: "S. Bieber (R)",
+      starter: "T. McKenzie",
     },
     mariners: {
       team: "Seattle Mariners",
       abbreviation: "SEA",
-      starter: "L. Castillo (R)",
+      starter: "R. Ray",
     },
     jays: {
       team: "Toronto Blue Jays",
       abbreviation: "TOR",
-      starter: "A. Manoah (R)",
+      starter: "K. Gausman",
     },
     yankees: { team: "New York Yankees", abbreviation: "NYY", starter: "" },
     astros: { team: "Houston Astros", abbreviation: "HOU", starter: "" },
   };
   const games = [
     {
-      schedule: { start: "2022-10-07T16:07:00.000Z" },
+      schedule: { start: "2022-10-08T16:08:00.000Z" },
       teams: {
         away: teams.rays,
         home: teams.guardians,
@@ -55,41 +55,20 @@ function MLBGames() {
       odds: {
         spread: {
           current: {
-            away: "+1.5",
-            home: "-1.5",
-            awayOdds: "-225",
-            homeOdds: "+185",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+105", homeOdds: "-125" } },
-      total: {
-        current: { total: "6.0", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-07T18:07:00.000Z" },
-      teams: {
-        away: teams.phillies,
-        home: teams.cardinals,
-      },
-      odds: {
-        spread: {
-          current: {
             away: "-1.5",
             home: "+1.5",
-            awayOdds: "+158",
-            homeOdds: "-190",
+            awayOdds: "+175",
+            homeOdds: "-215",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-110", homeOdds: "-110" } },
+      moneyline: { current: { awayOdds: "-105", homeOdds: "-110" } },
       total: {
-        current: { total: "6.5", overOdds: "-125", underOdds: "+100" },
+        current: { total: "6.0", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
-      schedule: { start: "2022-10-07T20:08:00.000Z" },
+      schedule: { start: "2022-10-08T20:08:00.000Z" },
       teams: {
         away: teams.mariners,
         home: teams.jays,
@@ -99,18 +78,18 @@ function MLBGames() {
           current: {
             away: "+1.5",
             home: "-1.5",
-            awayOdds: "-185",
-            homeOdds: "+150",
+            awayOdds: "-160",
+            homeOdds: "+130",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+125", homeOdds: "-150" } },
+      moneyline: { current: { awayOdds: "+135", homeOdds: "-160" } },
       total: {
-        current: { total: "7.0", overOdds: "-105", underOdds: "-115" },
+        current: { total: "7.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
-      schedule: { start: "2022-10-08T00:07:00.000Z" },
+      schedule: { start: "2022-10-08T23:37:00.000Z" },
       teams: {
         away: teams.padres,
         home: teams.mets,
@@ -120,14 +99,35 @@ function MLBGames() {
           current: {
             away: "+1.5",
             home: "-1.5",
-            awayOdds: "-200",
-            homeOdds: "+165",
+            awayOdds: "-155",
+            homeOdds: "+130",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+130", homeOdds: "-155" } },
+      moneyline: { current: { awayOdds: "+150", homeOdds: "-180" } },
       total: {
         current: { total: "6.0", overOdds: "-120", underOdds: "-105" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-09T00:38:00.000Z" },
+      teams: {
+        away: teams.phillies,
+        home: teams.cardinals,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-1.5",
+            home: "+1.5",
+            awayOdds: "+150",
+            homeOdds: "-185",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-120", homeOdds: "+104" } },
+      total: {
+        current: { total: "6.5", overOdds: "-120", underOdds: "-105" },
       },
     },
   ];
