@@ -64,14 +64,14 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+7.5",
-            home: "-7.5",
+            away: "+8.0",
+            home: "-8.0",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+300", homeOdds: "-375" } },
+      moneyline: { current: { awayOdds: "+295", homeOdds: "-390" } },
       total: {
         current: { total: "41.5", overOdds: "-105", underOdds: "-115" },
       },
@@ -92,7 +92,7 @@ function NFLGames() {
           },
         },
       },
-      moneyline: { current: { awayOdds: "+190", homeOdds: "-230" } },
+      moneyline: { current: { awayOdds: "+185", homeOdds: "-220" } },
       total: {
         current: { total: "45.5", overOdds: "-110", underOdds: "-110" },
       },
@@ -115,7 +115,7 @@ function NFLGames() {
       },
       moneyline: { current: { awayOdds: "+610", homeOdds: "-900" } },
       total: {
-        current: { total: "47.5", overOdds: "-105", underOdds: "-115" },
+        current: { total: "45.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
@@ -127,14 +127,14 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+7.0",
-            home: "-7.0",
-            awayOdds: "-115",
-            homeOdds: "-105",
+            away: "+7.5",
+            home: "-7.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+250", homeOdds: "-300" } },
+      moneyline: { current: { awayOdds: "+290", homeOdds: "-360" } },
       total: {
         current: { total: "43.5", overOdds: "-115", underOdds: "-105" },
       },
@@ -155,9 +155,9 @@ function NFLGames() {
           },
         },
       },
-      moneyline: { current: { awayOdds: "+265", homeOdds: "-330" } },
+      moneyline: { current: { awayOdds: "+275", homeOdds: "-340" } },
       total: {
-        current: { total: "44.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "43.5", overOdds: "-115", underOdds: "-105" },
       },
     },
     {
@@ -176,9 +176,9 @@ function NFLGames() {
           },
         },
       },
-      moneyline: { current: { awayOdds: "-180", homeOdds: "+150" } },
+      moneyline: { current: { awayOdds: "-175", homeOdds: "+150" } },
       total: {
-        current: { total: "44.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "45.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
@@ -190,16 +190,16 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+8.5",
-            home: "-8.5",
+            away: "+10.0",
+            home: "-10.0",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+315", homeOdds: "-400" } },
+      moneyline: { current: { awayOdds: "+370", homeOdds: "-500" } },
       total: {
-        current: { total: "48.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "46.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
@@ -211,16 +211,16 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+3.0",
-            home: "-3.0",
-            awayOdds: "-110",
-            homeOdds: "-110",
+            away: "+3.5",
+            home: "-3.5",
+            awayOdds: "-115",
+            homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+140", homeOdds: "-170" } },
+      moneyline: { current: { awayOdds: "+145", homeOdds: "-170" } },
       total: {
-        current: { total: "46.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "45.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
@@ -232,14 +232,14 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "-2.5",
-            home: "+2.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
+            away: "-1.5",
+            home: "+1.5",
+            awayOdds: "-105",
+            homeOdds: "-115",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-145", homeOdds: "+120" } },
+      moneyline: { current: { awayOdds: "-115", homeOdds: "-105" } },
       total: {
         current: { total: "42.5", overOdds: "-110", underOdds: "-110" },
       },
@@ -253,16 +253,16 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "-3.0",
-            home: "+3.0",
-            awayOdds: "-105",
-            homeOdds: "-115",
+            away: "-1.5",
+            home: "+1.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-160", homeOdds: "+135" } },
+      moneyline: { current: { awayOdds: "-120", homeOdds: "+105" } },
       total: {
-        current: { total: "47.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "47.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
@@ -274,14 +274,14 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "-6.0",
-            home: "+6.0",
+            away: "-6.5",
+            home: "+6.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-245", homeOdds: "+200" } },
+      moneyline: { current: { awayOdds: "-280", homeOdds: "+230" } },
       total: {
         current: { total: "39.5", overOdds: "-110", underOdds: "-110" },
       },
@@ -297,14 +297,14 @@ function NFLGames() {
           current: {
             away: "-5.5",
             home: "+5.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
+            awayOdds: "-105",
+            homeOdds: "-115",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-235", homeOdds: "+190" } },
+      moneyline: { current: { awayOdds: "-240", homeOdds: "+200" } },
       total: {
-        current: { total: "49.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "48.5", overOdds: "-115", underOdds: "-105" },
       },
     },
     {
@@ -316,16 +316,16 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+4.0",
-            home: "-4.0",
-            awayOdds: "-105",
-            homeOdds: "-115",
+            away: "+5.5",
+            home: "-5.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+170", homeOdds: "-210" } },
+      moneyline: { current: { awayOdds: "+200", homeOdds: "-240" } },
       total: {
-        current: { total: "45.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "42.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
@@ -337,16 +337,16 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+3.0",
-            home: "-3.0",
-            awayOdds: "-105",
-            homeOdds: "-115",
+            away: "+3.5",
+            home: "-3.5",
+            awayOdds: "-115",
+            homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+150", homeOdds: "-180" } },
+      moneyline: { current: { awayOdds: "+145", homeOdds: "-175" } },
       total: {
-        current: { total: "48.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "47.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
@@ -360,12 +360,12 @@ function NFLGames() {
           current: {
             away: "+7.5",
             home: "-7.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
+            awayOdds: "-115",
+            homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+285", homeOdds: "-350" } },
+      moneyline: { current: { awayOdds: "+265", homeOdds: "-330" } },
       total: {
         current: { total: "51.5", overOdds: "-110", underOdds: "-110" },
       },

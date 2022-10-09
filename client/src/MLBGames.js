@@ -9,12 +9,12 @@ function MLBGames() {
     mets: {
       team: "New York Mets",
       abbreviation: "NYM",
-      starter: "J. Degrom",
+      starter: "C. Bassitt",
     },
     padres: {
       team: "San Diego Padres",
       abbreviation: "SD",
-      starter: "B. Snell",
+      starter: "J. Musgrove",
     },
     phillies: {
       team: "Philladelphia Phillies",
@@ -89,7 +89,7 @@ function MLBGames() {
       },
     },
     {
-      schedule: { start: "2022-10-08T23:37:00.000Z" },
+      schedule: { start: "2022-10-09T19:37:00.000Z" },
       teams: {
         away: teams.padres,
         home: teams.mets,
@@ -99,14 +99,14 @@ function MLBGames() {
           current: {
             away: "+1.5",
             home: "-1.5",
-            awayOdds: "-155",
-            homeOdds: "+130",
+            awayOdds: "-190",
+            homeOdds: "+155",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+150", homeOdds: "-180" } },
+      moneyline: { current: { awayOdds: "+115", homeOdds: "-135" } },
       total: {
-        current: { total: "6.0", overOdds: "-120", underOdds: "-105" },
+        current: { total: "6.5", overOdds: "-120", underOdds: "-105" },
       },
     },
     {
