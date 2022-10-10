@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     
     def index
       users = User.all
-      User.find_each(&:save)
+      # User.find_each(&:save)
       render json: users,each_serializer: UserSearchSerializer
     end
 
