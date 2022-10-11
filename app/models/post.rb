@@ -68,7 +68,7 @@ class Post < ApplicationRecord
 
   def update_associated_users
     self.tails.find_each(&:save)
-    self.tails.find_each(&:save)
+    self.fades.find_each(&:save)
     self.user.save
   end
 

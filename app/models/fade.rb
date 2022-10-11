@@ -13,6 +13,8 @@ class Fade < ApplicationRecord
 
   before_save :set_post_result
 
+  after_save :save_user
+
   def already_tailed
     if self.post.tails.find_by(user_id: self.user_id)
       errors.add(:base,"You cannot fade a post you have already tailed")
@@ -45,5 +47,9 @@ class Fade < ApplicationRecord
 
   def set_post_result
     self.write_attribute(:post_result, self.post.result)
+  end
+
+  def save_user
+    self.user.save
   end
 end
