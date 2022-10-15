@@ -23,430 +23,430 @@ function NCAAFGames() {
     cincy: { team: "Cincinnati Bearcats", ranking: 21 },
     texas: { team: "Texas Longhorns", ranking: 22 },
     uk: { team: "Kentucky Wildcats", ranking: 23 },
-    wash: { team: "Illinois Fighting Illini", ranking: 24 },
+    ill: { team: "Illinois Fighting Illini", ranking: 24 },
     jmu: { team: "James Madison Dukes", ranking: 25 },
   };
   const games = [
     {
-      schedule: { start: "2022-10-08T16:00:00.000Z" },
+      schedule: { start: "2022-10-15T16:00:00.000Z" },
       teams: {
-        away: teams.mich,
-        home: { team: "Indiana Hoosiers" },
+        away: { team: "Minnesota Gophers" },
+        home: teams.ill,
       },
       odds: {
         spread: {
           current: {
-            away: "-22.5",
-            home: "+22.5",
-            awayOdds: "-120",
-            homeOdds: "-105",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-1800", homeOdds: "+980" } },
-      total: {
-        current: { total: "59.5", overOdds: "-105", underOdds: "-105" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T16:00:00.000Z" },
-      teams: {
-        away: teams.tenn,
-        home: teams.lsu,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+3.0",
-            home: "-3.0",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-155", homeOdds: "+130" } },
-      total: {
-        current: { total: "64.5", overOdds: "-115", underOdds: "-105" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T16:00:00.000Z" },
-      teams: {
-        away: teams.tcu,
-        home: teams.ku,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-7.0",
-            home: "+7.0",
-            awayOdds: "-265",
-            homeOdds: "+215",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+190", homeOdds: "-230" } },
-      total: {
-        current: { total: "69.5", overOdds: "-105", underOdds: "-115" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T16:00:00.000Z" },
-      teams: {
-        away: { team: "Arkansas Razorbacks" },
-        home: teams.msu,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+9.5",
-            home: "-9.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+260", homeOdds: "-330" } },
-      total: {
-        current: { total: "57.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T18:30:00.000Z" },
-      teams: {
-        away: { team: "South Florida Bulls" },
-        home: teams.cincy,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+27.5",
-            home: "-27.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+1280", homeOdds: "-3500" } },
-      total: {
-        current: { total: "58.5", overOdds: "-115", underOdds: "-105" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T19:30:00.000Z" },
-      teams: {
-        away: { team: "Auburn Tigers" },
-        home: teams.uga,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "29.5",
-            home: "29.5",
+            away: "-6.5",
+            home: "+6.5",
             awayOdds: "-115",
             homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+2200", homeOdds: "-8000" } },
+      moneyline: { current: { awayOdds: "-255", homeOdds: "+205" } },
       total: {
-        current: { total: "49.5", overOdds: "-105", underOdds: "-115" },
+        current: { total: "39.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
-      schedule: { start: "2022-10-08T19:30:00.000Z" },
+      schedule: { start: "2022-10-15T16:00:00.000Z" },
       teams: {
-        away: { team: "Texas Tech Red Raiders" },
-        home: teams.okstate,
+        away: teams.ku,
+        home: { team: "Oklahoma Sooners" },
       },
       odds: {
         spread: {
           current: {
-            away: "+9.5",
-            home: "-9.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
+            away: "+8.5",
+            home: "-8.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+260", homeOdds: "-330" } },
-      total: {
-        current: { total: "69.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T19:30:00.000Z" },
-      teams: {
-        away: teams.uu,
-        home: teams.ucla,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-3.5",
-            home: "+3.5",
-            awayOdds: "-105",
-            homeOdds: "-120",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-160", homeOdds: "+130" } },
+      moneyline: { current: { awayOdds: "+250", homeOdds: "-315" } },
       total: {
         current: { total: "64.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
-      schedule: { start: "2022-10-08T20:00:00.000Z" },
+      schedule: { start: "2022-10-15T16:00:00.000Z" },
       teams: {
-        away: teams.osu,
-        home: { team: "Michigan State Spartans" },
+        away: teams.psu,
+        home: teams.mich,
       },
       odds: {
         spread: {
           current: {
-            away: "-26.5",
-            home: "+26.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-4000", homeOdds: "+1400" } },
-      total: {
-        current: { total: "64.5", overOdds: "-115", underOdds: "-105" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T20:00:00.000Z" },
-      teams: {
-        away: teams.miss,
-        home: { team: "Vanderbilt Commadores" },
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-16.5",
-            home: "+16.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-800", homeOdds: "+580" } },
-      total: {
-        current: { total: "61.5", overOdds: "-115", underOdds: "-105" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T20:00:00.000Z" },
-      teams: {
-        away: teams.wash,
-        home: { team: "Arizona State Sun Devils" },
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-13.5",
-            home: "+13.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-530", homeOdds: "+390" } },
-      total: {
-        current: { total: "57.5", overOdds: "-105", underOdds: "-115" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T23:30:00.000Z" },
-      teams: {
-        away: teams.clemson,
-        home: { team: "Boston College Eagles" },
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-20.5",
-            home: "+20.5",
+            away: "+7.0",
+            home: "-7.0",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-1400", homeOdds: "+800" } },
+      moneyline: { current: { awayOdds: "+220", homeOdds: "-275" } },
+      total: {
+        current: { total: "49.5", overOdds: "-105", underOdds: "-115" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-15T16:00:00.000Z" },
+      teams: {
+        away: { team: "Iowa Hawkeyes" },
+        home: teams.texas,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+15.5",
+            home: "-15.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+500", homeOdds: "-720" } },
       total: {
         current: { total: "48.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
-      schedule: { start: "2022-10-08T23:30:00.000Z" },
+      schedule: { start: "2022-10-15T16:00:00.000Z" },
       teams: {
-        away: { team: "Washington State Cougars" },
-        home: teams.usc,
+        away: { team: "Auburn Tigers" },
+        home: teams.miss,
       },
       odds: {
         spread: {
           current: {
-            away: "+12.5",
-            home: "-12.5",
+            away: "+14.5",
+            home: "-14.5",
+            awayOdds: "-105",
+            homeOdds: "-115",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+490", homeOdds: "-710" } },
+      total: {
+        current: { total: "55.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-15T19:30:00.000Z" },
+      teams: {
+        away: { team: "Vanderbilt Commadores" },
+        home: teams.uga,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+37.5",
+            home: "-37.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+365", homeOdds: "-490" } },
+      moneyline: { current: { awayOdds: "n/a", homeOdds: "n/a" } },
       total: {
-        current: { total: "65.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "56.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
-      schedule: { start: "2022-10-08T23:30:00.000Z" },
+      schedule: { start: "2022-10-15T19:30:00.000Z" },
       teams: {
-        away: { team: "South Carolina Gamecocks" },
-        home: teams.uk,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+6.0",
-            home: "-6.0",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+195", homeOdds: "-240" } },
-      total: {
-        current: { total: "46.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T23:30:00.000Z" },
-      teams: {
-        away: { team: "Army Black Knights" },
-        home: teams.wf,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+17.5",
-            home: "-17.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+530", homeOdds: "-780" } },
-      total: {
-        current: { total: "65.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-08T23:30:00.000Z" },
-      teams: {
-        away: teams.byu,
-        home: { team: "Notre Dame Fighting Irish" },
+        away: teams.okstate,
+        home: teams.tcu,
       },
       odds: {
         spread: {
           current: {
             away: "+3.5",
             home: "-3.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
+            awayOdds: "-105",
+            homeOdds: "-120",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+145", homeOdds: "-175" } },
+      moneyline: { current: { awayOdds: "+150", homeOdds: "-185" } },
       total: {
-        current: { total: "50.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "68.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
-      schedule: { start: "2022-10-08T23:30:00.000Z" },
+      schedule: { start: "2022-10-15T19:30:00.000Z" },
       teams: {
-        away: teams.ksu,
-        home: { team: "Iowa State Cyclones" },
+        away: teams.bama,
+        home: teams.tenn,
       },
       odds: {
         spread: {
           current: {
-            away: "-2.0",
-            home: "+2.0",
-            awayOdds: "-110",
-            homeOdds: "-110",
+            away: "-8.5",
+            home: "+8.5",
+            awayOdds: "-105",
+            homeOdds: "-120",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-140", homeOdds: "+105" } },
+      moneyline: { current: { awayOdds: "-335", homeOdds: "+265" } },
       total: {
-        current: { total: "45.5", overOdds: "-105", underOdds: "-115" },
+        current: { total: "66.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
-      schedule: { start: "2022-10-09T00:00:00.000Z" },
+      schedule: { start: "2022-10-15T19:30:00.000Z" },
       teams: {
-        away: { team: "Texas A&M Aggies" },
-        home: teams.bama,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+24.5",
-            home: "-24.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+1060", homeOdds: "-2300" } },
-      total: {
-        current: { total: "50.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-09T00:00:00.000Z" },
-      teams: {
-        away: { team: "Florida State Seminoles" },
-        home: teams.ncst,
+        away: { team: "NCST Wolfpack" },
+        home: teams.cuse,
       },
       odds: {
         spread: {
           current: {
             away: "+3.0",
             home: "-3.0",
-            awayOdds: "-105",
-            homeOdds: "-115",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+130", homeOdds: "-155" } },
-      total: {
-        current: { total: "50.5", overOdds: "-115", underOdds: "-105" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-09T01:00:00.000Z" },
-      teams: {
-        away: teams.oregon,
-        home: { team: "Arizona Wildcats" },
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-13.5",
-            home: "+13.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-530", homeOdds: "+390" } },
+      moneyline: { current: { awayOdds: "+130", homeOdds: "-155" } },
       total: {
-        current: { total: "70.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "42.5", overOdds: "-105", underOdds: "-115" },
       },
     },
+    {
+      schedule: { start: "2022-10-15T20:00:00.000Z" },
+      teams: {
+        away: teams.jmu,
+        home: { team: "Georgia Southern Eagles" },
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-12.5",
+            home: "+12.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-465", homeOdds: "+350" } },
+      total: {
+        current: { total: "66.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-15T23:30:00.000Z" },
+      teams: {
+        away: teams.clemson,
+        home: { team: "Florida State Seminoles" },
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-4.5",
+            home: "+4.5",
+            awayOdds: "-115",
+            homeOdds: "-105",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-205", homeOdds: "+170" } },
+      total: {
+        current: { total: "51.5", overOdds: "-105", underOdds: "-115" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-15T23:30:00.000Z" },
+      teams: {
+        away: teams.msu,
+        home: teams.uk,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-3.5",
+            home: "+3.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-170", homeOdds: "+140" } },
+      total: {
+        current: { total: "50.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-16T00:00:00.000Z" },
+      teams: {
+        away: teams.usc,
+        home: teams.uu,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+3.5",
+            home: "-3.5",
+            awayOdds: "-115",
+            homeOdds: "-105",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+140", homeOdds: "-170" } },
+      total: {
+        current: { total: "64.5", overOdds: "-115", underOdds: "-105" },
+      },
+    },
+    // {
+    //   schedule: { start: "2022-10-15T23:30:00.000Z" },
+    //   teams: {
+    //     away: { team: "South Carolina Gamecocks" },
+    //     home: teams.uk,
+    //   },
+    //   odds: {
+    //     spread: {
+    //       current: {
+    //         away: "+6.0",
+    //         home: "-6.0",
+    //         awayOdds: "-110",
+    //         homeOdds: "-110",
+    //       },
+    //     },
+    //   },
+    //   moneyline: { current: { awayOdds: "+195", homeOdds: "-240" } },
+    //   total: {
+    //     current: { total: "46.5", overOdds: "-110", underOdds: "-110" },
+    //   },
+    //   },
+    //   {
+    //     schedule: { start: "2022-10-15T23:30:00.000Z" },
+    //     teams: {
+    //       away: { team: "Army Black Knights" },
+    //       home: teams.wf,
+    //     },
+    //     odds: {
+    //       spread: {
+    //         current: {
+    //           away: "+17.5",
+    //           home: "-17.5",
+    //           awayOdds: "-115",
+    //           homeOdds: "-105",
+    //         },
+    //       },
+    //     },
+    //     moneyline: { current: { awayOdds: "+530", homeOdds: "-780" } },
+    //     total: {
+    //       current: { total: "65.5", overOdds: "-110", underOdds: "-110" },
+    //     },
+    //   },
+    //   {
+    //     schedule: { start: "2022-10-15T23:30:00.000Z" },
+    //     teams: {
+    //       away: teams.byu,
+    //       home: { team: "Notre Dame Fighting Irish" },
+    //     },
+    //     odds: {
+    //       spread: {
+    //         current: {
+    //           away: "+3.5",
+    //           home: "-3.5",
+    //           awayOdds: "-110",
+    //           homeOdds: "-110",
+    //         },
+    //       },
+    //     },
+    //     moneyline: { current: { awayOdds: "+145", homeOdds: "-175" } },
+    //     total: {
+    //       current: { total: "50.5", overOdds: "-110", underOdds: "-110" },
+    //     },
+    //   },
+    //   {
+    //     schedule: { start: "2022-10-15T23:30:00.000Z" },
+    //     teams: {
+    //       away: teams.ksu,
+    //       home: { team: "Iowa State Cyclones" },
+    //     },
+    //     odds: {
+    //       spread: {
+    //         current: {
+    //           away: "-2.0",
+    //           home: "+2.0",
+    //           awayOdds: "-110",
+    //           homeOdds: "-110",
+    //         },
+    //       },
+    //     },
+    //     moneyline: { current: { awayOdds: "-140", homeOdds: "+105" } },
+    //     total: {
+    //       current: { total: "45.5", overOdds: "-105", underOdds: "-115" },
+    //     },
+    //   },
+    //   {
+    //     schedule: { start: "2022-10-09T00:00:00.000Z" },
+    //     teams: {
+    //       away: { team: "Texas A&M Aggies" },
+    //       home: teams.bama,
+    //     },
+    //     odds: {
+    //       spread: {
+    //         current: {
+    //           away: "+24.5",
+    //           home: "-24.5",
+    //           awayOdds: "-115",
+    //           homeOdds: "-105",
+    //         },
+    //       },
+    //     },
+    //     moneyline: { current: { awayOdds: "+1060", homeOdds: "-2300" } },
+    //     total: {
+    //       current: { total: "50.5", overOdds: "-110", underOdds: "-110" },
+    //     },
+    //   },
+    //   {
+    //     schedule: { start: "2022-10-09T00:00:00.000Z" },
+    //     teams: {
+    //       away: { team: "Florida State Seminoles" },
+    //       home: teams.ncst,
+    //     },
+    //     odds: {
+    //       spread: {
+    //         current: {
+    //           away: "+3.0",
+    //           home: "-3.0",
+    //           awayOdds: "-105",
+    //           homeOdds: "-115",
+    //         },
+    //       },
+    //     },
+    //     moneyline: { current: { awayOdds: "+130", homeOdds: "-155" } },
+    //     total: {
+    //       current: { total: "50.5", overOdds: "-115", underOdds: "-105" },
+    //     },
+    //   },
+    //   {
+    //     schedule: { start: "2022-10-09T01:00:00.000Z" },
+    //     teams: {
+    //       away: teams.oregon,
+    //       home: { team: "Arizona Wildcats" },
+    //     },
+    //     odds: {
+    //       spread: {
+    //         current: {
+    //           away: "-13.5",
+    //           home: "+13.5",
+    //           awayOdds: "-110",
+    //           homeOdds: "-110",
+    //         },
+    //       },
+    //     },
+    //     moneyline: { current: { awayOdds: "-530", homeOdds: "+390" } },
+    //     total: {
+    //       current: { total: "70.5", overOdds: "-110", underOdds: "-110" },
+    //     },
+    // },
   ];
   return { games };
 }
