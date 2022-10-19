@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NFLGames from "./NFLGames";
 import MLBGames from "./MLBGames";
 import NCAAFGames from "./NCAAFGames";
+import NBAGames from "./NBAGames";
 import Game from "./Game";
 import NewPost from "./NewPost";
 
@@ -35,6 +36,10 @@ function MakeAPick() {
     (g) => new Date(g.schedule.start) > new Date(Date.now())
   );
 
+  const upcomingNBA = NBAGames().games.filter(
+    (g) => new Date(g.schedule.start) > new Date(Date.now())
+  );
+
   const NFLgames = upcomingNFL.map((g, i) => (
     <Game key={i} game={g} setPickAndOddsAndStart={setPickAndOddsAndStart} />
   ));
@@ -47,6 +52,10 @@ function MakeAPick() {
     <Game key={i} game={g} setPickAndOddsAndStart={setPickAndOddsAndStart} />
   ));
 
+  const NBAgames = upcomingNBA.map((g, i) => (
+    <Game key={i} game={g} setPickAndOddsAndStart={setPickAndOddsAndStart} />
+  ));
+
   return (
     <div className="feed">
       <h3 style={{ textAlign: "center" }}>LINES</h3>
@@ -54,6 +63,7 @@ function MakeAPick() {
         <select onChange={(e) => setLeague(e.target.value)}>
           <option>NFL</option>
           <option>NCAAF</option>
+          <option>NBA</option>
           <option>MLB</option>
         </select>
       </div>
@@ -68,6 +78,7 @@ function MakeAPick() {
       ) : null}
       {league === "NFL" ? NFLgames : null}
       {league === "NCAAF" ? NCAAFgames : null}
+      {league === "NBA" ? NBAgames : null}
       {league === "MLB" ? MLBgames : null}
     </div>
   );
