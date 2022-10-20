@@ -13,12 +13,12 @@ function MLBGames() {
     yankees: {
       team: "New York Yankees",
       abbreviation: "NYY",
-      starter: "J. Taillon",
+      starter: "L. Severino",
     },
     astros: {
       team: "Houston Astros",
       abbreviation: "HOU",
-      starter: "J. Verlander",
+      starter: "F. Valdez",
     },
   };
   const games = [
@@ -44,7 +44,7 @@ function MLBGames() {
       },
     },
     {
-      schedule: { start: "2022-10-19T23:37:00.000Z" },
+      schedule: { start: "2022-10-20T23:37:00.000Z" },
       teams: {
         away: teams.yankees,
         home: teams.astros,
@@ -54,14 +54,14 @@ function MLBGames() {
           current: {
             away: "+1.5",
             home: "-1.5",
-            awayOdds: "-140",
-            homeOdds: "+120",
+            awayOdds: "-175",
+            homeOdds: "+150",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+160", homeOdds: "-190" } },
+      moneyline: { current: { awayOdds: "+120", homeOdds: "-140" } },
       total: {
-        current: { total: "7.0", overOdds: "+100", underOdds: "-120" },
+        current: { total: "7.0", overOdds: "-105", underOdds: "-115" },
       },
     },
   ];
