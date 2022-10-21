@@ -28,24 +28,24 @@ function NCAAFGames() {
   };
   const games = [
     {
-      schedule: { start: "2022-10-15T16:00:00.000Z" },
+      schedule: { start: "2022-10-21T23:00:00.000Z" },
       teams: {
-        away: { team: "Minnesota Gophers" },
-        home: teams.ill,
+        away: { team: "Princeton Tigers" },
+        home: { team: "Harvard Crimson" },
       },
       odds: {
         spread: {
           current: {
-            away: "-6.5",
-            home: "+6.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
+            away: "-1.5",
+            home: "+1.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-255", homeOdds: "+205" } },
+      moneyline: { current: { awayOdds: "-125", homeOdds: "+105" } },
       total: {
-        current: { total: "39.5", overOdds: "-105", underOdds: "-115" },
+        current: { total: "47.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
