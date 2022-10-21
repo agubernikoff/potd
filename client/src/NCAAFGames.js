@@ -49,24 +49,24 @@ function NCAAFGames() {
       },
     },
     {
-      schedule: { start: "2022-10-15T16:00:00.000Z" },
+      schedule: { start: "2022-10-22T00:00:00.000Z" },
       teams: {
-        away: teams.ku,
-        home: { team: "Oklahoma Sooners" },
+        away: { team: "UAB Blazers" },
+        home: { team: "Western Kentucky Hilltoppers" },
       },
       odds: {
         spread: {
           current: {
-            away: "+8.5",
-            home: "-8.5",
+            away: "+1.5",
+            home: "-1.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+250", homeOdds: "-315" } },
+      moneyline: { current: { awayOdds: "+100", homeOdds: "-120" } },
       total: {
-        current: { total: "64.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "58.5", overOdds: "-115", underOdds: "-105" },
       },
     },
     {
