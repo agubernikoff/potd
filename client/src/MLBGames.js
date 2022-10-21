@@ -3,12 +3,12 @@ function MLBGames() {
     padres: {
       team: "San Diego Padres",
       abbreviation: "SD",
-      starter: "B. Snell",
+      starter: "J. Musgrove",
     },
     phillies: {
       team: "Philladelphia Phillies",
       abbreviation: "PHI",
-      starter: "A. Nola",
+      starter: "R. Suarez",
     },
     yankees: {
       team: "New York Yankees",
@@ -23,24 +23,24 @@ function MLBGames() {
   };
   const games = [
     {
-      schedule: { start: "2022-10-19T20:35:00.000Z" },
+      schedule: { start: "2022-10-21T23:38:00.000Z" },
       teams: {
-        away: teams.phillies,
-        home: teams.padres,
+        away: teams.padres,
+        home: teams.phillies,
       },
       odds: {
         spread: {
           current: {
             away: "-1.5",
             home: "+1.5",
-            awayOdds: "+170",
-            homeOdds: "-200",
+            awayOdds: "+140",
+            homeOdds: "-170",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+100", homeOdds: "-120" } },
+      moneyline: { current: { awayOdds: "-120", homeOdds: "+100" } },
       total: {
-        current: { total: "7.0", overOdds: "+100", underOdds: "-120" },
+        current: { total: "7.5", overOdds: "-105", underOdds: "-120" },
       },
     },
     {
