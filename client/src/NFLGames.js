@@ -106,8 +106,8 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "-10.5",
-            home: "+10.5",
+            away: "-13.5",
+            home: "+13.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
@@ -148,16 +148,16 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+7.0",
-            home: "-7.0",
+            away: "+6.5",
+            home: "-6.5",
             awayOdds: "-105",
             homeOdds: "-115",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+260", homeOdds: "-320" } },
+      moneyline: { current: { awayOdds: "+240", homeOdds: "-295" } },
       total: {
-        current: { total: "48.5", overOdds: "-115", underOdds: "-105" },
+        current: { total: "49.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
@@ -232,8 +232,8 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+1.5",
-            home: "-1.5",
+            away: "-2.5",
+            home: "+2.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
@@ -241,7 +241,7 @@ function NFLGames() {
       },
       moneyline: { current: { awayOdds: "+105", homeOdds: "-125" } },
       total: {
-        current: { total: "38.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "36.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
@@ -253,8 +253,8 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+5.5",
-            home: "-5.5",
+            away: "+4.5",
+            home: "-4.5",
             awayOdds: "-105",
             homeOdds: "-115",
           },
@@ -274,8 +274,8 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "-3.0",
-            home: "+3.0",
+            away: "-1.5",
+            home: "+1.5",
             awayOdds: "-110",
             homeOdds: "-120",
           },
@@ -295,8 +295,8 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+7.0",
-            home: "-7.0",
+            away: "+7.5",
+            home: "-7.5",
             awayOdds: "-105",
             homeOdds: "-115",
           },
@@ -316,8 +316,8 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+8.0",
-            home: "-8.0",
+            away: "+7.5",
+            home: "-7.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
