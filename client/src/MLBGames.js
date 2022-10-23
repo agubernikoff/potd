@@ -3,48 +3,27 @@ function MLBGames() {
     padres: {
       team: "San Diego Padres",
       abbreviation: "SD",
-      starter: "M. Clevinger",
+      starter: "Y. Darvish",
     },
     phillies: {
       team: "Philladelphia Phillies",
       abbreviation: "PHI",
-      starter: "B. Falter",
+      starter: "Z. Wheeler",
     },
     yankees: {
       team: "New York Yankees",
       abbreviation: "NYY",
-      starter: "G. Cole",
+      starter: "N. Cortes",
     },
     astros: {
       team: "Houston Astros",
       abbreviation: "HOU",
-      starter: "C. Javier",
+      starter: "L. McCullers",
     },
   };
   const games = [
     {
-      schedule: { start: "2022-10-22T21:07:00.000Z" },
-      teams: {
-        away: teams.astros,
-        home: teams.yankees,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+1.5",
-            home: "-1.5",
-            awayOdds: "-165",
-            homeOdds: "+135",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+130", homeOdds: "-155" } },
-      total: {
-        current: { total: "6.5", overOdds: "-120", underOdds: "-105" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-22T23:45:00.000Z" },
+      schedule: { start: "2022-10-23T18:38:00.000Z" },
       teams: {
         away: teams.padres,
         home: teams.phillies,
@@ -52,16 +31,37 @@ function MLBGames() {
       odds: {
         spread: {
           current: {
-            away: "-1.5",
-            home: "+1.5",
-            awayOdds: "+150",
-            homeOdds: "-180",
+            away: "+1.5",
+            home: "-1.5",
+            awayOdds: "-185",
+            homeOdds: "+155",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-105", homeOdds: "-110" } },
+      moneyline: { current: { awayOdds: "+120", homeOdds: "-140" } },
       total: {
-        current: { total: "8.0", overOdds: "-105", underOdds: "-115" },
+        current: { total: "6.5", overOdds: "-115", underOdds: "-105" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-23T23:08:00.000Z" },
+      teams: {
+        away: teams.astros,
+        home: teams.yankees,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-1.5",
+            home: "+1.5",
+            awayOdds: "+170",
+            homeOdds: "-210",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+105", homeOdds: "-120" } },
+      total: {
+        current: { total: "6.5", overOdds: "-120", underOdds: "+100" },
       },
     },
   ];
