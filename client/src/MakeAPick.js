@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import NFLGames from "./NFLGames";
 import MLBGames from "./MLBGames";
 import NCAAFGames from "./NCAAFGames";
@@ -11,6 +12,13 @@ function MakeAPick() {
   const [odds, setOdds] = useState(null);
   const [start, setStart] = useState(null);
   const [league, setLeague] = useState("NFL");
+
+  const leagueURLParam = useParams();
+  const nav = useNavigate();
+
+  useEffect(() => {
+    if (leagueURLParam.league) setLeague(leagueURLParam.league);
+  }, [leagueURLParam]);
 
   function setPickAndOddsAndStart(array, start) {
     setPick(array[0]);
@@ -60,7 +68,12 @@ function MakeAPick() {
     <div className="feed">
       <h3 style={{ textAlign: "center" }}>LINES</h3>
       <div className="leaderboardSelect">
-        <select onChange={(e) => setLeague(e.target.value)}>
+        <select
+          onChange={(e) => {
+            nav(`/games/${e.target.value}`);
+          }}
+          value={league}
+        >
           <option>NFL</option>
           <option>NCAAF</option>
           <option>NBA</option>

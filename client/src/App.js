@@ -41,7 +41,8 @@ function App() {
         <Routes>
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/" element={<Feed />} />
-          <Route exact path="/games" element={<MakeAPick />} />
+          <Route path="/games" element={<MakeAPick />} />
+          <Route path="/games/:league" element={<MakeAPick />} />
           <Route exact path="/u/:id" element={<Account />} />
           <Route
             exact
