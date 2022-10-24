@@ -33,7 +33,7 @@ function NBAGames() {
   };
   const games = [
     {
-      schedule: { start: "2022-10-22T23:10:00.000Z" },
+      schedule: { start: "2022-10-24T23:10:00.000Z" },
       teams: {
         away: teams.ind,
         home: teams.phi,
@@ -54,7 +54,7 @@ function NBAGames() {
       },
     },
     {
-      schedule: { start: "2022-10-22T23:40:00.000Z" },
+      schedule: { start: "2022-10-24T23:40:00.000Z" },
       teams: {
         away: teams.tor,
         home: teams.mia,
@@ -75,7 +75,7 @@ function NBAGames() {
       },
     },
     {
-      schedule: { start: "2022-10-22T23:40:00.000Z" },
+      schedule: { start: "2022-10-24T23:40:00.000Z" },
       teams: {
         away: teams.orl,
         home: teams.nyk,
@@ -96,7 +96,7 @@ function NBAGames() {
       },
     },
     {
-      schedule: { start: "2022-10-23T00:10:00.000Z" },
+      schedule: { start: "2022-10-25T00:10:00.000Z" },
       teams: {
         away: teams.uta,
         home: teams.hou,
@@ -117,7 +117,7 @@ function NBAGames() {
       },
     },
     {
-      schedule: { start: "2022-10-23T00:10:00.000Z" },
+      schedule: { start: "2022-10-25T00:10:00.000Z" },
       teams: {
         away: teams.sas,
         home: teams.min,
@@ -138,7 +138,7 @@ function NBAGames() {
       },
     },
     {
-      schedule: { start: "2022-10-23T00:10:00.000Z" },
+      schedule: { start: "2022-10-25T00:10:00.000Z" },
       teams: {
         away: teams.bos,
         home: teams.chi,
@@ -159,7 +159,7 @@ function NBAGames() {
       },
     },
     {
-      schedule: { start: "2022-10-23T00:10:00.000Z" },
+      schedule: { start: "2022-10-25T00:10:00.000Z" },
       teams: {
         away: teams.bkn,
         home: teams.mem,
@@ -180,7 +180,7 @@ function NBAGames() {
       },
     },
     {
-      schedule: { start: "2022-10-23T02:10:00.000Z" },
+      schedule: { start: "2022-10-25T02:10:00.000Z" },
       teams: {
         away: teams.den,
         home: teams.por,
