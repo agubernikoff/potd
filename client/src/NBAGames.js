@@ -77,8 +77,8 @@ function NBAGames() {
     {
       schedule: { start: "2022-10-26T00:10:00.000Z" },
       teams: {
-        away: teams.orl,
-        home: teams.nyk,
+        away: teams.lac,
+        home: teams.okc,
       },
       odds: {
         spread: {
