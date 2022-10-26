@@ -35,199 +35,199 @@ function NFLGames() {
   };
   const games = [
     {
-      schedule: { start: "2022-10-21T00:15:00.000Z" },
+      schedule: { start: "2022-10-26T00:15:00.000Z" },
       teams: {
-        away: teams.saints,
-        home: teams.cardinals,
+        away: teams.ravens,
+        home: teams.buccaneers,
       },
       odds: {
         spread: {
           current: {
-            away: "+3.0",
-            home: "-3.0",
+            away: "-1.5",
+            home: "+1.5",
             awayOdds: "-110",
-            homeOdds: "-120",
+            homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+125", homeOdds: "-145" } },
+      moneyline: { current: { awayOdds: "-120", homeOdds: "+100" } },
       total: {
-        current: { total: "44.0", overOdds: "-105", underOdds: "-115" },
+        current: { total: "45.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
-      schedule: { start: "2022-10-23T17:00:00.000Z" },
+      schedule: { start: "2022-10-30T13:30:00.000Z" },
       teams: {
-        away: teams.colts,
-        home: teams.titans,
+        away: teams.broncos,
+        home: teams.jaguars,
       },
       odds: {
         spread: {
           current: {
             away: "+2.5",
             home: "-2.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+115", homeOdds: "-135" } },
-      total: {
-        current: { total: "42.0", overOdds: "-115", underOdds: "-105" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-23T17:00:00.000Z" },
-      teams: {
-        away: teams.giants,
-        home: teams.jaguars,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+3.0",
-            home: "-3.0",
-            awayOdds: "-105",
-            homeOdds: "-115",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+135", homeOdds: "-155" } },
-      total: {
-        current: { total: "41.5", overOdds: "-105", underOdds: "-115" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-23T17:00:00.000Z" },
-      teams: {
-        away: teams.buccaneers,
-        home: teams.panthers,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-13.5",
-            home: "+13.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-500", homeOdds: "+380" } },
+      moneyline: { current: { awayOdds: "+130", homeOdds: "-155" } },
       total: {
-        current: { total: "40.5", overOdds: "-105", underOdds: "-115" },
+        current: { total: "39.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
-      schedule: { start: "2022-10-23T17:00:00.000Z" },
+      schedule: { start: "2022-10-30T17:00:00.000Z" },
       teams: {
-        away: teams.packers,
-        home: teams.commanders,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-4.5",
-            home: "+4.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-220", homeOdds: "+190" } },
-      total: {
-        current: { total: "41.5", overOdds: "-105", underOdds: "-115" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-23T17:00:00.000Z" },
-      teams: {
-        away: teams.lions,
+        away: teams.bears,
         home: teams.cowboys,
       },
       odds: {
         spread: {
           current: {
-            away: "+6.5",
-            home: "-6.5",
+            away: "+9.5",
+            home: "-9.5",
             awayOdds: "-105",
             homeOdds: "-115",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+240", homeOdds: "-295" } },
+      moneyline: { current: { awayOdds: "+360", homeOdds: "-460" } },
       total: {
-        current: { total: "49.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "42.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
-      schedule: { start: "2022-10-23T17:00:00.000Z" },
+      schedule: { start: "2022-10-30T17:00:00.000Z" },
       teams: {
-        away: teams.falcons,
-        home: teams.bengals,
+        away: teams.raiders,
+        home: teams.saints,
       },
       odds: {
         spread: {
           current: {
-            away: "+6.5",
-            home: "-6.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+225", homeOdds: "-275" } },
-      total: {
-        current: { total: "47.0", overOdds: "-115", underOdds: "-105" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-23T17:00:00.000Z" },
-      teams: {
-        away: teams.browns,
-        home: teams.ravens,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+6.5",
-            home: "-6.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+230", homeOdds: "-280" } },
-      total: {
-        current: { total: "45.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-23T20:05:00.000Z" },
-      teams: {
-        away: teams.texans,
-        home: teams.raiders,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+7.0",
-            home: "-7.0",
+            away: "-1.5",
+            home: "+1.5",
             awayOdds: "-115",
             homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+260", homeOdds: "-320" } },
+      moneyline: { current: { awayOdds: "-130", homeOdds: "+110" } },
       total: {
-        current: { total: "45.5", overOdds: "-115", underOdds: "-105" },
+        current: { total: "49.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
-      schedule: { start: "2022-10-23T20:05:00.000Z" },
+      schedule: { start: "2022-10-30T17:00:00.000Z" },
       teams: {
-        away: teams.jets,
-        home: teams.broncos,
+        away: teams.panthers,
+        home: teams.falcons,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+4.5",
+            home: "-4.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+185", homeOdds: "-220" } },
+      total: {
+        current: { total: "42.5", overOdds: "-105", underOdds: "-115" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-30T17:00:00.000Z" },
+      teams: {
+        away: teams.steelers,
+        home: teams.eagles,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+10.5",
+            home: "-10.5",
+            awayOdds: "-105",
+            homeOdds: "-115",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+410", homeOdds: "-550" } },
+      total: {
+        current: { total: "43.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-30T17:00:00.000Z" },
+      teams: {
+        away: teams.dolphins,
+        home: teams.lions,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-3.5",
+            home: "+3.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-175", homeOdds: "+145" } },
+      total: {
+        current: { total: "51.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-30T17:00:00.000Z" },
+      teams: {
+        away: teams.cardinals,
+        home: teams.vikings,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+3.5",
+            home: "-3.5",
+            awayOdds: "-105",
+            homeOdds: "-115",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+170", homeOdds: "-200" } },
+      total: {
+        current: { total: "48.5", overOdds: "-115", underOdds: "-105" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-30T17:00:00.000Z" },
+      teams: {
+        away: teams.patriots,
+        home: teams.jets,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-1.5",
+            home: "+1.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-130", homeOdds: "+110" } },
+      total: {
+        current: { total: "40.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-30T20:05:00.000Z" },
+      teams: {
+        away: teams.titans,
+        home: teams.texans,
       },
       odds: {
         spread: {
@@ -239,37 +239,58 @@ function NFLGames() {
           },
         },
       },
-      moneyline: { current: { awayOdds: "+105", homeOdds: "-125" } },
+      moneyline: { current: { awayOdds: "-135", homeOdds: "+115" } },
       total: {
-        current: { total: "36.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "40.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
-      schedule: { start: "2022-10-23T20:25:00.000Z" },
+      schedule: { start: "2022-10-30T20:25:00.000Z" },
       teams: {
-        away: teams.seahawks,
-        home: teams.chargers,
+        away: teams.giants,
+        home: teams.seahawks,
       },
       odds: {
         spread: {
           current: {
-            away: "+4.5",
-            home: "-4.5",
-            awayOdds: "-105",
-            homeOdds: "-115",
+            away: "+3.0",
+            home: "-3.0",
+            awayOdds: "-110",
+            homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+200", homeOdds: "-240" } },
+      moneyline: { current: { awayOdds: "+125", homeOdds: "-145" } },
       total: {
-        current: { total: "51.0", overOdds: "-115", underOdds: "-105" },
+        current: { total: "44.5", overOdds: "-115", underOdds: "-105" },
       },
     },
     {
-      schedule: { start: "2022-10-23T20:25:00.000Z" },
+      schedule: { start: "2022-10-30T20:25:00.000Z" },
       teams: {
-        away: teams.chiefs,
-        home: teams.niners,
+        away: teams.commanders,
+        home: teams.colts,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+3.0",
+            home: "-3.0",
+            awayOdds: "-115",
+            homeOdds: "-105",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+130", homeOdds: "-150" } },
+      total: {
+        current: { total: "40.5", overOdds: "-105", underOdds: "-115" },
+      },
+    },
+    {
+      schedule: { start: "2022-10-30T20:25:00.000Z" },
+      teams: {
+        away: teams.niners,
+        home: teams.rams,
       },
       odds: {
         spread: {
@@ -277,97 +298,55 @@ function NFLGames() {
             away: "-1.5",
             home: "+1.5",
             awayOdds: "-110",
-            homeOdds: "-120",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "n/a", homeOdds: "n/a" } },
-      total: {
-        current: { total: "48.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-24T00:20:00.000Z" },
-      teams: {
-        away: teams.steelers,
-        home: teams.dolphins,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+7.5",
-            home: "-7.5",
-            awayOdds: "-105",
-            homeOdds: "-115",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+270", homeOdds: "-340" } },
-      total: {
-        current: { total: "44.5", overOdds: "-115", underOdds: "-105" },
-      },
-    },
-    {
-      schedule: { start: "2022-10-25T00:15:00.000Z" },
-      teams: {
-        away: teams.bears,
-        home: teams.patriots,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+7.5",
-            home: "-7.5",
-            awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+280", homeOdds: "-350" } },
+      moneyline: { current: { awayOdds: "-120", homeOdds: "+100" } },
       total: {
-        current: { total: "40.0", overOdds: "-110", underOdds: "-110" },
+        current: { total: "42.5", overOdds: "-115", underOdds: "-105" },
       },
     },
     {
-      schedule: { start: "2022-10-10T00:20:00.000Z" },
+      schedule: { start: "2022-10-31T00:20:00.000Z" },
       teams: {
-        away: teams.bengals,
-        home: teams.ravens,
+        away: teams.packers,
+        home: teams.bills,
       },
       odds: {
         spread: {
           current: {
-            away: "+3.5",
-            home: "-3.5",
-            awayOdds: "-115",
+            away: "+10.5",
+            home: "-10.5",
+            awayOdds: "-110",
             homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+145", homeOdds: "-175" } },
+      moneyline: { current: { awayOdds: "+410", homeOdds: "-550" } },
       total: {
         current: { total: "47.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
-      schedule: { start: "2022-10-11T00:15:00.000Z" },
+      schedule: { start: "2022-11-01T00:15:00.000Z" },
       teams: {
-        away: teams.raiders,
-        home: teams.chiefs,
+        away: teams.bengals,
+        home: teams.browns,
       },
       odds: {
         spread: {
           current: {
-            away: "+7.5",
-            home: "-7.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
+            away: "-3.5",
+            home: "+3.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+265", homeOdds: "-330" } },
+      moneyline: { current: { awayOdds: "-195", homeOdds: "+165" } },
       total: {
-        current: { total: "51.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "47.0", overOdds: "-110", underOdds: "-110" },
       },
     },
   ];
