@@ -35,7 +35,7 @@ function NFLGames() {
   };
   const games = [
     {
-      schedule: { start: "2022-10-26T00:15:00.000Z" },
+      schedule: { start: "2022-10-27T00:15:00.000Z" },
       teams: {
         away: teams.ravens,
         home: teams.buccaneers,
