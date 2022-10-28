@@ -28,6 +28,7 @@ function NCAAFGames() {
   };
   const games = [
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-21T23:00:00.000Z" },
       teams: {
         away: { team: "Princeton Tigers" },
@@ -49,6 +50,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-22T00:00:00.000Z" },
       teams: {
         away: { team: "UAB Blazers" },
@@ -70,6 +72,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-15T16:00:00.000Z" },
       teams: {
         away: teams.psu,
@@ -91,6 +94,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-15T16:00:00.000Z" },
       teams: {
         away: { team: "Iowa Hawkeyes" },
@@ -112,6 +116,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-15T16:00:00.000Z" },
       teams: {
         away: { team: "Auburn Tigers" },
@@ -133,6 +138,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-15T19:30:00.000Z" },
       teams: {
         away: { team: "Vanderbilt Commadores" },
@@ -154,6 +160,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-15T19:30:00.000Z" },
       teams: {
         away: teams.okstate,
@@ -175,6 +182,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-15T19:30:00.000Z" },
       teams: {
         away: teams.bama,
@@ -196,6 +204,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-15T19:30:00.000Z" },
       teams: {
         away: { team: "NCST Wolfpack" },
@@ -217,6 +226,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-15T20:00:00.000Z" },
       teams: {
         away: teams.jmu,
@@ -238,6 +248,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-15T23:30:00.000Z" },
       teams: {
         away: teams.clemson,
@@ -259,6 +270,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-15T23:30:00.000Z" },
       teams: {
         away: teams.msu,
@@ -280,6 +292,7 @@ function NCAAFGames() {
       },
     },
     {
+      details: { league: "NCAAF" },
       schedule: { start: "2022-10-16T00:00:00.000Z" },
       teams: {
         away: teams.usc,
@@ -301,6 +314,7 @@ function NCAAFGames() {
       },
     },
     // {
+    // details:{league:'NCAAF'},
     //   schedule: { start: "2022-10-15T23:30:00.000Z" },
     //   teams: {
     //     away: { team: "South Carolina Gamecocks" },
@@ -322,6 +336,7 @@ function NCAAFGames() {
     //   },
     //   },
     //   {
+    // details:{league:'NCAAF'},
     //     schedule: { start: "2022-10-15T23:30:00.000Z" },
     //     teams: {
     //       away: { team: "Army Black Knights" },
@@ -343,6 +358,7 @@ function NCAAFGames() {
     //     },
     //   },
     //   {
+    // details:{league:'NCAAF'},
     //     schedule: { start: "2022-10-15T23:30:00.000Z" },
     //     teams: {
     //       away: teams.byu,
@@ -364,6 +380,7 @@ function NCAAFGames() {
     //     },
     //   },
     //   {
+    // details:{league:'NCAAF'},
     //     schedule: { start: "2022-10-15T23:30:00.000Z" },
     //     teams: {
     //       away: teams.ksu,
@@ -385,6 +402,7 @@ function NCAAFGames() {
     //     },
     //   },
     //   {
+    // details:{league:'NCAAF'},
     //     schedule: { start: "2022-10-09T00:00:00.000Z" },
     //     teams: {
     //       away: { team: "Texas A&M Aggies" },
@@ -406,6 +424,7 @@ function NCAAFGames() {
     //     },
     //   },
     //   {
+    // details:{league:'NCAAF'},
     //     schedule: { start: "2022-10-09T00:00:00.000Z" },
     //     teams: {
     //       away: { team: "Florida State Seminoles" },
@@ -427,6 +446,7 @@ function NCAAFGames() {
     //     },
     //   },
     //   {
+    // details:{league:'NCAAF'},
     //     schedule: { start: "2022-10-09T01:00:00.000Z" },
     //     teams: {
     //       away: teams.oregon,

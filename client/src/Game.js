@@ -55,7 +55,8 @@ function Game({ game, setPickAndOddsAndStart }) {
             onClick={(e) =>
               setPickAndOddsAndStart(
                 e.target.value.split(","),
-                game.schedule.start
+                game.schedule.start,
+                game.details.league
               )
             }
           >
@@ -74,7 +75,8 @@ function Game({ game, setPickAndOddsAndStart }) {
             onClick={(e) =>
               setPickAndOddsAndStart(
                 e.target.value.split(","),
-                game.schedule.start
+                game.schedule.start,
+                game.details.league
               )
             }
           >
@@ -96,7 +98,8 @@ function Game({ game, setPickAndOddsAndStart }) {
             onClick={(e) =>
               setPickAndOddsAndStart(
                 e.target.value.split(","),
-                game.schedule.start
+                game.schedule.start,
+                game.details.league
               )
             }
           >
@@ -114,7 +117,8 @@ function Game({ game, setPickAndOddsAndStart }) {
             onClick={(e) =>
               setPickAndOddsAndStart(
                 e.target.value.split(","),
-                game.schedule.start
+                game.schedule.start,
+                game.details.league
               )
             }
           >
@@ -138,7 +142,8 @@ function Game({ game, setPickAndOddsAndStart }) {
             onClick={(e) =>
               setPickAndOddsAndStart(
                 e.target.value.split(","),
-                game.schedule.start
+                game.schedule.start,
+                game.details.league
               )
             }
           >
@@ -159,7 +164,8 @@ function Game({ game, setPickAndOddsAndStart }) {
             onClick={(e) =>
               setPickAndOddsAndStart(
                 e.target.value.split(","),
-                game.schedule.start
+                game.schedule.start,
+                game.details.league
               )
             }
           >

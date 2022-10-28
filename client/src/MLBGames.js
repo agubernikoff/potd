@@ -13,6 +13,7 @@ function MLBGames() {
   };
   const games = [
     {
+      details: { league: "MLB" },
       schedule: { start: "2022-10-29T00:04:00.000Z" },
       teams: {
         away: teams.phillies,

@@ -35,6 +35,7 @@ function NFLGames() {
   };
   const games = [
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-28T00:15:00.000Z" },
       teams: {
         away: teams.ravens,
@@ -56,6 +57,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T13:30:00.000Z" },
       teams: {
         away: teams.broncos,
@@ -77,6 +79,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T17:00:00.000Z" },
       teams: {
         away: teams.bears,
@@ -98,6 +101,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T17:00:00.000Z" },
       teams: {
         away: teams.raiders,
@@ -119,6 +123,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T17:00:00.000Z" },
       teams: {
         away: teams.panthers,
@@ -140,6 +145,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T17:00:00.000Z" },
       teams: {
         away: teams.steelers,
@@ -161,6 +167,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T17:00:00.000Z" },
       teams: {
         away: teams.dolphins,
@@ -182,6 +189,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T17:00:00.000Z" },
       teams: {
         away: teams.cardinals,
@@ -203,6 +211,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T17:00:00.000Z" },
       teams: {
         away: teams.patriots,
@@ -224,6 +233,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T20:05:00.000Z" },
       teams: {
         away: teams.titans,
@@ -245,6 +255,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T20:25:00.000Z" },
       teams: {
         away: teams.giants,
@@ -266,6 +277,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T20:25:00.000Z" },
       teams: {
         away: teams.commanders,
@@ -287,6 +299,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-30T20:25:00.000Z" },
       teams: {
         away: teams.niners,
@@ -308,6 +321,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-10-31T00:20:00.000Z" },
       teams: {
         away: teams.packers,
@@ -329,6 +343,7 @@ function NFLGames() {
       },
     },
     {
+      details: { league: "NFL" },
       schedule: { start: "2022-11-01T00:15:00.000Z" },
       teams: {
         away: teams.bengals,

@@ -33,6 +33,7 @@ function NBAGames() {
   };
   const games = [
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-28T23:10:00.000Z" },
       teams: {
         away: teams.atl,
@@ -54,6 +55,7 @@ function NBAGames() {
       },
     },
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-28T23:10:00.000Z" },
       teams: {
         away: teams.cha,
@@ -75,6 +77,7 @@ function NBAGames() {
       },
     },
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-28T23:40:00.000Z" },
       teams: {
         away: teams.cle,
@@ -96,6 +99,7 @@ function NBAGames() {
       },
     },
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-28T23:40:00.000Z" },
       teams: {
         away: teams.ind,
@@ -117,6 +121,7 @@ function NBAGames() {
       },
     },
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-28T23:40:00.000Z" },
       teams: {
         away: teams.phi,
@@ -138,6 +143,7 @@ function NBAGames() {
       },
     },
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-29T00:10:00.000Z" },
       teams: {
         away: teams.nyk,
@@ -159,6 +165,7 @@ function NBAGames() {
       },
     },
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-29T00:10:00.000Z" },
       teams: {
         away: teams.lal,
@@ -180,6 +187,7 @@ function NBAGames() {
       },
     },
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-29T00:40:00.000Z" },
       teams: {
         away: teams.chi,
@@ -201,6 +209,7 @@ function NBAGames() {
       },
     },
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-29T01:10:00.000Z" },
       teams: {
         away: teams.uta,
@@ -222,6 +231,7 @@ function NBAGames() {
       },
     },
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-29T02:10:00.000Z" },
       teams: {
         away: teams.hou,
@@ -243,6 +253,7 @@ function NBAGames() {
       },
     },
     {
+      details: { league: "NBA" },
       schedule: { start: "2022-10-29T02:10:00.000Z" },
       teams: {
         away: teams.nop,
