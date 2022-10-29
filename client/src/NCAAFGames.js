@@ -37,32 +37,164 @@ function NCAAFGames() {
   const games = [
     {
       details: { league: "NCAAF" },
-      schedule: { start: "2022-10-21T23:00:00.000Z" },
+      schedule: { start: "2022-10-29T16:00:00.000Z" },
       teams: {
-        away: { team: "Princeton Tigers" },
-        home: { team: "Harvard Crimson" },
+        away: teams.tcu,
+        home: { team: "West Virginia Mountaineers" },
       },
       odds: {
         spread: {
           current: {
-            away: "-1.5",
-            home: "+1.5",
+            away: "-7.0",
+            home: "+7.0",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-125", homeOdds: "+105" } },
+      moneyline: { current: { awayOdds: "-270", homeOdds: "+220" } },
       total: {
-        current: { total: "47.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "69.0", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
       details: { league: "NCAAF" },
-      schedule: { start: "2022-10-22T00:00:00.000Z" },
+      schedule: { start: "2022-10-29T16:00:00.000Z" },
       teams: {
-        away: { team: "UAB Blazers" },
-        home: { team: "Western Kentucky Hilltoppers" },
+        away: teams.osu,
+        home: teams.psu,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-16.0",
+            home: "+16.0",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-700", homeOdds: "+500" } },
+      total: {
+        current: { total: "60.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NCAAF" },
+      schedule: { start: "2022-10-29T16:00:00.000Z" },
+      teams: {
+        away: { team: "Notre Dame Fighting Irish" },
+        home: teams.cuse,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+1.5",
+            home: "-1.5",
+            awayOdds: "-105",
+            homeOdds: "-115",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+100", homeOdds: "-120" } },
+      total: {
+        current: { total: "48.0", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NCAAF" },
+      schedule: { start: "2022-10-29T19:30:00.000Z" },
+      teams: {
+        away: teams.ill,
+        home: { team: "Nebraska Cornhuskers" },
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-7.5",
+            home: "+7.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-290", homeOdds: "+230" } },
+      total: {
+        current: { total: "50.0", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NCAAF" },
+      schedule: { start: "2022-10-29T19:30:00.000Z" },
+      teams: {
+        away: teams.cincy,
+        home: { team: "University of Central Florida Knights" },
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+1.5",
+            home: "-1.5",
+            awayOdds: "+105",
+            homeOdds: "-125",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+105", homeOdds: "-125" } },
+      total: {
+        current: { total: "55.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NCAAF" },
+      schedule: { start: "2022-10-29T19:30:00.000Z" },
+      teams: {
+        away: teams.oregon,
+        home: { team: "California Golden Bears" },
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-17.0",
+            home: "+17.0",
+            awayOdds: "-105",
+            homeOdds: "-120",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-800", homeOdds: "+550" } },
+      total: {
+        current: { total: "56.5", overOdds: "-105", underOdds: "-115" },
+      },
+    },
+    {
+      details: { league: "NCAAF" },
+      schedule: { start: "2022-10-29T19:30:00.000Z" },
+      teams: {
+        away: teams.wf,
+        home: { team: "Louisville Cardinal" },
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-3.0",
+            home: "+3.0",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-155", homeOdds: "+135" } },
+      total: {
+        current: { total: "66.0", overOdds: "-105", underOdds: "-115" },
+      },
+    },
+    {
+      details: { league: "NCAAF" },
+      schedule: { start: "2022-10-29T19:30:00.000Z" },
+      teams: {
+        away: teams.okstate,
+        home: teams.ksu,
       },
       odds: {
         spread: {
@@ -76,254 +208,166 @@ function NCAAFGames() {
       },
       moneyline: { current: { awayOdds: "+100", homeOdds: "-120" } },
       total: {
-        current: { total: "58.5", overOdds: "-115", underOdds: "-105" },
+        current: { total: "56.0", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
       details: { league: "NCAAF" },
-      schedule: { start: "2022-10-15T16:00:00.000Z" },
+      schedule: { start: "2022-10-29T20:00:00.000Z" },
       teams: {
-        away: teams.psu,
-        home: teams.mich,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+7.0",
-            home: "-7.0",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+220", homeOdds: "-275" } },
-      total: {
-        current: { total: "49.5", overOdds: "-105", underOdds: "-115" },
-      },
-    },
-    {
-      details: { league: "NCAAF" },
-      schedule: { start: "2022-10-15T16:00:00.000Z" },
-      teams: {
-        away: { team: "Iowa Hawkeyes" },
-        home: teams.texas,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+15.5",
-            home: "-15.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+500", homeOdds: "-720" } },
-      total: {
-        current: { total: "48.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      details: { league: "NCAAF" },
-      schedule: { start: "2022-10-15T16:00:00.000Z" },
-      teams: {
-        away: { team: "Auburn Tigers" },
-        home: teams.miss,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+14.5",
-            home: "-14.5",
-            awayOdds: "-105",
-            homeOdds: "-115",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+490", homeOdds: "-710" } },
-      total: {
-        current: { total: "55.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      details: { league: "NCAAF" },
-      schedule: { start: "2022-10-15T19:30:00.000Z" },
-      teams: {
-        away: { team: "Vanderbilt Commadores" },
-        home: teams.uga,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+37.5",
-            home: "-37.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "n/a", homeOdds: "n/a" } },
-      total: {
-        current: { total: "56.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      details: { league: "NCAAF" },
-      schedule: { start: "2022-10-15T19:30:00.000Z" },
-      teams: {
-        away: teams.okstate,
-        home: teams.tcu,
+        away: { team: "Missouri Tigers" },
+        home: teams.sc,
       },
       odds: {
         spread: {
           current: {
             away: "+3.5",
             home: "-3.5",
-            awayOdds: "-105",
-            homeOdds: "-120",
+            awayOdds: "-115",
+            homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+150", homeOdds: "-185" } },
+      moneyline: { current: { awayOdds: "+150", homeOdds: "-175" } },
       total: {
-        current: { total: "68.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "45.0", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
       details: { league: "NCAAF" },
-      schedule: { start: "2022-10-15T19:30:00.000Z" },
+      schedule: { start: "2022-10-29T23:00:00.000Z" },
       teams: {
-        away: teams.bama,
+        away: teams.usc,
+        home: { team: "Arizona Wildcats" },
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-14.5",
+            home: "+14.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-600", homeOdds: "+450" } },
+      total: {
+        current: { total: "75.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NCAAF" },
+      schedule: { start: "2022-10-29T23:00:00.000Z" },
+      teams: {
+        away: teams.uk,
         home: teams.tenn,
       },
       odds: {
         spread: {
           current: {
-            away: "-8.5",
-            home: "+8.5",
-            awayOdds: "-105",
-            homeOdds: "-120",
+            away: "+11.5",
+            home: "-11.5",
+            awayOdds: "-115",
+            homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-335", homeOdds: "+265" } },
+      moneyline: { current: { awayOdds: "+340", homeOdds: "-425" } },
       total: {
-        current: { total: "66.5", overOdds: "-105", underOdds: "-115" },
+        current: { total: "62.0", overOdds: "-115", underOdds: "-105" },
       },
     },
     {
       details: { league: "NCAAF" },
-      schedule: { start: "2022-10-15T19:30:00.000Z" },
+      schedule: { start: "2022-10-29T23:30:00.000Z" },
       teams: {
-        away: { team: "NCST Wolfpack" },
-        home: teams.cuse,
+        away: teams.ole,
+        home: { team: "Texas A&M Aggies" },
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-2.5",
+            home: "+2.5",
+            awayOdds: "-115",
+            homeOdds: "-105",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "-135", homeOdds: "+115" } },
+      total: {
+        current: { total: "55.0", overOdds: "-115", underOdds: "-105" },
+      },
+    },
+    {
+      details: { league: "NCAAF" },
+      schedule: { start: "2022-10-29T23:30:00.000Z" },
+      teams: {
+        away: { team: "Michigan State Spartans" },
+        home: teams.mich,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+23.0",
+            home: "-23.0",
+            awayOdds: "-115",
+            homeOdds: "-105",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+1000", homeOdds: "-1800" } },
+      total: {
+        current: { total: "55.0", overOdds: "-115", underOdds: "-105" },
+      },
+    },
+    {
+      details: { league: "NCAAF" },
+      schedule: { start: "2022-10-30T00:00:00.000Z" },
+      teams: {
+        away: { team: "Pittsburgh Panthers" },
+        home: teams.unc,
       },
       odds: {
         spread: {
           current: {
             away: "+3.0",
             home: "-3.0",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "+130", homeOdds: "-155" } },
-      total: {
-        current: { total: "42.5", overOdds: "-105", underOdds: "-115" },
-      },
-    },
-    {
-      details: { league: "NCAAF" },
-      schedule: { start: "2022-10-15T20:00:00.000Z" },
-      teams: {
-        away: teams.jmu,
-        home: { team: "Georgia Southern Eagles" },
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-12.5",
-            home: "+12.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-465", homeOdds: "+350" } },
-      total: {
-        current: { total: "66.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      details: { league: "NCAAF" },
-      schedule: { start: "2022-10-15T23:30:00.000Z" },
-      teams: {
-        away: teams.clemson,
-        home: { team: "Florida State Seminoles" },
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-4.5",
-            home: "+4.5",
             awayOdds: "-115",
             homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-205", homeOdds: "+170" } },
+      moneyline: { current: { awayOdds: "+120", homeOdds: "-140" } },
       total: {
-        current: { total: "51.5", overOdds: "-105", underOdds: "-115" },
+        current: { total: "65.5", overOdds: "-115", underOdds: "-105" },
       },
     },
     {
       details: { league: "NCAAF" },
-      schedule: { start: "2022-10-15T23:30:00.000Z" },
+      schedule: { start: "2022-10-30T00:00:00.000Z" },
       teams: {
-        away: teams.msu,
-        home: teams.uk,
+        away: { team: "Stanford Cardinal" },
+        home: teams.ucla,
       },
       odds: {
         spread: {
           current: {
-            away: "-3.5",
-            home: "+3.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-170", homeOdds: "+140" } },
-      total: {
-        current: { total: "50.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      details: { league: "NCAAF" },
-      schedule: { start: "2022-10-16T00:00:00.000Z" },
-      teams: {
-        away: teams.usc,
-        home: teams.uu,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+3.5",
-            home: "-3.5",
+            away: "+16.0",
+            home: "-16.0",
             awayOdds: "-115",
             homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+140", homeOdds: "-170" } },
+      moneyline: { current: { awayOdds: "+475", homeOdds: "-650" } },
       total: {
-        current: { total: "64.5", overOdds: "-115", underOdds: "-105" },
+        current: { total: "65.0", overOdds: "-115", underOdds: "-105" },
       },
     },
     // {
     // details:{league:'NCAAF'},
-    //   schedule: { start: "2022-10-15T23:30:00.000Z" },
+    //   schedule: { start: "2022-10-29T23:30:00.000Z" },
     //   teams: {
     //     away: { team: "South Carolina Gamecocks" },
     //     home: teams.uk,
@@ -345,7 +389,7 @@ function NCAAFGames() {
     //   },
     //   {
     // details:{league:'NCAAF'},
-    //     schedule: { start: "2022-10-15T23:30:00.000Z" },
+    //     schedule: { start: "2022-10-29T23:30:00.000Z" },
     //     teams: {
     //       away: { team: "Army Black Knights" },
     //       home: teams.wf,
@@ -367,7 +411,7 @@ function NCAAFGames() {
     //   },
     //   {
     // details:{league:'NCAAF'},
-    //     schedule: { start: "2022-10-15T23:30:00.000Z" },
+    //     schedule: { start: "2022-10-29T23:30:00.000Z" },
     //     teams: {
     //       away: teams.byu,
     //       home: { team: "Notre Dame Fighting Irish" },
@@ -389,7 +433,7 @@ function NCAAFGames() {
     //   },
     //   {
     // details:{league:'NCAAF'},
-    //     schedule: { start: "2022-10-15T23:30:00.000Z" },
+    //     schedule: { start: "2022-10-29T23:30:00.000Z" },
     //     teams: {
     //       away: teams.ksu,
     //       home: { team: "Iowa State Cyclones" },
