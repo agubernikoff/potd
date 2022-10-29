@@ -3,18 +3,18 @@ function MLBGames() {
     phillies: {
       team: "Philladelphia Phillies",
       abbreviation: "PHI",
-      starter: "A. Nola",
+      starter: "Z. Wheeler",
     },
     astros: {
       team: "Houston Astros",
       abbreviation: "HOU",
-      starter: "J. Verlander",
+      starter: "F. Valdez",
     },
   };
   const games = [
     {
       details: { league: "MLB" },
-      schedule: { start: "2022-10-29T00:04:00.000Z" },
+      schedule: { start: "2022-10-30T00:04:00.000Z" },
       teams: {
         away: teams.phillies,
         home: teams.astros,
@@ -24,14 +24,14 @@ function MLBGames() {
           current: {
             away: "+1.5",
             home: "-1.5",
-            awayOdds: "-165",
-            homeOdds: "+135",
+            awayOdds: "-180",
+            homeOdds: "+150",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+140", homeOdds: "-165" } },
+      moneyline: { current: { awayOdds: "+120", homeOdds: "-140" } },
       total: {
-        current: { total: "6.5", overOdds: "-130", underOdds: "+105" },
+        current: { total: "7.0", overOdds: "-110", underOdds: "-110" },
       },
     },
   ];
