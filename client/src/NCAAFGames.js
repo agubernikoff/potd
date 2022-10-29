@@ -105,6 +105,28 @@ function NCAAFGames() {
       details: { league: "NCAAF" },
       schedule: { start: "2022-10-29T19:30:00.000Z" },
       teams: {
+        away: { team: "Florida Gators", abbreviation: "UF" },
+        home: teams.uga,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "-23.5",
+            home: "+23.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+1060", homeOdds: "-2500" } },
+      total: {
+        current: { total: "56.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NCAAF" },
+      schedule: { start: "2022-10-29T19:30:00.000Z" },
+      teams: {
         away: teams.ill,
         home: { team: "Nebraska Cornhuskers" },
       },
