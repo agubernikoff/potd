@@ -345,7 +345,7 @@ function NCAAFGames() {
     },
     {
       details: { league: "NCAAF" },
-      schedule: { start: "2022-10-30T00:00:00.000Z" },
+      schedule: { start: "2022-10-30T02:30:00.000Z" },
       teams: {
         away: { team: "Stanford Cardinal" },
         home: teams.ucla,
