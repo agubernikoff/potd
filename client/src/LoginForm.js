@@ -28,7 +28,7 @@ function LoginForm() {
       if (r.ok) {
         r.json().then((user) => {
           dispatch(userActions.setUser(user));
-          navigate("/");
+          navigate(-1);
         });
       } else {
         r.json().then((err) => setErrors(err.errors));
