@@ -3,35 +3,35 @@ function MLBGames() {
     phillies: {
       team: "Philladelphia Phillies",
       abbreviation: "PHI",
-      starter: "Z. Wheeler",
+      starter: "N. Syndergaard",
     },
     astros: {
       team: "Houston Astros",
       abbreviation: "HOU",
-      starter: "F. Valdez",
+      starter: "L. McCullers",
     },
   };
   const games = [
     {
       details: { league: "MLB" },
-      schedule: { start: "2022-10-30T00:04:00.000Z" },
+      schedule: { start: "2022-11-01T00:04:00.000Z" },
       teams: {
-        away: teams.phillies,
-        home: teams.astros,
+        away: teams.astros,
+        home: teams.phillies,
       },
       odds: {
         spread: {
           current: {
-            away: "+1.5",
-            home: "-1.5",
-            awayOdds: "-180",
-            homeOdds: "+150",
+            away: "-1.5",
+            home: "+1.5",
+            awayOdds: "+130",
+            homeOdds: "-155",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+120", homeOdds: "-140" } },
+      moneyline: { current: { awayOdds: "-130", homeOdds: "+110" } },
       total: {
-        current: { total: "7.0", overOdds: "-110", underOdds: "-110" },
+        current: { total: "8.0", overOdds: "-105", underOdds: "-115" },
       },
     },
   ];
