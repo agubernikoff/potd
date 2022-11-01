@@ -1,4 +1,4 @@
-import React, { useState, useRef, forwardRef } from "react";
+import React, { useEffect, useState, useRef, forwardRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { userActions } from "./store/user-slice";
@@ -16,6 +16,7 @@ const Post = forwardRef(({ post, account }, ref) => {
 
   const dispatch = useDispatch();
 
+  const [logo, setLogo] = useState(null);
   const [comment, setComment] = useState("");
   const [errors, setErrors] = useState([]);
   function displayErrors(errors) {
@@ -265,6 +266,17 @@ const Post = forwardRef(({ post, account }, ref) => {
     post.result === "w" ? "✅" : "❌"
   );
 
+  useEffect(() => {
+    fetch(
+      `${process.env.PUBLIC_URL}/logos/${post.pick
+        .split(" ")
+        .slice(0, -1)
+        .join("")}.png`
+    ).then((r) => {
+      if (r.ok) setLogo(r.url);
+    });
+  }, [post.pick]);
+
   return (
     <div id={`post${post.id}`} className="post" ref={ref} style={borderColor}>
       <div>
@@ -318,6 +330,13 @@ const Post = forwardRef(({ post, account }, ref) => {
         )}
       </div>
       <span>{post.league}</span>
+      {logo ? (
+        <img
+          alt={post.pick}
+          src={logo}
+          style={{ width: "20%", display: "block", margin: "1em auto" }}
+        />
+      ) : null}
       <h1 style={color}>
         {post.pick} {post.odds}
       </h1>
