@@ -1,7 +1,7 @@
 function MLBGames() {
   const teams = {
     phillies: {
-      team: "Philladelphia Phillies",
+      team: "Philadelphia Phillies",
       abbreviation: "PHI",
       starter: "R. Suarez",
     },
