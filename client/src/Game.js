@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Game({ game, setPickAndOddsAndStart }) {
+  const [homeLogo, setHomeLogo] = useState(null);
+  const [awayLogo, setAwayLogo] = useState(null);
+
+  console.log(game.teams.away.team.split(" ").join(""));
+  useEffect(() => {
+    fetch(
+      `${process.env.PUBLIC_URL}/logos/${game.teams.away.team
+        .split(" ")
+        .join("")}.png`
+    ).then((r) => {
+      if (r.ok) setAwayLogo(r.url);
+    });
+    fetch(
+      `${process.env.PUBLIC_URL}/logos/${game.teams.home.team
+        .split(" ")
+        .join("")}.png`
+    ).then((r) => {
+      if (r.ok) setHomeLogo(r.url);
+    });
+  }, [game.teams.away.team, game.teams.home.team]);
   return (
     <div className="game">
       <div className="teams">
@@ -14,9 +34,19 @@ function Game({ game, setPickAndOddsAndStart }) {
           {game.teams.away.starter ? (
             <span className="team-starter">{game.teams.away.starter}</span>
           ) : null}
+          <img
+            alt={game.teams.away.team}
+            src={awayLogo}
+            style={{ width: "25%", display: "block" }}
+          />
         </div>
         <p>@</p>
         <div className="team">
+          <img
+            alt={game.teams.home.team}
+            src={homeLogo}
+            style={{ width: "25%", display: "block" }}
+          />
           <p className="team-name">
             {game.teams.home.ranking
               ? "#" + game.teams.home.ranking + " "
