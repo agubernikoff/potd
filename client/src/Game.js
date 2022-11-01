@@ -34,19 +34,23 @@ function Game({ game, setPickAndOddsAndStart }) {
           {game.teams.away.starter ? (
             <span className="team-starter">{game.teams.away.starter}</span>
           ) : null}
-          <img
-            alt={game.teams.away.team}
-            src={awayLogo}
-            style={{ width: "25%", display: "block" }}
-          />
+          {awayLogo ? (
+            <img
+              alt={game.teams.away.team}
+              src={awayLogo}
+              style={{ width: "25%", display: "block" }}
+            />
+          ) : null}
         </div>
         <p>@</p>
         <div className="team">
-          <img
-            alt={game.teams.home.team}
-            src={homeLogo}
-            style={{ width: "25%", display: "block" }}
-          />
+          {homeLogo ? (
+            <img
+              alt={game.teams.home.team}
+              src={homeLogo}
+              style={{ width: "25%", display: "block" }}
+            />
+          ) : null}
           <p className="team-name">
             {game.teams.home.ranking
               ? "#" + game.teams.home.ranking + " "
