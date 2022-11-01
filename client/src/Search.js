@@ -72,7 +72,6 @@ function Search() {
         ))
     : null;
 
-  console.log(mappedGames);
   return (
     <div className="feed">
       <div className="search-container">
