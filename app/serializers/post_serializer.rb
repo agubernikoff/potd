@@ -35,7 +35,7 @@ class PostSerializer < ActiveModel::Serializer
   end
 
   def last_ten
-    object.user.posts.filter{|p|p.status =='graded'}.sort_by{|p|p.created_at}.reverse!.first(10)
+    object.user.posts.filter{|p|p.status =='graded'}.sort_by{|p|p.created_at}.reverse!.first(10).map{|p|p.result}
   end
 
   def league_record
