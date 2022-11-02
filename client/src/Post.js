@@ -262,9 +262,7 @@ const Post = forwardRef(({ post, account }, ref) => {
       : { color: "red" }
     : {};
 
-  const lastTen = post.last_ten.map((post) =>
-    post.result === "w" ? "✅" : "❌"
-  );
+  const lastTen = post.last_ten.map((result) => (result === "w" ? "✅" : "❌"));
 
   useEffect(() => {
     fetch(
@@ -314,6 +312,10 @@ const Post = forwardRef(({ post, account }, ref) => {
               <strong>Record: </strong>
               {`${post.user.w} - ${post.user.l}`} (
               {Math.round((post.user.winP + Number.EPSILON) * 100)}%)
+            </p>
+            <p style={{ textAlign: "left" }}>
+              <strong>{`Record in ${post.league}: `}</strong>
+              {`${post.league_record}`}
             </p>
             <p style={{ textAlign: "left" }}>
               <strong>Last Pick: </strong>
