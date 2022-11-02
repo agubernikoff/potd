@@ -1,7 +1,7 @@
 class PostSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
-  attributes :id,:league,:pick,:odds,:caption,:status,:result,:start,:confidence,:created_at,:files,:comments,:tails,:fades,:last_pick,:last_ten
+  attributes :id,:league,:pick,:odds,:caption,:status,:result,:start,:confidence,:created_at,:files,:comments,:tails,:fades,:last_pick,:last_ten,:league_record
   belongs_to :user
 
   def files
@@ -36,5 +36,12 @@ class PostSerializer < ActiveModel::Serializer
 
   def last_ten
     object.user.posts.filter{|p|p.status =='graded'}.sort_by{|p|p.created_at}.reverse!.first(10)
+  end
+
+  def league_record
+    w=object.user.posts.filter{|p|p.status =='graded'}.where(league:object.league,result:'w').length
+    l=object.user.posts.filter{|p|p.status =='graded'}.where(league:object.league,result:'l').length
+    winP=w.to_f/(w.to_f+l.to_f)
+    return "#{w} - #{l} (#{winP.round(2)}%)"
   end
 end
