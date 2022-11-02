@@ -14,7 +14,7 @@ function MLBGames() {
   const games = [
     {
       details: { league: "MLB" },
-      schedule: { start: "2022-11-02T00:04:00.000Z" },
+      schedule: { start: "2022-11-03T00:04:00.000Z" },
       teams: {
         away: teams.astros,
         home: teams.phillies,
