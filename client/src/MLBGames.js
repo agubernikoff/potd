@@ -3,12 +3,12 @@ function MLBGames() {
     phillies: {
       team: "Philadelphia Phillies",
       abbreviation: "PHI",
-      starter: "R. Suarez",
+      starter: "A. Nola",
     },
     astros: {
       team: "Houston Astros",
       abbreviation: "HOU",
-      starter: "L. McCullers",
+      starter: "C. Javier",
     },
   };
   const games = [
@@ -24,14 +24,14 @@ function MLBGames() {
           current: {
             away: "-1.5",
             home: "+1.5",
-            awayOdds: "+130",
-            homeOdds: "-155",
+            awayOdds: "+160",
+            homeOdds: "-190",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-130", homeOdds: "+110" } },
+      moneyline: { current: { awayOdds: "-105", homeOdds: "-115" } },
       total: {
-        current: { total: "8.0", overOdds: "-105", underOdds: "-115" },
+        current: { total: "7.5", overOdds: "+105", underOdds: "-125" },
       },
     },
   ];
