@@ -274,8 +274,9 @@ const Post = forwardRef(({ post, account }, ref) => {
         .join("")}.png`
     ).then((r) => {
       if (r.ok) setLogo(r.url);
+      else setLogo(`${process.env.PUBLIC_URL}/logos/${post.league}.png`);
     });
-  }, [post.pick]);
+  }, [post.pick, post.league]);
 
   return (
     <div id={`post${post.id}`} className="post" ref={ref} style={borderColor}>
