@@ -224,7 +224,9 @@ function Account() {
               {accountHolder.league_records.map((league) => (
                 <p>
                   <strong>{league.league} RECORD: </strong>
-                  {league.record}
+                  {`${league.record} (${Math.round(
+                    (league.winP + Number.EPSILON) * 100
+                  )}%)`}
                 </p>
               ))}
               <p className="backP">

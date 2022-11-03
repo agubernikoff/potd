@@ -315,7 +315,9 @@ const Post = forwardRef(({ post, account }, ref) => {
             </p>
             <p style={{ textAlign: "left" }}>
               <strong>{`${post.league} Record: `}</strong>
-              {`${post.league_record}`}
+              {`${post.league_record.record} (${Math.round(
+                (post.league_record.winP + Number.EPSILON) * 100
+              )}%)`}
             </p>
             <p style={{ textAlign: "left" }}>
               <strong>Last Pick: </strong>

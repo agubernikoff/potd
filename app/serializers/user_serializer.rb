@@ -17,7 +17,7 @@ include Rails.application.routes.url_helpers
       w=object.posts.where(status:'graded',league:league,result:'w').length
       l=object.posts.where(status:'graded',league:league,result:'l').length
       winP=w.to_f/(w.to_f+l.to_f)
-      record={league:league, record:"#{w} - #{l} (#{winP.round(2)*100}%)"}
+      record={league:league, record:"#{w} - #{l}", winP:winP}
       records<<record
     end
     return records
