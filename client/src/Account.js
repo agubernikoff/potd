@@ -27,6 +27,7 @@ function Account() {
     fetch(`/users/${id}`)
       .then((r) => r.json())
       .then((data) => {
+        console.log(data);
         dispatch(ahActions.setAccountHolder(data));
         setUsername(data.username);
         setEditFormPicture(data.profile_picture);
@@ -220,6 +221,12 @@ function Account() {
                 {`${accountHolder.w} - ${accountHolder.l}`} (
                 {Math.round((accountHolder.winP + Number.EPSILON) * 100)}%)
               </p>
+              {accountHolder.league_records.map((league) => (
+                <p>
+                  <strong>{league.league} RECORD: </strong>
+                  {league.record}
+                </p>
+              ))}
               <p className="backP">
                 <strong>TAIL/FADE SUCCESS: </strong>
                 {`${successfulFades + successfulTails} - ${
