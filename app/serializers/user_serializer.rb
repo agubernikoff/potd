@@ -1,7 +1,7 @@
 class UserSerializer < ActiveModel::Serializer
 include Rails.application.routes.url_helpers
 
-  attributes :id,:username,:w,:l,:winP,:backP,:agg_success,:isAdmin,:profile_picture,:league_records
+  attributes :id,:username,:w,:l,:p,:winP,:backP,:agg_success,:isAdmin,:profile_picture,:league_records
   has_many :posts
   has_many :tails
   has_many :fades

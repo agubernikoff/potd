@@ -13,11 +13,13 @@ function Feed() {
 
   const losers = postsCopy.filter((p) => p.result === "l");
 
+  const pushers = postsCopy.filter((p) => p.result === "p");
+
   const sortedPosts = postsCopy
     .filter((p) => !p.result)
     .sort((a, b) => b.confidence - a.confidence);
 
-  const filteredAndSorted = [...sortedPosts, ...winners, ...losers];
+  const filteredAndSorted = [...sortedPosts, ...winners, ...pushers, ...losers];
 
   const postCards = filteredAndSorted.map((post) => (
     <Post post={post} key={post.id} account={false} ref={createRef()} />
