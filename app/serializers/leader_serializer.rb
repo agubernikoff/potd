@@ -1,7 +1,7 @@
 class LeaderSerializer < ActiveModel::Serializer
 include Rails.application.routes.url_helpers
 
-  attributes :id,:username,:w,:l,:winP,:backP,:agg_success,:isAdmin,:profile_picture
+  attributes :id,:username,:w,:l,:p,:winP,:backP,:agg_success,:isAdmin,:profile_picture
   
   has_many :tails
   has_many :fades
