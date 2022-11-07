@@ -41,7 +41,11 @@ class PostSerializer < ActiveModel::Serializer
   def league_record
     w=object.user.posts.where(status:'graded',league:object.league,result:'w').length
     l=object.user.posts.where(status:'graded',league:object.league,result:'l').length
+    push=object.user.posts.where(status:'graded',league:object.league,result:'p').length
     winP=w.to_f/(w.to_f+l.to_f)
+    if push>0
     return {record:"#{w} - #{l}",winP: winP}
+    else return {record:"#{w} - #{l} - #{push}",winP: winP}
+  end
   end
 end
