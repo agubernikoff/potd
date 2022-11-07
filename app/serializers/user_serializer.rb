@@ -21,6 +21,7 @@ include Rails.application.routes.url_helpers
       if push>0
         record={league:league, record:"#{w} - #{l}", winP:winP}
       else record={league:league, record:"#{w} - #{l} - #{push}", winP:winP}
+    end
       records<<record
     end
     return records
