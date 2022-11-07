@@ -441,7 +441,7 @@ const Post = forwardRef(({ post, account }, ref) => {
             W
           </button>
           <button
-            onClick={(e) => grade("e.target.innerText"[0])}
+            onClick={(e) => grade(e.target.innerText[0])}
             style={{ color: "white", background: "grey" }}
           >
             PUSH
