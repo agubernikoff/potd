@@ -39,16 +39,24 @@ function Account() {
     ? accountHolder.fades.filter((f) => f.post_result === "l").length
     : null;
 
-  const totalFades = accountHolder
-    ? accountHolder.fades.filter((f) => f.post_result).length
+  const unsuccessfulFades = accountHolder
+    ? accountHolder.fades.filter((f) => f.post_result !== "l").length
+    : null;
+
+  const pushFades = accountHolder
+    ? accountHolder.fades.filter((f) => f.post_result === "p").length
     : null;
 
   const successfulTails = accountHolder
     ? accountHolder.tails.filter((t) => t.post_result === "w").length
     : null;
 
-  const totalTails = accountHolder
-    ? accountHolder.tails.filter((t) => t.post_result).length
+  const unsuccessfulTails = accountHolder
+    ? accountHolder.tails.filter((t) => t.post_result !== "w").length
+    : null;
+
+  const pushTails = accountHolder
+    ? accountHolder.tails.filter((f) => f.post_result === "p").length
     : null;
 
   const formData = new FormData();
@@ -218,7 +226,8 @@ function Account() {
             <>
               <p className={displayOnly ? "recordP" : null}>
                 <strong>RECORD: </strong>
-                {`${accountHolder.w} - ${accountHolder.l}`} (
+                {`${accountHolder.w} - ${accountHolder.l}`}
+                {accountHolder.p > 0 ? ` - ${accountHolder.p}` : null} (
                 {Math.round((accountHolder.winP + Number.EPSILON) * 100)}%)
               </p>
               {accountHolder.league_records.map((league) => (
@@ -232,8 +241,11 @@ function Account() {
               <p className="backP">
                 <strong>TAIL/FADE SUCCESS: </strong>
                 {`${successfulFades + successfulTails} - ${
-                  totalTails + totalFades - (successfulFades + successfulTails)
-                }`}{" "}
+                  unsuccessfulFades + unsuccessfulTails
+                }`}
+                {pushFades > 0 || pushTails > 0
+                  ? ` - ${pushFades + pushTails}`
+                  : null}{" "}
                 ({Math.round((accountHolder.backP + Number.EPSILON) * 100)}%)
               </p>
               {posts}

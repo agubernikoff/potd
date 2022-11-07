@@ -16,8 +16,11 @@ include Rails.application.routes.url_helpers
     object.posts.map{|p|p.league}.uniq.each do |league|
       w=object.posts.where(status:'graded',league:league,result:'w').length
       l=object.posts.where(status:'graded',league:league,result:'l').length
+      push=object.posts.where(status:'graded',league:league,result:'p').length
       winP=w.to_f/(w.to_f+l.to_f)
-      record={league:league, record:"#{w} - #{l}", winP:winP}
+      if push>0
+        record={league:league, record:"#{w} - #{l}", winP:winP}
+      else record={league:league, record:"#{w} - #{l} - #{push}", winP:winP}
       records<<record
     end
     return records

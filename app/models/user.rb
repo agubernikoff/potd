@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
     validate :acceptable_profile_picture
 
-    before_save :set_w,:set_l,:set_winP,:set_backP,:set_agg_success
+    before_save :set_w,:set_l,:set_p,:set_winP,:set_backP,:set_agg_success
 
   def acceptable_profile_picture
     return unless profile_picture.attached?
@@ -34,6 +34,10 @@ class User < ApplicationRecord
     self.write_attribute(:l,posts.where(result:'l').length)
   end
 
+  def set_p
+    self.write_attribute(:p,posts.where(result:'p').length)
+  end
+
   def set_winP
     total= w+l
     percentage=w.to_f/total.to_f
@@ -44,9 +48,9 @@ class User < ApplicationRecord
   end
 
   def set_backP
-    total_tails= self.tails.filter{|t|t.post_result}.length
+    total_tails= self.tails.filter{|t|t.post_result && t.post_result!='p'}.length
     successful_tails=self.tails.where(post_result:'w').length
-    total_fades= self.fades.filter{|t|t.post_result}.length
+    total_fades= self.fades.filter{|t|t.post_result && t.post_result!='p'}.length
     successful_fades=self.fades.where(post_result:'l').length
     total=total_tails+total_fades
     puts total_tails

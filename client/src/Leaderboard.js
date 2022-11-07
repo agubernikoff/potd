@@ -41,6 +41,7 @@ function Leaderboard({ inFooter }) {
       </td>
       <td>
         {u.w} - {u.l}
+        {u.p > 0 ? ` - ${u.p}` : null}
       </td>
       <td>{Math.round((u.winP + Number.EPSILON) * 100)}%</td>
     </tr>
@@ -51,13 +52,25 @@ function Leaderboard({ inFooter }) {
       ? u.fades.filter((f) => f.post_result === "l").length
       : null;
 
-    const totalFades = u ? u.fades.filter((f) => f.post_result).length : null;
+    const unsuccessfulFades = u
+      ? u.fades.filter((f) => f.post_result !== "l").length
+      : null;
+
+    const pushFades = u
+      ? u.fades.filter((f) => f.post_result === "p").length
+      : null;
 
     const successfulTails = u
       ? u.tails.filter((t) => t.post_result === "w").length
       : null;
 
-    const totalTails = u ? u.tails.filter((t) => t.post_result).length : null;
+    const unsuccessfulTails = u
+      ? u.tails.filter((t) => t.post_result !== "w").length
+      : null;
+
+    const pushTails = u
+      ? u.tails.filter((f) => f.post_result === "p").length
+      : null;
 
     return (
       <tr key={u.id}>
@@ -76,7 +89,10 @@ function Leaderboard({ inFooter }) {
         </td>
         <td>
           {successfulFades + successfulTails} -{" "}
-          {totalTails + totalFades - (successfulFades + successfulTails)}
+          {unsuccessfulFades + unsuccessfulTails}
+          {pushFades > 0 || pushTails > 0
+            ? ` - ${pushFades + pushTails}`
+            : null}
         </td>
         <td>{Math.round((u.backP + Number.EPSILON) * 100)}%</td>
       </tr>

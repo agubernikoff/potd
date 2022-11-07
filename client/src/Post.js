@@ -253,16 +253,22 @@ const Post = forwardRef(({ post, account }, ref) => {
   const borderColor = post.result
     ? post.result === "w"
       ? { borderColor: "green" }
-      : { borderColor: "red" }
+      : post.result === "l"
+      ? { borderColor: "red" }
+      : { borderColor: "grey" }
     : {};
 
   const color = post.result
     ? post.result === "w"
       ? { color: "green" }
-      : { color: "red" }
+      : post.result === "l"
+      ? { color: "red" }
+      : { color: "grey" }
     : {};
 
-  const lastTen = post.last_ten.map((result) => (result === "w" ? "✅" : "❌"));
+  const lastTen = post.last_ten.map((result) =>
+    result === "w" ? "✅" : result === "l" ? "❌" : "🅿️"
+  );
 
   useEffect(() => {
     fetch(
@@ -310,7 +316,8 @@ const Post = forwardRef(({ post, account }, ref) => {
           <>
             <p style={{ textAlign: "left" }}>
               <strong>Record: </strong>
-              {`${post.user.w} - ${post.user.l}`} (
+              {`${post.user.w} - ${post.user.l}`}
+              {post.user.p > 0 ? ` - ${post.user.p}` : null} (
               {Math.round((post.user.winP + Number.EPSILON) * 100)}%)
             </p>
             <p style={{ textAlign: "left" }}>
@@ -432,6 +439,12 @@ const Post = forwardRef(({ post, account }, ref) => {
             style={{ color: "white", background: "green" }}
           >
             W
+          </button>
+          <button
+            onClick={(e) => grade("e.target.innerText"[0])}
+            style={{ color: "white", background: "grey" }}
+          >
+            PUSH
           </button>
           <button
             onClick={(e) => grade(e.target.innerText)}
