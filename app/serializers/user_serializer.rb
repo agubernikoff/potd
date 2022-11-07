@@ -18,7 +18,7 @@ include Rails.application.routes.url_helpers
       l=object.posts.where(status:'graded',league:league,result:'l').length
       push=object.posts.where(status:'graded',league:league,result:'p').length
       winP=w.to_f/(w.to_f+l.to_f)
-      if push>0
+      unless push>0
         record={league:league, record:"#{w} - #{l}", winP:winP}
       else record={league:league, record:"#{w} - #{l} - #{push}", winP:winP}
     end
