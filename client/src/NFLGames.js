@@ -36,24 +36,24 @@ function NFLGames() {
   const games = [
     {
       details: { league: "NFL" },
-      schedule: { start: "2022-11-04T00:15:00.000Z" },
+      schedule: { start: "2022-11-11T01:15:00.000Z" },
       teams: {
-        away: teams.eagles,
-        home: teams.texans,
+        away: teams.falcons,
+        home: teams.panthers,
       },
       odds: {
         spread: {
           current: {
-            away: "-14.0",
-            home: "+14.0",
+            away: "-2.5",
+            home: "+2.5",
             awayOdds: "-105",
             homeOdds: "-115",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-820", homeOdds: "+570" } },
+      moneyline: { current: { awayOdds: "-145", homeOdds: "+120" } },
       total: {
-        current: { total: "45.5", overOdds: "-105", underOdds: "-115" },
+        current: { total: "41.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
