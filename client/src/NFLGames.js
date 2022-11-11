@@ -58,164 +58,98 @@ function NFLGames() {
     },
     {
       details: { league: "NFL" },
-      schedule: { start: "2022-11-06T18:00:00.000Z" },
+      schedule: { start: "2022-11-13T14:30:00.000Z" },
       teams: {
-        away: teams.colts,
-        home: teams.patriots,
+        away: teams.seahawks,
+        home: teams.buccaneers,
       },
       odds: {
         spread: {
           current: {
-            away: "+4.5",
-            home: "-4.5",
+            away: "+2.5",
+            home: "-2.5",
             awayOdds: "-110",
             homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+120", homeOdds: "-140" } },
+      total: {
+        current: { total: "44.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NFL" },
+      schedule: { start: "2022-11-13T18:00:00.000Z" },
+      teams: {
+        away: teams.jaguars,
+        home: teams.chiefs,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+9.5",
+            home: "-9.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+340", homeOdds: "-430" } },
+      total: {
+        current: { total: "51.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NFL" },
+      schedule: { start: "2022-11-13T18:00:00.000Z" },
+      teams: {
+        away: teams.texans,
+        home: teams.giants,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+5.5",
+            home: "-5.5",
+            awayOdds: "-115",
+            homeOdds: "-105",
           },
         },
       },
       moneyline: { current: { awayOdds: "+190", homeOdds: "-225" } },
       total: {
-        current: { total: "39.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "41.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
       details: { league: "NFL" },
-      schedule: { start: "2022-11-06T18:00:00.000Z" },
+      schedule: { start: "2022-11-13T18:00:00.000Z" },
       teams: {
-        away: teams.bills,
-        home: teams.jets,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-12.5",
-            home: "+12.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-620", homeOdds: "+460" } },
-      total: {
-        current: { total: "46.5", overOdds: "-115", underOdds: "-105" },
-      },
-    },
-    {
-      details: { league: "NFL" },
-      schedule: { start: "2022-11-06T18:00:00.000Z" },
-      teams: {
-        away: teams.dolphins,
+        away: teams.lions,
         home: teams.bears,
       },
       odds: {
         spread: {
           current: {
-            away: "-5.0",
-            home: "+5.0",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-215", homeOdds: "+180" } },
-      total: {
-        current: { total: "45.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      details: { league: "NFL" },
-      schedule: { start: "2022-11-06T18:00:00.000Z" },
-      teams: {
-        away: teams.packers,
-        home: teams.lions,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-3.5",
-            home: "+3.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-195", homeOdds: "+160" } },
-      total: {
-        current: { total: "49.5", overOdds: "-105", underOdds: "-115" },
-      },
-    },
-    {
-      details: { league: "NFL" },
-      schedule: { start: "2022-11-06T18:00:00.000Z" },
-      teams: {
-        away: teams.vikings,
-        home: teams.commanders,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-3.5",
-            home: "+3.5",
-            awayOdds: "-110",
-            homeOdds: "-110",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-170", homeOdds: "+145" } },
-      total: {
-        current: { total: "43.5", overOdds: "-110", underOdds: "-110" },
-      },
-    },
-    {
-      details: { league: "NFL" },
-      schedule: { start: "2022-11-06T18:00:00.000Z" },
-      teams: {
-        away: teams.panthers,
-        home: teams.bengals,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "+7.5",
-            home: "-7.5",
+            away: "+3.0",
+            home: "-3.0",
             awayOdds: "-115",
             homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+265", homeOdds: "-330" } },
+      moneyline: { current: { awayOdds: "+135", homeOdds: "-160" } },
       total: {
-        current: { total: "42.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "48.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
       details: { league: "NFL" },
-      schedule: { start: "2022-11-06T18:00:00.000Z" },
+      schedule: { start: "2022-11-13T18:00:00.000Z" },
       teams: {
-        away: teams.chargers,
-        home: teams.falcons,
-      },
-      odds: {
-        spread: {
-          current: {
-            away: "-3.0",
-            home: "+3.0",
-            awayOdds: "-115",
-            homeOdds: "-105",
-          },
-        },
-      },
-      moneyline: { current: { awayOdds: "-165", homeOdds: "+140" } },
-      total: {
-        current: { total: "49.5", overOdds: "-115", underOdds: "-105" },
-      },
-    },
-    {
-      details: { league: "NFL" },
-      schedule: { start: "2022-11-06T18:00:00.000Z" },
-      teams: {
-        away: teams.raiders,
-        home: teams.jaguars,
+        away: teams.saints,
+        home: teams.steelers,
       },
       odds: {
         spread: {
@@ -227,45 +161,67 @@ function NFLGames() {
           },
         },
       },
-      moneyline: { current: { awayOdds: "-125", homeOdds: "+105" } },
+      moneyline: { current: { awayOdds: "-125", homeOdds: "+110" } },
       total: {
-        current: { total: "47.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "40.5", overOdds: "-105", underOdds: "-115" },
       },
     },
     {
       details: { league: "NFL" },
-      schedule: { start: "2022-11-06T21:05:00.000Z" },
+      schedule: { start: "2022-11-13T18:00:00.000Z" },
       teams: {
-        away: teams.seahawks,
-        home: teams.titans,
+        away: teams.browns,
+        home: teams.dolphins,
       },
       odds: {
         spread: {
           current: {
-            away: "+2.0",
-            home: "-2.0",
-            awayOdds: "-110",
-            homeOdds: "-110",
+            away: "+3.5",
+            home: "-3.5",
+            awayOdds: "-115",
+            homeOdds: "-105",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+110", homeOdds: "-130" } },
+      moneyline: { current: { awayOdds: "+145", homeOdds: "-175" } },
       total: {
         current: { total: "49.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
       details: { league: "NFL" },
-      schedule: { start: "2022-11-06T21:25:00.000Z" },
+      schedule: { start: "2022-11-13T18:00:00.000Z" },
       teams: {
-        away: teams.rams,
-        home: teams.buccaneers,
+        away: teams.vikings,
+        home: teams.bills,
       },
       odds: {
         spread: {
           current: {
-            away: "+3.0",
-            home: "-3.0",
+            away: "+3.5",
+            home: "-3.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+150", homeOdds: "-180" } },
+      total: {
+        current: { total: "42.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NFL" },
+      schedule: { start: "2022-11-13T18:00:00.000Z" },
+      teams: {
+        away: teams.broncos,
+        home: teams.titans,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+2.5",
+            home: "-2.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
@@ -273,51 +229,117 @@ function NFLGames() {
       },
       moneyline: { current: { awayOdds: "+125", homeOdds: "-145" } },
       total: {
-        current: { total: "42.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "38.5", overOdds: "-115", underOdds: "-105" },
       },
     },
     {
       details: { league: "NFL" },
-      schedule: { start: "2022-11-07T01:20:00.000Z" },
+      schedule: { start: "2022-11-13T21:05:00.000Z" },
       teams: {
-        away: teams.titans,
-        home: teams.chiefs,
+        away: teams.colts,
+        home: teams.raiders,
       },
       odds: {
         spread: {
           current: {
-            away: "+12.5",
-            home: "-12.5",
+            away: "+4.5",
+            home: "-4.5",
+            awayOdds: "-105",
+            homeOdds: "-115",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+180", homeOdds: "-215" } },
+      total: {
+        current: { total: "40.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NFL" },
+      schedule: { start: "2022-11-13T21:25:00.000Z" },
+      teams: {
+        away: teams.cardinals,
+        home: teams.rams,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+1.5",
+            home: "-1.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+480", homeOdds: "-650" } },
+      moneyline: { current: { awayOdds: "+105", homeOdds: "-120" } },
       total: {
-        current: { total: "46.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "40.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
       details: { league: "NFL" },
-      schedule: { start: "2022-11-08T01:15:00.000Z" },
+      schedule: { start: "2022-11-13T21:25:00.000Z" },
       teams: {
-        away: teams.ravens,
-        home: teams.saints,
+        away: teams.cowboys,
+        home: teams.packers,
       },
       odds: {
         spread: {
           current: {
-            away: "-2.5",
-            home: "+2.5",
-            awayOdds: "-115",
-            homeOdds: "-105",
+            away: "-4.5",
+            home: "+4.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-140", homeOdds: "+120" } },
+      moneyline: { current: { awayOdds: "-200", homeOdds: "+170" } },
       total: {
-        current: { total: "48.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "43.0", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NFL" },
+      schedule: { start: "2022-11-14T01:20:00.000Z" },
+      teams: {
+        away: teams.chargers,
+        home: teams.niners,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+7.0",
+            home: "-7.0",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+245", homeOdds: "-300" } },
+      total: {
+        current: { total: "45.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NFL" },
+      schedule: { start: "2022-11-15T01:15:00.000Z" },
+      teams: {
+        away: teams.commanders,
+        home: teams.eagles,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+10.5",
+            home: "-10.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+390", homeOdds: "-510" } },
+      total: {
+        current: { total: "43.5", overOdds: "-110", underOdds: "-110" },
       },
     },
   ];
