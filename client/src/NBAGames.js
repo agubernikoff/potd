@@ -130,8 +130,8 @@ function NBAGames() {
       odds: {
         spread: {
           current: {
-            away: "+6.5",
-            home: "-6.5",
+            away: "+9.0",
+            home: "-9.0",
             awayOdds: "-110",
             homeOdds: "-110",
           },
