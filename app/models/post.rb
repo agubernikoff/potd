@@ -13,7 +13,7 @@ class Post < ApplicationRecord
 
   after_save :update_associated_users
 
-  # before_destroy :game_started
+  before_destroy :game_started
 
   validates :caption, presence: true
   validates :user_id, presence: true
