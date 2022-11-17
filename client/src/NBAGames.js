@@ -210,46 +210,68 @@ function NBAGames() {
     },
     {
       details: { league: "NBA" },
-      schedule: { start: "2022-11-17T03:10:00.000Z" },
+      schedule: { start: "2022-11-18T03:10:00.000Z" },
       teams: {
-        away: teams.nyk,
-        home: teams.den,
+        away: teams.bkn,
+        home: teams.por,
       },
       odds: {
         spread: {
           current: {
-            away: "+3.5",
-            home: "-3.5",
+            away: "+2.5",
+            home: "-2.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "+135", homeOdds: "-160" } },
+      moneyline: { current: { awayOdds: "+120", homeOdds: "-140" } },
       total: {
-        current: { total: "226.0", overOdds: "-110", underOdds: "-110" },
+        current: { total: "220.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
       details: { league: "NBA" },
-      schedule: { start: "2022-11-17T03:10:00.000Z" },
+      schedule: { start: "2022-11-18T03:10:00.000Z" },
       teams: {
-        away: teams.gsw,
-        home: teams.phx,
+        away: teams.sas,
+        home: teams.sac,
       },
       odds: {
         spread: {
           current: {
-            away: "+1.0",
-            home: "-1.0",
+            away: "+6.5",
+            home: "-6.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
         },
       },
-      moneyline: { current: { awayOdds: "-105", homeOdds: "-110" } },
+      moneyline: { current: { awayOdds: "+215", homeOdds: "-260" } },
       total: {
-        current: { total: "227.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "237.5", overOdds: "-110", underOdds: "-110" },
+      },
+    },
+    {
+      details: { league: "NBA" },
+      schedule: { start: "2022-11-18T03:10:00.000Z" },
+      teams: {
+        away: teams.det,
+        home: teams.lac,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+9.5",
+            home: "-9.5",
+            awayOdds: "-110",
+            homeOdds: "-110",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+320", homeOdds: "-405" } },
+      total: {
+        current: { total: "217.5", overOdds: "-110", underOdds: "-110" },
       },
     },
   ];
