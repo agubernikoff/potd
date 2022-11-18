@@ -5,6 +5,7 @@ import NFLGames from "./NFLGames";
 import MLBGames from "./MLBGames";
 import NCAAFGames from "./NCAAFGames";
 import NBAGames from "./NBAGames";
+import WCGames from "./WCGames";
 import Game from "./Game";
 import NewPost from "./NewPost";
 import SearchInput from "./SearchInput";
@@ -52,6 +53,7 @@ function Search() {
     ...MLBGames().games,
     ...NCAAFGames().games,
     ...NBAGames().games,
+    ...WCGames().games,
   ].filter((g) => new Date(g.schedule.start) > new Date(Date.now()));
 
   const mappedGames = searchText
