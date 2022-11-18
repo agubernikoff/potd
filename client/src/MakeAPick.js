@@ -4,6 +4,7 @@ import NFLGames from "./NFLGames";
 import MLBGames from "./MLBGames";
 import NCAAFGames from "./NCAAFGames";
 import NBAGames from "./NBAGames";
+import WCGames from "./WCGames";
 import Game from "./Game";
 import NewPost from "./NewPost";
 
@@ -48,6 +49,10 @@ function MakeAPick() {
     (g) => new Date(g.schedule.start) > new Date(Date.now())
   );
 
+  const upcomingWC = WCGames().games.filter(
+    (g) => new Date(g.schedule.start) > new Date(Date.now())
+  );
+
   const NFLgames = upcomingNFL.map((g, i) => (
     <Game key={i} game={g} setPickAndOddsAndStart={setPickAndOddsAndStart} />
   ));
@@ -61,6 +66,10 @@ function MakeAPick() {
   ));
 
   const NBAgames = upcomingNBA.map((g, i) => (
+    <Game key={i} game={g} setPickAndOddsAndStart={setPickAndOddsAndStart} />
+  ));
+
+  const WCgames = upcomingWC.map((g, i) => (
     <Game key={i} game={g} setPickAndOddsAndStart={setPickAndOddsAndStart} />
   ));
 
@@ -84,6 +93,7 @@ function MakeAPick() {
           <option>NCAAF</option>
           <option>NBA</option>
           <option>MLB</option>
+          <option>WORLD CUP</option>
         </select>
       </div>
       {pick && odds && start ? (
@@ -99,6 +109,7 @@ function MakeAPick() {
       {league === "NCAAF" ? NCAAFgames : null}
       {league === "NBA" ? NBAgames : null}
       {league === "MLB" ? MLBgames : null}
+      {league === "WORLD CUP" ? WCgames : null}
     </div>
   );
 }
