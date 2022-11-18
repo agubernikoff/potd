@@ -66,6 +66,12 @@ function MakeAPick() {
 
   return (
     <div className="feed">
+      <h3 style={{ textAlign: "center" }}>
+        Don't see your pick? <br />
+        Email me at{" "}
+        <a href="mailto:agubernikoff@gmail.com">agubernikoff@gmail.com</a> with
+        your pick and your caption for the post.
+      </h3>
       <h3 style={{ textAlign: "center" }}>LINES</h3>
       <div className="leaderboardSelect">
         <select
