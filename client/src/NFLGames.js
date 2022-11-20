@@ -88,8 +88,8 @@ function NFLGames() {
       odds: {
         spread: {
           current: {
-            away: "+6.5",
-            home: "-6.5",
+            away: "-6.5",
+            home: "+6.5",
             awayOdds: "-110",
             homeOdds: "-110",
           },
