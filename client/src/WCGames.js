@@ -34,28 +34,28 @@ function WCGames() {
     kor: { team: "South Korea", abbreviation: "KOR" },
   };
   const games = [
-    // {
-    //   details: { league: "WORLD CUP" },
-    //   schedule: { start: "2022-11-20T16:00:00.000Z" },
-    //   teams: {
-    //     away: teams.qat,
-    //     home: teams.ecu,
-    //   },
-    //   odds: {
-    //     spread: {
-    //       current: {
-    //         away: "+0.5",
-    //         home: "-0.5",
-    //         awayOdds: "-175",
-    //         homeOdds: "+140",
-    //       },
-    //     },
-    //   },
-    //   moneyline: { current: { awayOdds: "+220", homeOdds: "+150" } },
-    //   total: {
-    //     current: { total: "1.5", overOdds: "-190", underOdds: "+155" },
-    //   },
-    // },
+    {
+      details: { league: "WORLD CUP" },
+      schedule: { start: "2022-11-20T16:00:00.000Z" },
+      teams: {
+        away: teams.qat,
+        home: teams.ecu,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+0.5",
+            home: "-0.5",
+            awayOdds: "-175",
+            homeOdds: "+140",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+220", homeOdds: "+150" } },
+      total: {
+        current: { total: "1.5", overOdds: "-190", underOdds: "+155" },
+      },
+    },
     // {
     //   details: { league: "WORLD CUP" },
     //   schedule: { start: "2022-11-21T13:00:00.000Z" },
