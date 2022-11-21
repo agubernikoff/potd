@@ -110,8 +110,8 @@ function WCGames() {
       odds: {
         spread: {
           current: {
-            away: "+0.5",
-            home: "-0.5",
+            away: "-0.5",
+            home: "+0.5",
             awayOdds: "+135",
             homeOdds: "-165",
           },
