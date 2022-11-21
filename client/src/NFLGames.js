@@ -317,7 +317,7 @@ function NFLGames() {
       },
       moneyline: { current: { awayOdds: "-240", homeOdds: "+200" } },
       total: {
-        current: { total: "45.5", overOdds: "-110", underOdds: "-110" },
+        current: { total: "52.5", overOdds: "-110", underOdds: "-110" },
       },
     },
     {
