@@ -78,50 +78,50 @@ function WCGames() {
     //     current: { total: "212.5", overOdds: "-110", underOdds: "-110" },
     //   },
     // },
-    // {
-    //   details: { league: "WORLD CUP" },
-    //   schedule: { start: "2022-11-21T16:00:00.000Z" },
-    //   teams: {
-    //     away: teams.sen,
-    //     home: teams.ned,
-    //   },
-    //   odds: {
-    //     spread: {
-    //       current: {
-    //         away: "+9.5",
-    //         home: "-9.5",
-    //         awayOdds: "-110",
-    //         homeOdds: "-110",
-    //       },
-    //     },
-    //   },
-    //   moneyline: { current: { awayOdds: "+350", homeOdds: "-450" } },
-    //   total: {
-    //     current: { total: "221.0", overOdds: "-110", underOdds: "-110" },
-    //   },
-    // },
-    // {
-    //   details: { league: "WORLD CUP" },
-    //   schedule: { start: "2022-11-21T19:00:00.000Z" },
-    //   teams: {
-    //     away: teams.usa,
-    //     home: teams.wal,
-    //   },
-    //   odds: {
-    //     spread: {
-    //       current: {
-    //         away: "+6.0",
-    //         home: "-6.0",
-    //         awayOdds: "-110",
-    //         homeOdds: "-110",
-    //       },
-    //     },
-    //   },
-    //   moneyline: { current: { awayOdds: "+190", homeOdds: "-230" } },
-    //   total: {
-    //     current: { total: "230.5", overOdds: "-110", underOdds: "-110" },
-    //   },
-    // },
+    {
+      details: { league: "WORLD CUP" },
+      schedule: { start: "2022-11-21T16:00:00.000Z" },
+      teams: {
+        away: teams.sen,
+        home: teams.ned,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+0.5",
+            home: "-0.5",
+            awayOdds: "+125",
+            homeOdds: "-155",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+550", homeOdds: "-180" } },
+      total: {
+        current: { total: "2.5", overOdds: "+135", underOdds: "-165" },
+      },
+    },
+    {
+      details: { league: "WORLD CUP" },
+      schedule: { start: "2022-11-21T19:00:00.000Z" },
+      teams: {
+        away: teams.usa,
+        home: teams.wal,
+      },
+      odds: {
+        spread: {
+          current: {
+            away: "+0.5",
+            home: "-0.5",
+            awayOdds: "+135",
+            homeOdds: "-165",
+          },
+        },
+      },
+      moneyline: { current: { awayOdds: "+140", homeOdds: "+230" } },
+      total: {
+        current: { total: "2.5", overOdds: "+145", underOdds: "-180" },
+      },
+    },
     // {
     //   details: { league: "WORLD CUP" },
     //   schedule: { start: "2022-11-22T10:00:00.000Z" },
